@@ -1,0 +1,95 @@
+body {
+	margin: 0;
+}
+
+#app {
+	width: 1024px;
+	height: 100%;
+	margin: 0 auto;
+	background-color: #2f2f2f;
+	font-family: Roboto;
+	color: #fff;
+	padding-bottom: 30px;
+}
+
+#logo {
+	height: 200px;
+	background-color: #000;
+	color: #fff;
+	font-size: 40px;
+	line-height: 3.5;
+	text-align: center;
+}
+
+#menu {
+	height: 70px;
+	padding: 0 25px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #808080;
+}
+
+#social {
+	width: 190px;
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+
+#social .social-button {
+	width: 50px;
+	height: 50px;
+	box-sizing: border-box;
+}
+
+#navigation {
+
+}
+
+#contacts {
+	display: flex;
+	flex-direction: column;
+	color: #000
+}
+
+#products {
+
+}
+
+#products .title,
+#advantages .title {
+	text-align: center;
+	color: #fff;
+}
+
+#products #liquids {
+	display: flex;
+	box-sizing: border-box;
+	padding: 20px;
+}
+
+#liquids .liquid {
+	width: 200px;
+	height: 200px;
+	margin: 0 20px;
+	background-color: #feebd7;
+}
+#advantages {
+}
+
+#advantages .content {
+	box-sizing: border-box;
+	padding: 20px;
+}
+
+#partner {
+	width: 200px;
+	height: 50px;
+	margin: 0 auto;
+	border-radius: 5px;
+	line-height: 3;
+	text-align: center;
+	color: #000;
+	background-color: #ff0;
+}
