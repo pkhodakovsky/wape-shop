@@ -19,6 +19,8 @@
   "dependencies": {
     "@babel/core": "^7.2.2",
     "babel-loader": "^8.0.5",
+    "iscroll": "^5.2.0",
+    "touchmyripple": "^2.7.2",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1"
   }

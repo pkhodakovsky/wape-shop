@@ -1,20 +1,43 @@
-body {
+@import 'fonts.css';
+@import "nav-buttons.css";
+
+* {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+body,
+ul,
+li {
 	margin: 0;
+	padding: 0;
+}
+
+body {
+	/*background: #141E30;
+	background: -webkit-linear-gradient(to right, #243B55, #141E30);
+	background: linear-gradient(to right, #243B55, #141E30);*/
+	background: #000000;
+	background: -webkit-linear-gradient(to right, #434343, #000000);
+	background: linear-gradient(to right, #434343, #000000);
 }
 
 #app {
-	width: 1024px;
+	width: 100%;
 	height: 100%;
 	margin: 0 auto;
-	background-color: #2f2f2f;
 	font-family: Roboto;
 	color: #fff;
 	padding-bottom: 30px;
+	/*background: #000000;
+	background: -webkit-linear-gradient(to right, #434343, #000000);
+	background: linear-gradient(to right, #434343, #000000);*/
 }
 
 #logo {
 	height: 200px;
-	background-color: #000;
 	color: #fff;
 	font-size: 40px;
 	line-height: 3.5;
@@ -27,11 +50,13 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: #808080;
+	background: #304352;
+	background: -webkit-linear-gradient(to right, #d7d2cc, #304352);
+	background: linear-gradient(to right, #d7d2cc, #304352);
 }
 
 #social {
-	width: 190px;
+	width: 150px;
 	height: 50px;
 	display: flex;
 	justify-content: space-between;
@@ -43,27 +68,35 @@ body {
 	box-sizing: border-box;
 }
 
+#social .social-button a {
+	display: block;
+	padding: 10px;
+}
+
 #navigation {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-#navigation div {
-	width: 100px;
-	height: 30px;
+#navigation .nav-button {
+	width: 130px;
+	height: 40px;
 	box-sizing: border-box;
-	border: 1px solid #fff;
 	border-radius: 10px;
-	margin: 0 5px;
 	text-align: center;
-	line-height: 1.6;
+	line-height: 2.4;
 }
 
 #contacts {
 	display: flex;
 	flex-direction: column;
-	color: #000
+	color: #fff;
+	font-size: 13px;
+}
+
+#content {
+
 }
 
 #products {
@@ -77,17 +110,33 @@ body {
 }
 
 #products #liquids {
-	display: flex;
 	box-sizing: border-box;
-	padding: 20px;
+	padding: 20px 40px;
+	overflow: hidden;
+}
+
+#products #liquids ul {
+	width: 1464px;
+	display: flex;
+	list-style: none;
 }
 
 #liquids .liquid {
 	width: 200px;
 	height: 200px;
+	flex-shrink: 0;
 	margin: 0 20px;
 	background-color: #feebd7;
 }
+
+#liquids .liquid:first-of-type {
+	margin-left: 0;
+}
+
+#liquids .liquid:last-of-type {
+	margin-right: 0;
+}
+
 #advantages {
 }
 
