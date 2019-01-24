@@ -22,15 +22,17 @@ body {
 	background: #000000;
 	background: -webkit-linear-gradient(to right, #434343, #000000);
 	background: linear-gradient(to right, #434343, #000000);
+	background: url("../../images/bg.jpg");
 }
 
 #app {
-	width: 100%;
+	width: 1024px;
 	height: 100%;
+	min-height: 100vh;
 	margin: 0 auto;
 	font-family: Roboto;
 	color: #fff;
-	padding-bottom: 30px;
+	background-color: rgba(0, 0, 0, 0.3);
 	/*background: #000000;
 	background: -webkit-linear-gradient(to right, #434343, #000000);
 	background: linear-gradient(to right, #434343, #000000);*/
@@ -50,13 +52,14 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background: #304352;
+	/*background: #304352;
 	background: -webkit-linear-gradient(to right, #d7d2cc, #304352);
-	background: linear-gradient(to right, #d7d2cc, #304352);
+	background: linear-gradient(to right, #d7d2cc, #304352);*/
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 #social {
-	width: 150px;
+	width: 100px;
 	height: 50px;
 	display: flex;
 	justify-content: space-between;
@@ -96,7 +99,7 @@ body {
 }
 
 #content {
-
+	padding-bottom: 30px;
 }
 
 #products {
@@ -116,17 +119,16 @@ body {
 }
 
 #products #liquids ul {
-	width: 1464px;
+	width: 1854px;
 	display: flex;
 	list-style: none;
 }
 
 #liquids .liquid {
-	width: 200px;
-	height: 200px;
+	width: 265px;
+	height: 265px;
 	flex-shrink: 0;
 	margin: 0 20px;
-	background-color: #feebd7;
 }
 
 #liquids .liquid:first-of-type {
@@ -154,4 +156,65 @@ body {
 	text-align: center;
 	color: #000;
 	background-color: #ff0;
+}
+
+#popups {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+	pointer-events: none;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 100;
+}
+
+#popups.visible {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+#popups .popup {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 824px;
+	height: 330px;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+	pointer-events: none;
+	border: 5px solid #7d7d7d;
+	border-radius: 20px;
+	background-color: #fff;
+}
+
+#popups .popup.visible {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+#popups .popup .close-button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 30px;
+	height: 30px;
+	background: url("../../images/close-popup.png") no-repeat center/contain;
+}
+
+#popups .popup-content {
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	color: #000;
+}
+
+#popups .popup-content h3 {
+	margin-top: 80px;
 }

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width,user-scalable=no">-->
 	<title>Vape Shop Royal</title>
 	<link rel="stylesheet" href="./src/css/styles.css">
 </head>
@@ -17,11 +18,6 @@
 			<div id="instagram" class="social-button">
 				<a href="http://instagram.com" target="_blank">
 					<img src="./images/instagram_icon.png" alt="Instagram" width="30px" height="30px">
-				</a>
-			</div>
-			<div id="vkontakte" class="social-button">
-				<a href="http://vk.com" target="_blank">
-					<img src="./images/vk_icon.png" alt="VK" width="30px" height="30px">
 				</a>
 			</div>
 			<div id="facebook" class="social-button">
@@ -47,12 +43,48 @@
 			<h2 class="title">Наша продукция</h2>
 			<div id="liquids">
 				<ul>
-					<li class="liquid"></li>
-					<li class="liquid"></li>
-					<li class="liquid"></li>
-					<li class="liquid"></li>
-					<li class="liquid"></li>
-					<li class="liquid"></li>
+					<li class="liquid" data-open-popup-name="dewwy">
+						<img src="./images/liquids/dewwy.jpg" alt="dewwy">
+						<!--<div>Honeydew with tropical fruits.
+							80% VG / 20% PG
+							120ml Bottle
+							https://www.eliquid-depot.com/vape-juice/dewwy/#/122-nicotine-3_mg_ml_03</div>-->
+					</li>
+					<li class="liquid" data-open-popup-name="gentleman">
+						<img src="./images/liquids/gentleman.jpg" alt="gentleman">
+						<!--<div>A smooth caramel vanilla tobacco
+							80% VG / 20% PG
+							120ml Bottle
+							https://www.eliquid-depot.com/vape-juice/gentleman/#/122-nicotine-3_mg_ml_03</div>-->
+					</li>
+					<li class="liquid" data-open-popup-name="heisenberg">
+						<img src="./images/liquids/heisenberg.jpg" alt="heisenberg">
+						<!--<div>Fruity blue raspberry candy
+							80% VG / 20% PG
+							120ml Bottle
+							https://www.eliquid-depot.com/vape-juice/heisenberg/#/122-nicotine-3_mg_ml_03</div>-->
+					</li>
+					<li class="liquid" data-open-popup-name="ice-dragon">
+						<img src="./images/liquids/ice-dragon.jpg" alt="ice-dragon">
+						<!--<div>Fruity blueberry & dragonfruit base with a fresh minty chill
+							80% VG / 20% PG
+							120ml Bottle
+							https://www.eliquid-depot.com/vape-juice/ice-dragon/#/122-nicotine-3_mg_ml_03</div>-->
+					</li>
+					<li class="liquid" data-open-popup-name="rainbow">
+						<img src="./images/liquids/rainbow.jpg" alt="rainbow">
+						<!--<div>A sweet rainbow frozen sherbert
+							80% VG / 20% PG
+							120ml Bottle
+							https://www.eliquid-depot.com/vape-juice/rainbow/#/122-nicotine-3_mg_ml_03</div>-->
+					</li>
+					<li class="liquid" data-open-popup-name="smurf">
+						<img src="./images/liquids/smurf.jpg" alt="smurf">
+						<!--<div>Strawberry blueberry smoothie
+							80% VG / 20% PG
+							120ml Bottle
+							https://www.eliquid-depot.com/vape-juice/smurf/#/122-nicotine-3_mg_ml_03</div>-->
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -83,6 +115,68 @@
 			</div>
 		</div>
 		<div id="partner">Стать партнером</div>
+	</div>
+	<div id="popups">
+		<div class="popup" data-popup-name="dewwy">
+			<div class="close-button" data-close-popup-name="dewwy"></div>
+			<div class="popup-content">
+				<img src="./images/liquids/dewwy.jpg" alt="dewwy" align="left">
+				<h3>Honeydew with tropical fruits.</h3>
+				<p>80% VG / 20% PG</p>
+				<p>120ml Bottle</p>
+				<!--https://www.eliquid-depot.com/vape-juice/dewwy/#/122-nicotine-3_mg_ml_03-->
+			</div>
+		</div>
+		<div class="popup" data-popup-name="gentleman">
+			<div class="close-button" data-close-popup-name="gentleman"></div>
+			<div class="popup-content">
+				<img src="./images/liquids/gentleman.jpg" alt="gentleman" align="left">
+				<h3>A smooth caramel vanilla tobacco</h3>
+				<p>80% VG / 20% PG</p>
+				<p>120ml Bottle</p>
+				<!--https://www.eliquid-depot.com/vape-juice/gentleman/#/122-nicotine-3_mg_ml_03-->
+			</div>
+		</div>
+		<div class="popup" data-popup-name="heisenberg">
+			<div class="close-button" data-close-popup-name="heisenberg"></div>
+			<div class="popup-content">
+				<img src="./images/liquids/heisenberg.jpg" alt="heisenberg" align="left">
+				<h3>Fruity blue raspberry candy</h3>
+				<p>80% VG / 20% PG</p>
+				<p>120ml Bottle</p>
+				<!--https://www.eliquid-depot.com/vape-juice/heisenberg/#/122-nicotine-3_mg_ml_03-->
+			</div>
+		</div>
+		<div class="popup" data-popup-name="ice-dragon">
+			<div class="close-button" data-close-popup-name="ice-dragon"></div>
+			<div class="popup-content">
+				<img src="./images/liquids/ice-dragon.jpg" alt="ice-dragon" align="left">
+				<h3>Fruity blueberry & dragonfruit base with a fresh minty chill</h3>
+				<p>80% VG / 20% PG</p>
+				<p>120ml Bottle</p>
+				<!--https://www.eliquid-depot.com/vape-juice/ice-dragon/#/122-nicotine-3_mg_ml_03-->
+			</div>
+		</div>
+		<div class="popup" data-popup-name="rainbow">
+			<div class="close-button" data-close-popup-name="rainbow"></div>
+			<div class="popup-content">
+				<img src="./images/liquids/rainbow.jpg" alt="rainbow" align="left">
+				<h3>A sweet rainbow frozen sherbert</h3>
+				<p>80% VG / 20% PG</p>
+				<p>120ml Bottle</p>
+				<!--https://www.eliquid-depot.com/vape-juice/rainbow/#/122-nicotine-3_mg_ml_03-->
+			</div>
+		</div>
+		<div class="popup" data-popup-name="smurf">
+			<div class="close-button" data-close-popup-name="smurf"></div>
+			<div class="popup-content">
+				<img src="./images/liquids/smurf.jpg" alt="smurf" align="left">
+				<h3>Strawberry blueberry smoothie</h3>
+				<p>80% VG / 20% PG</p>
+				<p>120ml Bottle</p>
+				<!--https://www.eliquid-depot.com/vape-juice/smurf/#/122-nicotine-3_mg_ml_03-->
+			</div>
+		</div>
 	</div>
 </div>
 <script type="text/javascript" src="dist/bundle.js"></script>
