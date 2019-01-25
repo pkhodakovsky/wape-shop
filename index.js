@@ -10,9 +10,8 @@ function initScrolls() {
 		scrollX: true,
 		scrollY: false,
 		mouseWheel: true,
-		preventDefault: false,
+		preventDefault: true,
 	});
-	window.liquidsScroll = liquidsScroll;
 }
 
 function initTmripples() {
@@ -48,23 +47,36 @@ function initPopups() {
 function handleTap(element, handler) {
 	let isMoved = false;
 	let isTouched = false;
+	let possibleDiff = 20;
+	let prevPos = {
+		x: 0,
+		y: 0,
+	};
+	const events = [
+		'touch',
+		'pointer',
+	];
 
-	function startHandler(event) {
-		event.preventDefault();
+	function startHandler(event, pos) {
 		isMoved = false;
 		isTouched = true;
+		prevPos = {
+			x: pos[0],
+			y: pos[1],
+		};
 	}
 
-	function moveHandler(event) {
+	function moveHandler(event, pos) {
 		if (!isTouched) {
 			return;
 		}
 		isMoved = true;
 	}
 
-	function endHandler(event) {
+	function endHandler(event, pos) {
 		isTouched = false;
 		if (isMoved) {
+			// if (Math.abs(pos[0] - prevPos.x) > possibleDiff || Math.abs(pos[1] - prevPos.y) > possibleDiff) {
 			isMoved = false;
 			return;
 		}
@@ -72,7 +84,10 @@ function handleTap(element, handler) {
 		handler.call(element, event);
 	}
 
-	touch(element)
+	touch(element, {
+		filtered: true,
+		preventSimulated: true,
+	})
 		.on('start', startHandler)
 		.on('move', moveHandler)
 		.on('end', endHandler);
