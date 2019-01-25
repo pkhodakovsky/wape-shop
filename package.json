@@ -19,6 +19,7 @@
   "dependencies": {
     "@babel/core": "^7.2.2",
     "babel-loader": "^8.0.5",
+    "hammerjs": "^2.0.8",
     "iscroll": "^5.2.0",
     "touches": "^1.2.2",
     "touchmyripple": "^2.7.2",
