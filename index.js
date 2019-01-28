@@ -11,7 +11,6 @@ function documentPreventDefault(event) {
 
 function initScrolls() {
 	initLiquidsScroll();
-	initPartnersPopupScroll();
 }
 
 function initLiquidsScroll() {
@@ -24,18 +23,8 @@ function initLiquidsScroll() {
 	});
 }
 
-function initPartnersPopupScroll() {
-	const partnersPopupEl = document.querySelector('#popups .popup.partners .popup-content');
-	const liquidsScroll = new IScroll(partnersPopupEl, {
-		scrollX: false,
-		scrollY: true,
-		mouseWheel: true,
-		preventDefault: true,
-	});
-}
-
 function initTmripples() {
-	const tmripples = new TmRipple('#partner', {
+	const tmripples = new TmRipple('#becomePartner', {
 		color: '#fff',
 	});
 }

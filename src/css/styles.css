@@ -104,8 +104,7 @@ body {
 
 }
 
-#products .title,
-#advantages .title {
+.title {
 	text-align: center;
 	color: #fff;
 }
@@ -145,7 +144,19 @@ body {
 	padding: 20px;
 }
 
-#partner {
+#partners {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+	padding: 20px 0;
+	background-color: #000;
+}
+
+#partners img {
+	margin: 0 10px;
+}
+
+#becomePartner {
 	width: 200px;
 	height: 50px;
 	margin: 0 auto;
@@ -216,19 +227,4 @@ body {
 
 #popups .popup-content h3 {
 	margin-top: 80px;
-}
-
-#popups .popup.partners {
-	width: 938px;
-	height: 700px;
-	max-height: 100vh;
-}
-
-#popups .popup.partners .popup-content {
-	padding: 0;
-	overflow: hidden;
-}
-
-#popups .popup.partners .content-wrapper {
-	padding: 20px;
 }
