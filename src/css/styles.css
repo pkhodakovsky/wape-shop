@@ -32,7 +32,7 @@ body {
 	margin: 0 auto;
 	font-family: Roboto;
 	color: #fff;
-	background-color: rgba(0, 0, 0, 0.5);
+	/*background-color: rgba(0, 0, 0, 0.5);*/
 	/*background: #000000;
 	background: -webkit-linear-gradient(to right, #434343, #000000);
 	background: linear-gradient(to right, #434343, #000000);*/
@@ -51,7 +51,7 @@ body {
 	/*background: #304352;
 	background: -webkit-linear-gradient(to right, #d7d2cc, #304352);
 	background: linear-gradient(to right, #d7d2cc, #304352);*/
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
 #social {
@@ -95,7 +95,9 @@ body {
 }
 
 #content {
+	padding-top: 10px;
 	padding-bottom: 30px;
+	background-color: rgba(0, 0, 0, 0.6);
 }
 
 #products {
@@ -202,6 +204,7 @@ body {
 	width: 50px;
 	height: 50px;
 	background: url("../../images/close-popup.png") no-repeat center/30px 30px;
+	z-index: 100;
 }
 
 #popups .popup-content {
@@ -213,4 +216,19 @@ body {
 
 #popups .popup-content h3 {
 	margin-top: 80px;
+}
+
+#popups .popup.partners {
+	width: 938px;
+	height: 700px;
+	max-height: 100vh;
+}
+
+#popups .popup.partners .popup-content {
+	padding: 0;
+	overflow: hidden;
+}
+
+#popups .popup.partners .content-wrapper {
+	padding: 20px;
 }

@@ -4,13 +4,33 @@ import TmRipple from './src/js/tmripple';
 
 const POPUP_VISIBLE_CLASS = 'visible';
 
+function documentPreventDefault(event) {
+	const mc = new Hammer(document);
+	mc.on('pan', event => event.preventDefault());
+}
+
 function initScrolls() {
+	initLiquidsScroll();
+	initPartnersPopupScroll();
+}
+
+function initLiquidsScroll() {
 	const liquidsEl = document.getElementById('liquids');
 	const liquidsScroll = new IScroll(liquidsEl, {
 		scrollX: true,
 		scrollY: false,
 		mouseWheel: true,
 		preventDefault: false,
+	});
+}
+
+function initPartnersPopupScroll() {
+	const partnersPopupEl = document.querySelector('#popups .popup.partners .popup-content');
+	const liquidsScroll = new IScroll(partnersPopupEl, {
+		scrollX: false,
+		scrollY: true,
+		mouseWheel: true,
+		preventDefault: true,
 	});
 }
 
@@ -46,8 +66,7 @@ function initPopups() {
 	});
 }
 
+documentPreventDefault();
 initScrolls();
 initTmripples();
 initPopups();
-
-touch().on('move', event => event.preventDefault());
