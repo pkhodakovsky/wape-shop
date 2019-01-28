@@ -9,6 +9,18 @@ function documentPreventDefault(event) {
 	mc.on('pan', event => event.preventDefault());
 }
 
+function initHandleMenuPosition() {
+	const menuEl = document.getElementById('menu');
+	const menuElOffset = menuEl.offsetTop;
+	document.addEventListener('scroll', (event) => {
+		if (window.pageYOffset > menuElOffset) {
+			menuEl.style.position = 'fixed';
+		} else {
+			menuEl.style.position = '';
+		}
+	});
+}
+
 function initScrolls() {
 	initLiquidsScroll();
 }
@@ -56,6 +68,7 @@ function initPopups() {
 }
 
 documentPreventDefault();
+initHandleMenuPosition();
 initScrolls();
 initTmripples();
 initPopups();

@@ -42,7 +42,14 @@ body {
 	height: 256px;
 }
 
+#menuWrapper {
+	width: 1024px;
+	height: 70px;
+}
+
 #menu {
+	top: 0;
+	width: 1024px;
 	height: 70px;
 	padding: 0 25px;
 	display: flex;
@@ -52,6 +59,7 @@ body {
 	background: -webkit-linear-gradient(to right, #d7d2cc, #304352);
 	background: linear-gradient(to right, #d7d2cc, #304352);*/
 	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 100;
 }
 
 #social {
@@ -87,15 +95,21 @@ body {
 	line-height: 2.4;
 }
 
-#contacts {
+#tels {
 	display: flex;
 	flex-direction: column;
-	color: #fff;
 	font-size: 13px;
 }
 
+#tels a,
+#tels a:hover,
+#tels a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
 #content {
-	padding-top: 10px;
+	padding-top: 80px;
 	padding-bottom: 30px;
 	background-color: rgba(0, 0, 0, 0.6);
 }
