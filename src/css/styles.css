@@ -102,7 +102,7 @@ body {
 }
 
 #tels .wrapper {
-	width: 170px;
+	width: 90px;
 	display: flex;
 	justify-content: space-between;
 }
@@ -136,7 +136,7 @@ body {
 }
 
 #products #liquids ul {
-	width: 1854px;
+	width: 1254px;
 	display: flex;
 	list-style: none;
 }
