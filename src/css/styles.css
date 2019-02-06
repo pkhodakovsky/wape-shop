@@ -133,6 +133,7 @@ body {
 	box-sizing: border-box;
 	padding: 20px 40px;
 	overflow: hidden;
+	background-color: #000;
 }
 
 #products #liquids ul {
@@ -142,7 +143,6 @@ body {
 }
 
 #liquids .liquid {
-	width: 265px;
 	height: 265px;
 	flex-shrink: 0;
 	margin: 0 20px;
