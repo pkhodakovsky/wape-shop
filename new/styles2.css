@@ -1,0 +1,33 @@
+#banner .inner {
+	width: 918px;
+	height: 615px;
+}
+#banner .logo {
+	width: 100%;
+	height: 415px;
+	background: url(./images/logo.png) center/contain no-repeat;
+}
+.spotlight .content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 3rem;
+}
+.spotlight .liquid-wrapper {
+	width: 27em;
+	height: 27em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2em;
+	background-color: #000;
+	box-shadow: 0 0 20px 5px #000;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.spotlight .liquid-wrapper img {
+	width: 18em;
+}
+.spotlight.accent1 {
+	background-color: #d8a13a;
+}
