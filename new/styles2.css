@@ -1,6 +1,6 @@
 #banner .inner {
-	width: 918px;
-	height: 615px;
+	width: 100%;
+	height: 100%;
 }
 #banner .logo {
 	width: 100%;
@@ -28,6 +28,58 @@
 .spotlight .liquid-wrapper img {
 	width: 18em;
 }
+@media screen and (max-width: 1100px) {
+	.spotlight .liquid-wrapper img {
+		width: 16em;
+	}
+}
+@media screen and (max-width: 980px) {
+	.spotlight .liquid-wrapper {
+		width: 20em;
+		height: 20em;
+	}
+	.spotlight .liquid-wrapper img {
+		width: 12em;
+	}
+}
 .spotlight.accent1 {
 	background-color: #d8a13a;
+}
+.spotlight.accent2 {
+	background-color: #35230c;
+}
+.spotlight.accent3 {
+	background-color: #e2d35a;
+}
+.spotlight.accent4 {
+	background-color: #2342c7;
+}
+#five .posts article {
+	width: 100%;
+}
+#five .posts ol {
+	text-align: left;
+}
+.wrapper.style1 {
+	background-color: #000000;
+}
+#menu {
+	background-color: #000;
+}
+#menu,
+#menu .close:before,
+#header a:active, #header a:hover, #header a:focus{
+	color: #888;
+}
+#social {
+	width: 150px;
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+#tels {
+	display: flex;
+	flex-direction: column;
+	font-size: 13px;
+	line-height: 1.3;
 }
