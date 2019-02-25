@@ -16,7 +16,7 @@
     background-color: #000;
 }
 #three .image.fit img {
-    width: initial;
+    width: 100%;
     margin: 0 auto;
 }
 #three .box {
