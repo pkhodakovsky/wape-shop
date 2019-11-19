@@ -1,0 +1,21 @@
+{
+  "name": "wape-shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pkhodakovsky/wape-shop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pkhodakovsky/wape-shop/issues"
+  },
+  "homepage": "https://github.com/pkhodakovsky/wape-shop#readme",
+  "devDependencies": {
+    "@vue/cli": "^4.0.5",
+    "vue": "^2.6.10"
+  }
+}

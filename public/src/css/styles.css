@@ -1,0 +1,53 @@
+#banner .logo {
+    width: 40em;
+    max-width: 100%;
+    height: 20em;
+    margin-bottom: 5em;
+    background: url(../../images/logo.png) center/contain no-repeat;
+}
+#two #flexgrid {
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+#two #flexgrid > * {
+    width: initial;
+}
+#three .image.fit {
+    background-color: #000;
+}
+#three .image.fit img {
+    width: 100%;
+    margin: 0 auto;
+}
+#three .box {
+    background: none;
+}
+#four .inner {
+    padding: 0 20px;
+}
+#four .inner .advantages {
+    text-align: left;
+}
+#partners {
+    width: 100%;
+    padding-top: 20px;
+    background-color: #000;
+}
+@media screen and (max-width: 480px) {
+    #partners img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+#social {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+#tels {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    line-height: 1.3;
+}
