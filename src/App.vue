@@ -7,6 +7,7 @@
     <!-- Header -->
     <header id="header" class="alt">
       <div class="logo"><router-link to="/">Royal Vape</router-link></div>
+      <Cart/>
       <a href="#menu" class="toggle"><span>Menu</span></a>
     </header>
 
@@ -47,3 +48,12 @@
     <router-view/>
   </div>
 </template>
+<script>
+import Cart from '@/components/Cart.vue';
+
+export default {
+  components: {
+    Cart,
+  },
+};
+</script>

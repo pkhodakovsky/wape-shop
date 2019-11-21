@@ -31,6 +31,7 @@
       <div class="inner">
         <div class="grid-style">
           <liquidItem
+            id="wildWest_cowboyGirl"
             :image="liquid4"
             :title="`<h2>WILD WEST</h2>`"
             :list="[
@@ -66,7 +67,7 @@
                     вам как правильно расслабляться. Нежный фруктовый десерт из свежей клубники,
                     банана нарезанного кольцами и взбитыми сливками.`,
             ]'/>
-          <liquidItem
+          <!--<liquidItem
             :image="liquid2"
             :title='`<h2>DAILY STEAM</h2><p>(Табачка)</p>`'
             :list='[
@@ -87,7 +88,7 @@
               `<b>Gum</b> – Фруктовая жевательная резинка`,
               `<b>Currant</b> – Кислая смородина`,
               `<b>Juice</b> – Микс граната, грейпфрута, манго и тонкой ноткой лайма`,
-            ]'/>
+            ]'/>-->
 
         </div>
       </div>
@@ -199,12 +200,14 @@
         </section>
       </div>
     </footer>
+    <LiquidDetailsPopup/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import LiquidItem from '@/components/LiquidItem.vue';
+import LiquidDetailsPopup from '@/components/LiquidDetailsPopup.vue';
 
 import liquid1 from '../../public/images/liquids/liquid1.jpg';
 import liquid2 from '../../public/images/liquids/liquid2.jpg';
@@ -215,6 +218,7 @@ export default {
   name: 'home',
   components: {
     LiquidItem,
+    LiquidDetailsPopup,
   },
   data() {
     return {
