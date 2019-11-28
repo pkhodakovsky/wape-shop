@@ -20,6 +20,7 @@
     margin: 0 auto;
 }
 #three .box {
+    position: relative;
     background: none;
 }
 #four .inner {

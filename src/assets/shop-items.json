@@ -58,6 +58,15 @@
       "cost": "25"
     },
     {
+      "id": "royal_lemonade",
+      "type": "liquids",
+      "subtype": "royal",
+      "subtypeName": "ROYAL",
+      "name": "Lemonade",
+      "description": "Освежающий и утоляющий жажду напиток из нашего детства. Кислые, но приятные нотки лимонного сока с газировкой заряжают бодростью на целый день и поднимают настроение. Если вы ведете активный образ жизни и не любите останавливаться – эта жидкость 100% ваша!",
+      "cost": "25"
+    },
+    {
       "id": "royal_paradisePleasure",
       "type": "liquids",
       "subtype": "royal",
@@ -65,6 +74,105 @@
       "name": "Paradise pleasure",
       "description": "Настоящее \"Райское наслаждение\", этот вкус покажет вам как правильно расслабляться. Нежный фруктовый десерт из свежей клубники, банана нарезанного кольцами и взбитыми сливками.",
       "cost": "26"
+    },
+    {
+      "id": "dailySteamTobacco_island",
+      "type": "liquids",
+      "subtype": "dailySteamTobacco",
+      "subtypeName": "<h2>DAILY STEAM</h2><p>(Табачка)</p>",
+      "name": "Island",
+      "description": "Табачный лист в шоколадной глазури пропитанный кокосовым молоком",
+      "cost": "27"
+    },
+    {
+      "id": "dailySteamTobacco_ry4",
+      "type": "liquids",
+      "subtype": "dailySteamTobacco",
+      "subtypeName": "<h2>DAILY STEAM</h2><p>(Табачка)</p>",
+      "name": "RY4",
+      "description": "Крепкий, с кислиной, табачный вкус для ценителей классики",
+      "cost": "28"
+    },
+    {
+      "id": "dailySteamTobacco_luckyStrike",
+      "type": "liquids",
+      "subtype": "dailySteamTobacco",
+      "subtypeName": "<h2>DAILY STEAM</h2><p>(Табачка)</p>",
+      "name": "Lucky strike",
+      "description": "Настоящий американский вкус табака с мягким послевкусием",
+      "cost": "29"
+    },
+    {
+      "id": "dailySteamTobacco_kent",
+      "type": "liquids",
+      "subtype": "dailySteamTobacco",
+      "subtypeName": "<h2>DAILY STEAM</h2><p>(Табачка)</p>",
+      "name": "KENT",
+      "description": "Классический табачный вкус популярных сигарет. Немного терпкий с кислинкой",
+      "cost": "30"
+    },
+    {
+      "id": "dailySteamTobacco_davidoff",
+      "type": "liquids",
+      "subtype": "dailySteamTobacco",
+      "subtypeName": "<h2>DAILY STEAM</h2><p>(Табачка)</p>",
+      "name": "Davidoff",
+      "description": "Нежный табачный вкус с нотками меда и шоколада",
+      "cost": "31"
+    },
+    {
+      "id": "dailySteamFruits_mango",
+      "type": "liquids",
+      "subtype": "dailySteamFruits",
+      "subtypeName": "<h2>DAILY STEAM</h2><p>(Фрукты)</p>",
+      "name": "Mango",
+      "description": "Спелое манго",
+      "cost": "32"
+    },
+    {
+      "id": "dailySteamFruits_exotic",
+      "type": "liquids",
+      "subtype": "dailySteamFruits",
+      "subtypeName": "<h2>DAILY STEAM</h2><p>(Фрукты)</p>",
+      "name": "Exotic",
+      "description": "Освежающий микс апельсина, манго и киви",
+      "cost": "33"
+    },
+    {
+      "id": "dailySteamFruits_peach",
+      "type": "liquids",
+      "subtype": "dailySteamFruits",
+      "subtypeName": "<h2>DAILY STEAM</h2><p>(Фрукты)</p>",
+      "name": "Peach",
+      "description": "Сладкий сочный персик",
+      "cost": "34"
+    },
+    {
+      "id": "dailySteamFruits_gum",
+      "type": "liquids",
+      "subtype": "dailySteamFruits",
+      "subtypeName": "<h2>DAILY STEAM</h2><p>(Фрукты)</p>",
+      "name": "Gum",
+      "description": "Фруктовая жевательная резинка",
+      "cost": "35"
+    },
+    {
+      "id": "dailySteamFruits_currant",
+      "type": "liquids",
+      "subtype": "dailySteamFruits",
+      "subtypeName": "<h2>DAILY STEAM</h2><p>(Фрукты)</p>",
+      "name": "Currant",
+      "description": "Кислая смородина",
+      "cost": "36"
+    },
+    {
+      "id": "dailySteamFruits_juice",
+      "type": "liquids",
+      "subtype": "dailySteamFruits",
+      "subtypeName": "<h2>DAILY STEAM</h2><p>(Фрукты)</p>",
+      "name": "Juice",
+      "description": "Микс граната, грейпфрута, манго и тонкой ноткой лайма",
+      "cost": "37"
     }
   ]
 }

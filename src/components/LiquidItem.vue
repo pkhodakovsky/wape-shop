@@ -6,7 +6,7 @@
     </div>
     <div class="content">
       <header class="align-center">
-        <h2 v-html="title"></h2>
+        <div v-html="title"></div>
       </header>
       <hr/>
       <ul>
@@ -25,22 +25,29 @@ export default {
   data() {
     return {
       isOpened: false,
+      list: this.getList(),
     };
   },
   props: {
     id: String,
     image: String,
     title: String,
-    list: Array,
   },
   methods: {
     ...mapMutations('liquidDetails', ['openPopup']),
+    getList() {
+      return this.$store.state.shopItems.items
+        .filter(({ subtype }) => subtype === this.id)
+        .map(({ name, description }) => `<b>${name}</b> – ${description}`);
+    },
   },
 };
 </script>
 
 <style scoped>
   .open-popup {
+    position: absolute;
+    bottom: 0;
     width: 100%;
     background-color: grey;
     padding: 5px 0;
