@@ -49,11 +49,23 @@
   </div>
 </template>
 <script>
+import { mapMutations } from 'vuex';
+
 import Cart from '@/components/Cart.vue';
 
 export default {
   components: {
     Cart,
   },
+  methods: {
+    ...mapMutations('cart', ['setCart']),
+  },
+  beforeMount() {
+    this.setCart({ cart: JSON.parse(localStorage.getItem('royal-vape-cart')), filter: true });
+  },
 };
 </script>
+<style>
+  @import '../public/src/css/main.css';
+  @import '../public/src/css/styles.css';
+</style>

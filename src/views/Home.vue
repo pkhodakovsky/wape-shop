@@ -190,6 +190,4 @@ export default {
 };
 </script>
 <style>
-  @import '../../public/src/css/main.css';
-  @import '../../public/src/css/styles.css';
 </style>
