@@ -10,7 +10,7 @@
       "subtypeName": "WILD WEST",
       "name": "Cowboy girl",
       "description": "Нежный <i>бисквитный пирог</i> с начинкой из спелой, сочной <i>малины</i>. Мягкий и легкий вкус десерта, дополняет свежая и сладкая ягода на выдохе. Любители попарить и расслабится оценят эту жидкость по достоинству",
-      "cost": "19"
+      "cost": 19
     },
     {
       "id": "wildWest_sherif",
@@ -19,7 +19,7 @@
       "subtypeName": "WILD WEST",
       "name": "Sherif",
       "description": "Тост с легкой прожаренной корочкой и сладким <i>клубничным вареньем</i>. Эта жидкость заставит вас погрузиться в детство и получить незабываемое наслаждение от всеми любимого лакомства",
-      "cost": "20"
+      "cost": 20
     },
     {
       "id": "wildWest_legends",
@@ -28,7 +28,7 @@
       "subtypeName": "WILD WEST",
       "name": "Legends",
       "description": "Жевательная резинка со вкусом <i>медовой дыни</i> и спелой, сочной <i>клубники</i>. Легкий фруктовый микс со сладким послевкусием. Освежающая жидкость отлично подойдет на повседневное парение",
-      "cost": "22"
+      "cost": 22
     },
     {
       "id": "wildWest_bandit",
@@ -37,7 +37,7 @@
       "subtypeName": "WILD WEST",
       "name": "Bandit",
       "description": "Невероятно бодрящий вкус крепкого <i>мокачино</i> с тонкой <i>ореховой</i> ноткой. Основной кофейный вкус передан очень четко и насыщено, а ореховое послевкусие не оставит равнодушным ни одного парильщика",
-      "cost": "23"
+      "cost": 23
     },
     {
       "id": "royal_watermelonGum",
@@ -46,7 +46,7 @@
       "subtypeName": "ROYAL",
       "name": "Watermelon gum",
       "description": "Мягкая жевательная резинка с насыщенным вкусом спелого арбуза и нотками клубники на выдохе. Настоящие ценители сладких и освежающих вкусов оценят эту жидкость и она станет вашим повседневным другом.",
-      "cost": "24"
+      "cost": 24
     },
     {
       "id": "royal_strawberryMilkshake",
@@ -55,7 +55,7 @@
       "subtypeName": "ROYAL",
       "name": "Strawberry milkshake",
       "description": "Вкуснейший напиток, который обожают люди на всей планете. Нежная и сочная клубника в сочетании со сливочным мороженным и молоком расслабляют и заставляют ощутить незабываемое наслаждение.",
-      "cost": "25"
+      "cost": 25
     },
     {
       "id": "royal_lemonade",
@@ -64,7 +64,7 @@
       "subtypeName": "ROYAL",
       "name": "Lemonade",
       "description": "Освежающий и утоляющий жажду напиток из нашего детства. Кислые, но приятные нотки лимонного сока с газировкой заряжают бодростью на целый день и поднимают настроение. Если вы ведете активный образ жизни и не любите останавливаться – эта жидкость 100% ваша!",
-      "cost": "25"
+      "cost": 25
     },
     {
       "id": "royal_paradisePleasure",
@@ -73,7 +73,7 @@
       "subtypeName": "ROYAL",
       "name": "Paradise pleasure",
       "description": "Настоящее \"Райское наслаждение\", этот вкус покажет вам как правильно расслабляться. Нежный фруктовый десерт из свежей клубники, банана нарезанного кольцами и взбитыми сливками.",
-      "cost": "26"
+      "cost": 26
     },
     {
       "id": "dailySteamTobacco_island",
@@ -82,7 +82,7 @@
       "subtypeName": "<h2>DAILY STEAM</h2><p>(Табачка)</p>",
       "name": "Island",
       "description": "Табачный лист в шоколадной глазури пропитанный кокосовым молоком",
-      "cost": "27"
+      "cost": 27
     },
     {
       "id": "dailySteamTobacco_ry4",
@@ -91,7 +91,7 @@
       "subtypeName": "<h2>DAILY STEAM</h2><p>(Табачка)</p>",
       "name": "RY4",
       "description": "Крепкий, с кислиной, табачный вкус для ценителей классики",
-      "cost": "28"
+      "cost": 28
     },
     {
       "id": "dailySteamTobacco_luckyStrike",
@@ -100,7 +100,7 @@
       "subtypeName": "<h2>DAILY STEAM</h2><p>(Табачка)</p>",
       "name": "Lucky strike",
       "description": "Настоящий американский вкус табака с мягким послевкусием",
-      "cost": "29"
+      "cost": 29
     },
     {
       "id": "dailySteamTobacco_kent",
@@ -109,7 +109,7 @@
       "subtypeName": "<h2>DAILY STEAM</h2><p>(Табачка)</p>",
       "name": "KENT",
       "description": "Классический табачный вкус популярных сигарет. Немного терпкий с кислинкой",
-      "cost": "30"
+      "cost": 30
     },
     {
       "id": "dailySteamTobacco_davidoff",
@@ -118,7 +118,7 @@
       "subtypeName": "<h2>DAILY STEAM</h2><p>(Табачка)</p>",
       "name": "Davidoff",
       "description": "Нежный табачный вкус с нотками меда и шоколада",
-      "cost": "31"
+      "cost": 31
     },
     {
       "id": "dailySteamFruits_mango",
@@ -127,7 +127,7 @@
       "subtypeName": "<h2>DAILY STEAM</h2><p>(Фрукты)</p>",
       "name": "Mango",
       "description": "Спелое манго",
-      "cost": "32"
+      "cost": 32
     },
     {
       "id": "dailySteamFruits_exotic",
@@ -136,7 +136,7 @@
       "subtypeName": "<h2>DAILY STEAM</h2><p>(Фрукты)</p>",
       "name": "Exotic",
       "description": "Освежающий микс апельсина, манго и киви",
-      "cost": "33"
+      "cost": 33
     },
     {
       "id": "dailySteamFruits_peach",
@@ -145,7 +145,7 @@
       "subtypeName": "<h2>DAILY STEAM</h2><p>(Фрукты)</p>",
       "name": "Peach",
       "description": "Сладкий сочный персик",
-      "cost": "34"
+      "cost": 34
     },
     {
       "id": "dailySteamFruits_gum",
@@ -154,7 +154,7 @@
       "subtypeName": "<h2>DAILY STEAM</h2><p>(Фрукты)</p>",
       "name": "Gum",
       "description": "Фруктовая жевательная резинка",
-      "cost": "35"
+      "cost": 35
     },
     {
       "id": "dailySteamFruits_currant",
@@ -163,7 +163,7 @@
       "subtypeName": "<h2>DAILY STEAM</h2><p>(Фрукты)</p>",
       "name": "Currant",
       "description": "Кислая смородина",
-      "cost": "36"
+      "cost": 36
     },
     {
       "id": "dailySteamFruits_juice",
@@ -172,7 +172,7 @@
       "subtypeName": "<h2>DAILY STEAM</h2><p>(Фрукты)</p>",
       "name": "Juice",
       "description": "Микс граната, грейпфрута, манго и тонкой ноткой лайма",
-      "cost": "37"
+      "cost": 37
     }
   ]
 }

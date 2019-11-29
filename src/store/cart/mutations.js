@@ -1,6 +1,9 @@
 export default {
-  addItem(state, payload) {
-    state.items.push(payload);
+  setCart(state, cart) {
+    while (state.items.length) {
+      state.items.pop();
+    }
+    Object.assign(state.items, cart);
   },
   removeItem() {},
 };

@@ -1,11 +1,12 @@
 <template>
   <div class="popup" v-if="isOpened">
     <div class="liquids-wrapper">
-      <div class="close-popup" @click="closePopup">Close</div>
-      <div class="liquid" v-for="liquid in liquids" :key="liquid.id">
+      <div class="close-popup" @click="closePopup"></div>
+      <div class="liquid" v-for="(liquid, index) in liquids" :key="liquid.id">
         <span class="name">{{ liquid.name }}</span>
-        <input type="number" min="0" max="100" value="0"/>
-        <div class="add-to-cart" @click="addItem({ id: liquid.id })">
+        <input type="number" min="0" max="100" v-model="liquidsCount[index]"/>
+        <div class="add-to-cart button special"
+             @click="addItem({ id: liquid.id, count: +liquidsCount[index] })">
           Добавить в корзину
         </div>
       </div>
@@ -22,6 +23,9 @@ export default {
     ...mapState('liquidDetails', ['isOpened', 'id']),
     liquids() {
       return this.$store.state.shopItems.items.filter(({ subtype }) => subtype === this.id);
+    },
+    liquidsCount() {
+      return this.liquids.map(() => 0);
     },
   },
   methods: {
@@ -48,28 +52,31 @@ export default {
   }
   .liquids-wrapper {
     position: relative;
-    width: 50%;
-    height: 50%;
+    width: 60%;
     border-radius: 20px;
     box-sizing: border-box;
-    padding: 20px 30px;
-    background-color: grey;
+    border: .5em solid #71b2f0;
+    padding: 20px 40px;
+    background-color: #fff
   }
   .close-popup {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 3px;
+    right: 3px;
+    width: 32px;
+    height: 32px;
+    background: url("../../public/images/close-popup.png") center/contain no-repeat;
+    cursor: pointer;
   }
   .liquid {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
   }
   .liquid .name {
     width: 40%;
-  }
-  .add-to-cart {
-    background-color: grey;
-    padding: 5px 10px;
-    border-radius: 10px;
-    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
   }
 </style>
