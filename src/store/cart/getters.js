@@ -1,3 +1,6 @@
 export default {
-  amount: state => state.items.reduce((amount, { cost, count }) => (amount + (cost * count)), 0),
+  amount(state) {
+    const amount = state.items.reduce((summ, { cost, count }) => (summ + (cost * count)), 0);
+    return `${amount.toLocaleString()} грн.`;
+  },
 };

@@ -18,7 +18,7 @@
         2
       </text>
     </svg>
-    <span class="amount">{{ amount | cash }}</span>
+    <span class="amount">{{ amount }}</span>
   </router-link>
 </template>
 
@@ -33,11 +33,6 @@ export default {
   },
   computed: {
     ...mapGetters('cart', ['amount']),
-  },
-  filters: {
-    cash(value) {
-      return `${value} грн.`;
-    },
   },
 };
 </script>
