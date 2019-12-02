@@ -20,7 +20,8 @@ export default {
     const cart = Object.assign([], state.items);
     const indexExist = cart.findIndex(({ id }) => id === payload.id);
     if (indexExist !== -1) {
-      commit('setCart', { cart: cart.slice(0, indexExist) });
+      cart.splice(indexExist, 1);
+      commit('setCart', { cart });
     }
   },
 };

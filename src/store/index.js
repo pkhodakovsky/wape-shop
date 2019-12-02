@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-import shopItems from '@/assets/shop-items.json';
+import shopItems from '../assets/shop-items';
 import cart from './cart';
 import liquidDetails from './liquid-details';
 
