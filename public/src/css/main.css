@@ -46,6 +46,7 @@
 	}
 
 	body {
+		height: 100%;
 		-webkit-text-size-adjust: none;
 	}
 
@@ -1585,6 +1586,7 @@
 /* Type */
 
 	html {
+		height: 100%;
 		font-size: 13pt;
 	}
 
@@ -3523,11 +3525,10 @@
 			-webkit-animation: none;
 			-ms-animation: none;
 			animation: none;
-			background-color: transparent;
 			box-shadow: none;
 			overflow: hidden;
 			position: absolute;
-			top: .5em;
+			padding-top: .5em;
 		}
 
 			#header.alt h1 {
@@ -3536,6 +3537,10 @@
 
 			#header.alt nav {
 				right: 2.5em;
+			}
+
+			#header.alt .logo {
+				top: 0;
 			}
 
 	@media screen and (max-width: 980px) {

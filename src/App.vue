@@ -68,4 +68,8 @@ export default {
 <style>
   @import '../public/src/css/main.css';
   @import '../public/src/css/styles.css';
+
+  #app {
+    height: 100%;
+  }
 </style>

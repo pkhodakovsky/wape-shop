@@ -18,18 +18,23 @@
         2
       </text>
     </svg>
-    <span class="amount">{{ amount }}</span>
+    <span class="amount">{{ amount | amountFilter }}</span>
   </router-link>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
 
+import { amount as amountFilter } from '@/utils';
+
 export default {
   name: 'Cart',
-  date() {
+  data() {
     return {
     };
+  },
+  filters: {
+    amountFilter,
   },
   computed: {
     ...mapGetters('cart', ['amount']),
