@@ -47,6 +47,11 @@
             :image="liquid3"
             :title='`<h2>DAILY STEAM</h2><p>(Фрукты)</p>`'/>
         </div>
+        <div class="button special open-shop">
+          <router-link to="/shop">
+            Перейти в магазин
+          </router-link>
+        </div>
       </div>
     </section>
 
@@ -156,14 +161,12 @@
         </section>
       </div>
     </footer>
-    <LiquidDetailsPopup/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import LiquidItem from '@/components/LiquidItem.vue';
-import LiquidDetailsPopup from '@/components/LiquidDetailsPopup.vue';
 
 import liquid1 from '../../public/images/liquids/liquid1.jpg';
 import liquid2 from '../../public/images/liquids/liquid2.jpg';
@@ -174,7 +177,6 @@ export default {
   name: 'home',
   components: {
     LiquidItem,
-    LiquidDetailsPopup,
   },
   data() {
     return {
@@ -189,5 +191,14 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
+  .open-shop {
+    position: relative;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+  }
+  .open-shop a {
+    color: #fff;
+    text-decoration: none;
+  }
 </style>

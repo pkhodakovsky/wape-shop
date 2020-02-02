@@ -43,7 +43,7 @@ export default {
 <style scoped>
   .cart {
     position: relative;
-    min-height: 100%;
+    min-height: 100vh;
     box-sizing: border-box;
     padding-top: 4.25em;
     background-image: url('../../public/images/bg.jpg');
@@ -51,8 +51,6 @@ export default {
     background-attachment: fixed;
     background-position: center;
     color: #fff;
-  }
-  .cart h2 {
   }
   .inner {
     width: 80rem;

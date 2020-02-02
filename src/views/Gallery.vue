@@ -219,7 +219,7 @@ export default {
     };
   },
   mounted() {
-    this.jgallery = window.JGallery.create(this.images, { previewSize: 'contain', slideShowAutoStart: true });
+    this.jgallery = window.JGallery.create(this.images, { previewSize: 'contain', slideShowAutoStart: true, browserHistory: false });
     this.$refs.gallery
       .appendChild(this.jgallery.getElement());
   },

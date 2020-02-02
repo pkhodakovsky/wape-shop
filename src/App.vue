@@ -16,6 +16,7 @@
       <ul class="links">
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/gallery">Gallery</router-link></li>
+        <li><router-link to="/shop">Shop</router-link></li>
       </ul>
 
       <div id="social">

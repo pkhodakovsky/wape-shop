@@ -13,18 +13,14 @@
         <li v-for="(item, index) in list" :key="index" v-html="item"></li>
       </ul>
     </div>
-    <div class="open-popup button special" @click="openPopup({ id })">Подробнее</div>
   </div>
 </template>
 
 <script>
-import { mapMutations } from 'vuex';
-
 export default {
   name: 'LiquidItem',
   data() {
     return {
-      isOpened: false,
       list: this.getList(),
     };
   },
@@ -34,7 +30,6 @@ export default {
     title: String,
   },
   methods: {
-    ...mapMutations('liquidDetails', ['openPopup']),
     getList() {
       return this.$store.state.shopItems.items
         .filter(({ subtype }) => subtype === this.id)
@@ -43,11 +38,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-  .open-popup {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-</style>
