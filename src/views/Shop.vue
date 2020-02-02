@@ -14,7 +14,7 @@
       <div class="main">
         <div class="shop-item" v-for="item in shownItems" :key="item.id">
           <div class="img">
-            <img :src="item.image" :alt="item.name" width="150px" height="auto">
+            <img :src="item.image" :alt="item.name" width="320px" height="auto">
           </div>
           <div class="data">
             <h4 class="name">{{ item.name }}</h4>
@@ -66,6 +66,7 @@ export default {
   }
   .inner {
     width: 80rem;
+    max-width: 100vw;
     margin: 0 auto;
     display: flex;
   }
@@ -82,6 +83,9 @@ export default {
     padding: 1em 2em;
     background-color: rgba(0, 0, 0, .75);
   }
+  .shop-item img {
+    width: 160px;
+  }
   .shop-item .data {
     width: 100%;
     margin: 0 1em;
@@ -89,5 +93,18 @@ export default {
   .shop-item .data .name {
     font-weight: bold;
     margin: 0;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .shop-item {
+      flex-direction: column;
+    }
+    .shop-item img {
+      width: 320px;
+    }
+    .shop-item .name,
+    .shop-item .cost {
+      text-align: center;
+    }
   }
 </style>

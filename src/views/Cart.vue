@@ -4,13 +4,16 @@
       <h2>Корзина:</h2>
       <div class="items-wrapper">
         <div class="cart-item" v-for="item in items" :key="item.id">
-          <img width="128px" height="128px" :src="item.image" :alt="item.name"/>
-          <span class="name">{{ item.name }}</span>
-          <span class="cost">{{ item.cost | amountFilter }}</span>
-          x
-          <input type="number" min="0" max="100" v-model="item.count"
-                 @change="updateItem({ id: item.id, count: +item.count })"/>
-          <span class="item-amount">{{ item.cost * (+item.count) | amountFilter }}</span>
+          <img width="256px" height="auto" :src="item.image" :alt="item.name"/>
+          <h4 class="name">{{ item.name }}</h4>
+          <span class="item-amount">
+            <span class="cost">{{ item.cost | amountFilter }}</span>
+            x
+            <input type="number" min="0" max="100" v-model="item.count"
+                   @change="updateItem({ id: item.id, count: +item.count })"/>
+            &nbsp;
+            <span class="item-amount">{{ item.cost * (+item.count) | amountFilter }}</span>
+          </span>
           <div class="remove-item button special" @click="removeItem({ id: item.id })">Удалить</div>
         </div>
       </div>
@@ -54,6 +57,7 @@ export default {
   }
   .inner {
     width: 80rem;
+    max-width: 100vw;
     margin: 0 auto;
   }
   .cart-item {
@@ -64,10 +68,29 @@ export default {
     background-color: rgba(0, 0, 0, .75);
     padding: 1em 4em;
   }
+  .cart-item img {
+    width: 128px;
+  }
   .cart-item .name {
     width: 50%;
+    margin: 0;
   }
   .amount {
     padding: 20px 0;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .cart-item {
+      flex-direction: column;
+      text-align: center;
+    }
+    .cart-item img {
+      width: 256px;
+    }
+    .cart-item .name,
+    .cart-item .item-amount,
+    .cart-item .remove-item {
+      margin-top: 1em;
+    }
   }
 </style>
