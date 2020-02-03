@@ -7,7 +7,56 @@ export default {
   types: [
     {
       id: 'liquids',
-      name: 'Жидкости',
+      name: 'Жидкости для электронных сигарет',
+      checked: true,
+    },
+    {
+      id: 'samozames',
+      name: 'Всё для "самозамеса"',
+      checked: true,
+      sub: [
+        {
+          id: 'nicotine',
+          name: 'Никотин',
+          checked: true,
+        },
+        {
+          id: 'bases',
+          name: 'Готовые базы',
+          checked: true,
+        },
+        {
+          id: 'aroma',
+          name: 'Ароматизаторы',
+          checked: true,
+        },
+      ],
+    },
+    {
+      id: 'hard',
+      name: 'Железо',
+      checked: true,
+      sub: [
+        {
+          id: 'e-sigurs',
+          name: 'Электронные сигареты',
+          checked: true,
+        },
+        {
+          id: 'modes',
+          name: 'Моды',
+          checked: true,
+        },
+        {
+          id: 'atomizers',
+          name: 'Атомайзеры',
+          checked: true,
+        },
+      ],
+    },
+    {
+      id: 'other',
+      name: 'Аккумуляторы, расходники, обслужка',
       checked: true,
     },
   ],
