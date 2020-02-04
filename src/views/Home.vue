@@ -31,21 +31,45 @@
       <div class="inner">
         <div class="grid-style">
           <liquidItem
-            :id="'wildWest'"
-            :image="liquid4"
+            id="wildWest"
+            :image="wildWestImage"
             :title="`<h2>WILD WEST</h2>`"/>
           <liquidItem
-            :id="'royal'"
-            :image="liquid1"
-            :title="`<h2>ROYAL</h2>`"/>
+            id="cards"
+            :image="cardsImage"
+            :title="`<h2>CARDS</h2>`"/>
           <liquidItem
-            :id="'dailySteamTobacco'"
-            :image="liquid2"
+            id="dailySteamTobacco"
+            :image="dailySteamTobaccoImage"
             :title='`<h2>DAILY STEAM</h2><p>(Табачка)</p>`'/>
           <liquidItem
-            :id="'dailySteamFruits'"
-            :image="liquid3"
+            id="dailySteamFruits"
+            :image="dailySteamFruitsImage"
             :title='`<h2>DAILY STEAM</h2><p>(Фрукты)</p>`'/>
+          <liquidItem
+            id="tobacco"
+            :image="tobaccoImage"
+            :title='`<h2>TOBACCO</h2>`'/>
+          <liquidItem
+            id="tobaccoSmall"
+            :image="tobaccoSmallImage"
+            :title='`<h2>TOBACCO</h2><p>(small)</p>`'/>
+          <liquidItem
+            id="deadPirate"
+            :image="deadPirateImage"
+            :title='`<h2>DEAD PIRATE</h2>`'/>
+          <liquidItem
+            id="simpsons"
+            :image="simpsonsImage"
+            :title='`<h2>SIMPSONS</h2>`'/>
+          <liquidItem
+            id="iceApow"
+            :image="iceApowImage"
+            :title='`<h2>ICE APOW</h2>`'/>
+          <liquidItem
+            id="vapeDrinks"
+            :image="vapeDrinksImage"
+            :title='`<h2>VAPE DRINK</h2>`'/>
         </div>
         <div class="button special open-shop">
           <router-link to="/shop">
@@ -168,10 +192,16 @@
 // @ is an alias to /src
 import LiquidItem from '@/components/LiquidItem.vue';
 
-import liquid1 from '../../public/images/liquids/liquid1.jpg';
-import liquid2 from '../../public/images/liquids/liquid2.jpg';
-import liquid3 from '../../public/images/liquids/liquid3.jpg';
-import liquid4 from '../../public/images/liquids/liquid4.jpg';
+import wildWestImage from '../../public/images/liquids/wild-west.png';
+import cardsImage from '../../public/images/liquids/cards.png';
+import dailySteamFruitsImage from '../../public/images/liquids/daily-steam-fruits.png';
+import dailySteamTobaccoImage from '../../public/images/liquids/daily-steam-tobacco.png';
+import tobaccoImage from '../../public/images/liquids/tobacco.png';
+import tobaccoSmallImage from '../../public/images/liquids/tobacco-small.png';
+import deadPirateImage from '../../public/images/liquids/dead-pirate.png';
+import simpsonsImage from '../../public/images/liquids/simpsons.png';
+import iceApowImage from '../../public/images/liquids/ice-apow.png';
+import vapeDrinksImage from '../../public/images/liquids/vape-drinks.png';
 
 export default {
   name: 'home',
@@ -180,10 +210,16 @@ export default {
   },
   data() {
     return {
-      liquid1,
-      liquid2,
-      liquid3,
-      liquid4,
+      wildWestImage,
+      cardsImage,
+      dailySteamFruitsImage,
+      dailySteamTobaccoImage,
+      tobaccoImage,
+      tobaccoSmallImage,
+      deadPirateImage,
+      simpsonsImage,
+      iceApowImage,
+      vapeDrinksImage,
     };
   },
   mounted() {

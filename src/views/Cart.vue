@@ -70,7 +70,7 @@ export default {
   }
   .inner {
     width: 80rem;
-    max-width: 100vw;
+    max-width: 95vw;
     margin: 0 auto;
   }
   .items-wrapper.empty {

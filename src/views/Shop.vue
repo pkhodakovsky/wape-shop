@@ -80,7 +80,7 @@ export default {
   }
   .inner {
     width: 80rem;
-    max-width: 100vw;
+    max-width: 95vw;
     min-height: 85vh;
     margin: 0 auto;
     display: flex;
@@ -166,6 +166,13 @@ export default {
     .shop-item .name,
     .shop-item .cost {
       text-align: center;
+    }
+    .inner {
+      flex-direction: column;
+    }
+    .filters,
+    .main {
+      width: 100%;
     }
   }
 </style>

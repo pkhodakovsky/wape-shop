@@ -12,9 +12,6 @@
 #two #flexgrid > * {
     width: initial;
 }
-#three .image.fit {
-    background-color: #000;
-}
 #three .image.fit img {
     width: 100%;
     margin: 0 auto;
