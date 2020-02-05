@@ -76,6 +76,7 @@ export default {
       name: 'Cowboy girl',
       description: 'Нежный <i>бисквитный пирог</i> с начинкой из спелой, сочной <i>малины</i>. Мягкий и легкий вкус десерта, дополняет свежая и сладкая ягода на выдохе. Любители попарить и расслабится оценят эту жидкость по достоинству',
       cost: 19,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'wildWest_sherif',
@@ -86,6 +87,7 @@ export default {
       name: 'Sherif',
       description: 'Тост с легкой прожаренной корочкой и сладким <i>клубничным вареньем</i>. Эта жидкость заставит вас погрузиться в детство и получить незабываемое наслаждение от всеми любимого лакомства',
       cost: 20,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'wildWest_legends',
@@ -96,6 +98,7 @@ export default {
       name: 'Legends',
       description: 'Жевательная резинка со вкусом <i>медовой дыни</i> и спелой, сочной <i>клубники</i>. Легкий фруктовый микс со сладким послевкусием. Освежающая жидкость отлично подойдет на повседневное парение',
       cost: 22,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'wildWest_bandit',
@@ -106,6 +109,7 @@ export default {
       name: 'Bandit',
       description: 'Невероятно бодрящий вкус крепкого <i>мокачино</i> с тонкой <i>ореховой</i> ноткой. Основной кофейный вкус передан очень четко и насыщено, а ореховое послевкусие не оставит равнодушным ни одного парильщика',
       cost: 23,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'cards_ten',
@@ -116,6 +120,7 @@ export default {
       name: 'Ten',
       description: '',
       cost: 24,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'cards_jack',
@@ -126,6 +131,7 @@ export default {
       name: 'Jack',
       description: '',
       cost: 25,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'cards_queen',
@@ -136,6 +142,7 @@ export default {
       name: 'Queen',
       description: '',
       cost: 25,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'cards_king',
@@ -146,6 +153,7 @@ export default {
       name: 'King',
       description: '',
       cost: 26,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'cards_ace',
@@ -156,6 +164,7 @@ export default {
       name: 'Ace',
       description: '',
       cost: 26,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'dailySteamTobacco_island',
@@ -166,6 +175,7 @@ export default {
       name: 'Island',
       description: 'Табачный лист в шоколадной глазури пропитанный кокосовым молоком',
       cost: 27,
+      strength: [1.5, 3],
     },
     {
       id: 'dailySteamTobacco_ry4',
@@ -176,6 +186,7 @@ export default {
       name: 'RY4',
       description: 'Крепкий, с кислиной, табачный вкус для ценителей классики',
       cost: 28,
+      strength: [1.5, 3],
     },
     {
       id: 'dailySteamTobacco_luckyStrike',
@@ -186,6 +197,7 @@ export default {
       name: 'Lucky strike',
       description: 'Настоящий американский вкус табака с мягким послевкусием',
       cost: 29,
+      strength: [1.5, 3],
     },
     {
       id: 'dailySteamTobacco_kent',
@@ -196,6 +208,7 @@ export default {
       name: 'KENT',
       description: 'Классический табачный вкус популярных сигарет. Немного терпкий с кислинкой',
       cost: 30,
+      strength: [1.5, 3],
     },
     {
       id: 'dailySteamTobacco_davidoff',
@@ -206,6 +219,7 @@ export default {
       name: 'Davidoff',
       description: 'Нежный табачный вкус с нотками меда и шоколада',
       cost: 31,
+      strength: [1.5, 3],
     },
     {
       id: 'dailySteamFruits_mango',
@@ -216,6 +230,7 @@ export default {
       name: 'Mango',
       description: 'Спелое манго',
       cost: 32,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'dailySteamFruits_exotic',
@@ -226,6 +241,7 @@ export default {
       name: 'Exotic',
       description: 'Освежающий микс апельсина, манго и киви',
       cost: 33,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'dailySteamFruits_peach',
@@ -236,6 +252,7 @@ export default {
       name: 'Peach',
       description: 'Сладкий сочный персик',
       cost: 34,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'dailySteamFruits_gum',
@@ -246,6 +263,7 @@ export default {
       name: 'Gum',
       description: 'Фруктовая жевательная резинка',
       cost: 35,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'dailySteamFruits_currant',
@@ -256,6 +274,7 @@ export default {
       name: 'Currant',
       description: 'Кислая смородина',
       cost: 36,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'dailySteamFruits_juice',
@@ -266,6 +285,7 @@ export default {
       name: 'Juice',
       description: 'Микс граната, грейпфрута, манго и тонкой ноткой лайма',
       cost: 37,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'tobacco_captainBlack',
@@ -276,6 +296,7 @@ export default {
       name: 'Captain Black',
       description: '',
       cost: 37,
+      strength: [3, 6],
     },
     {
       id: 'tobacco_lm',
@@ -286,6 +307,7 @@ export default {
       name: 'L&M',
       description: '',
       cost: 37,
+      strength: [3, 6],
     },
     {
       id: 'tobacco_camel',
@@ -296,6 +318,7 @@ export default {
       name: 'CAMEL',
       description: '',
       cost: 37,
+      strength: [3, 6],
     },
     {
       id: 'tobacco_winston',
@@ -306,6 +329,7 @@ export default {
       name: 'WINSTON',
       description: '',
       cost: 37,
+      strength: [3, 6],
     },
     {
       id: 'tobacco_parliament',
@@ -316,6 +340,7 @@ export default {
       name: 'PARLIAMENT',
       description: '',
       cost: 37,
+      strength: [3, 6],
     },
     {
       id: 'tobacco_marlboro',
@@ -326,6 +351,7 @@ export default {
       name: 'MARLBORO',
       description: '',
       cost: 37,
+      strength: [3, 6],
     },
     {
       id: 'tobaccoSmall_camel',
@@ -336,6 +362,7 @@ export default {
       name: 'CAMEL',
       description: '',
       cost: 37,
+      strength: [25, 50],
     },
     {
       id: 'tobaccoSmall_lm',
@@ -346,6 +373,7 @@ export default {
       name: 'L&M',
       description: '',
       cost: 37,
+      strength: [25, 50],
     },
     {
       id: 'tobaccoSmall_winston',
@@ -356,6 +384,7 @@ export default {
       name: 'WINSTON',
       description: '',
       cost: 37,
+      strength: [25, 50],
     },
     {
       id: 'tobaccoSmall_camelRed',
@@ -366,6 +395,7 @@ export default {
       name: 'CAMEL (RED)',
       description: '',
       cost: 37,
+      strength: [25, 50],
     },
     {
       id: 'deadPirate_greenIsland',
@@ -376,6 +406,7 @@ export default {
       name: 'GREEN ISLAND',
       description: '',
       cost: 37,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'deadPirate_captainBlack',
@@ -386,6 +417,7 @@ export default {
       name: 'CAPTAIN BLACK',
       description: '',
       cost: 37,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'deadPirate_purple',
@@ -396,6 +428,7 @@ export default {
       name: 'PURPLE',
       description: '',
       cost: 37,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'simpsons_maggie',
@@ -406,6 +439,7 @@ export default {
       name: 'MAGGIE',
       description: '',
       cost: 37,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'simpsons_lisa',
@@ -416,6 +450,7 @@ export default {
       name: 'LISA',
       description: '',
       cost: 37,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'simpsons_bart',
@@ -426,6 +461,7 @@ export default {
       name: 'BART',
       description: '',
       cost: 37,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'simpsons_marge',
@@ -436,6 +472,7 @@ export default {
       name: 'MARGE',
       description: '',
       cost: 37,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'simpsons_homer',
@@ -446,6 +483,7 @@ export default {
       name: 'HOMER',
       description: '',
       cost: 37,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'iceApow_restFruits',
@@ -456,6 +494,7 @@ export default {
       name: 'RET FRUITS',
       description: '',
       cost: 37,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'iceApow_iceLime',
@@ -466,6 +505,7 @@ export default {
       name: 'ICE LIME',
       description: '',
       cost: 37,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'iceApow_iceCurrant',
@@ -476,6 +516,7 @@ export default {
       name: 'ICE CURRANT',
       description: '',
       cost: 37,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'iceApow_trawb',
@@ -486,6 +527,7 @@ export default {
       name: 'TRAWB',
       description: '',
       cost: 37,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'vapeDrinks_cocaCola',
@@ -496,6 +538,7 @@ export default {
       name: 'COCA COLA',
       description: '',
       cost: 37,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'vapeDrinks_sprite',
@@ -506,6 +549,7 @@ export default {
       name: 'SPRITE',
       description: '',
       cost: 37,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'vapeDrinks_fanta',
@@ -516,6 +560,7 @@ export default {
       name: 'FANTA',
       description: '',
       cost: 37,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'vapeDrinks_redBull',
@@ -526,6 +571,7 @@ export default {
       name: 'RED BULL',
       description: '',
       cost: 37,
+      strength: [0, 1.5, 3],
     },
     {
       id: 'vapeDrinks_drPepper',
@@ -536,6 +582,7 @@ export default {
       name: 'Dr PEPPER',
       description: '',
       cost: 37,
+      strength: [0, 1.5, 3],
     },
   ],
 };

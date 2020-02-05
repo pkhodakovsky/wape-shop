@@ -68,6 +68,7 @@ export default {
   .cart-icon {
     width: 2em;
     height: 2em;
+    margin-left: 2em;
   }
   .cart-icon g {
     fill: gray;

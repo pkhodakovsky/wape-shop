@@ -16,13 +16,7 @@
     <!-- One -->
     <section id="one" class="wrapper style2">
       <div class="inner">
-        <div>
-          <div class="box">
-            <div class="image fit">
-              <img src="../../public/images/pic01.jpg" alt=""/>
-            </div>
-          </div>
-        </div>
+        <h2>Линейки жидкостей</h2>
       </div>
     </section>
 
@@ -228,6 +222,13 @@ export default {
 };
 </script>
 <style scoped>
+  #one {
+    background-color: #000;
+  }
+  #one h2 {
+    color: #fff;
+    text-align: center;
+  }
   .open-shop {
     position: relative;
     left: 50%;
