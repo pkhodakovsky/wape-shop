@@ -62,7 +62,10 @@ export default {
     ...mapMutations('cart', ['setCart']),
   },
   beforeMount() {
-    this.setCart({ cart: JSON.parse(localStorage.getItem('royal-vape-cart')), filter: true });
+    const cart = localStorage.getItem('royal-vape-cart');
+    if (cart) {
+      this.setCart(JSON.parse(cart));
+    }
   },
 };
 </script>

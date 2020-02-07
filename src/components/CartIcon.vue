@@ -1,6 +1,6 @@
 <template>
-  <svg class="cart-icon" viewBox="0 0 24 24" id="icon-basket" v-if="!item.isInCart"
-       @click="$emit('click')">
+  <svg class="cart-icon" viewBox="0 0 24 24" id="icon-basket" v-if="!isClicked"
+       @click="onClick">
     <g>
       <path fill-rule="evenodd" clip-rule="evenodd"
             d="M1 2C0.447715 2 0 2.44772 0 3C0 3.55228 0.447715 4 1 4H2.68121C3.08124 4
@@ -55,10 +55,26 @@
 <script>
 export default {
   name: 'CartIcon',
+  data() {
+    return {
+      isClicked: false,
+    };
+  },
   props: {
     item: {
       type: Object,
       required: true,
+    },
+  },
+  methods: {
+    onClick() {
+      if (!this.isClicked) {
+        this.isClicked = true;
+        this.$emit('click');
+        setTimeout(() => {
+          this.isClicked = false;
+        }, 500);
+      }
     },
   },
 };

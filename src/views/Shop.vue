@@ -41,7 +41,11 @@
                 2h-9v9A1,1,0,0,1,1233.02,493.993Z"
                 transform="translate(-1223 -473)"></path>
             </svg>
-            <CartIcon :item="item" @click="addItem(Object.assign(item, { count: 1 }))"></CartIcon>
+            <CartIcon :item="item" @click="addItem({
+              id: item.id,
+              type: item.strength && item.strength[0],
+              count: 1,
+            })"></CartIcon>
           </div>
         </div>
       </div>
@@ -53,7 +57,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapActions } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 
 import CartIcon from '@/components/CartIcon.vue';
 
@@ -64,7 +68,6 @@ export default {
   },
   computed: {
     ...mapState(['shopItems']),
-    ...mapGetters('cart', ['idsInCard']),
     checkedCategories() {
       return this.shopItems.types
         .filter(({ checked }) => checked)
@@ -72,11 +75,7 @@ export default {
     },
     shownItems() {
       return this.shopItems.items
-        .filter(({ type }) => this.checkedCategories.includes(type))
-        .map((item) => {
-          if (this.idsInCard.includes(item.id)) return Object.assign(item, { isInCart: true });
-          return item;
-        });
+        .filter(({ type }) => this.checkedCategories.includes(type));
     },
   },
   methods: {

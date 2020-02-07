@@ -1,27 +1,35 @@
 export default {
-  addItem({ state, rootState, commit }, payload) {
-    const cart = Object.assign([], state.items);
-    const existItem = cart.find(({ id }) => id === payload.id);
-    if (existItem) {
-      existItem.count += payload.count;
+  addItem({ state, commit }, payload) {
+    const cart = state.items;
+    const existItemIndex = cart.findIndex(({ id }) => id === payload.id);
+    if (existItemIndex !== -1) {
+      commit('updateCartItem', {
+        index: existItemIndex,
+        count: cart[existItemIndex].count += payload.count,
+      });
     } else {
-      const newItem = Object.assign(rootState.shopItems.items.find(({ id }) => id === payload.id));
-      cart.push(Object.assign(newItem, { count: payload.count }));
+      const { id, count, type } = payload;
+      commit('updateCart', {
+        id,
+        count,
+        type,
+      });
     }
-    commit('setCart', { cart, filter: true });
+    commit('saveCart');
   },
   updateItem({ state, commit }, payload) {
-    const cart = Object.assign([], state.items);
-    const existItem = cart.find(({ id }) => id === payload.id);
-    existItem.count = payload.count;
-    commit('setCart', { cart });
+    const existItemIndex = state.items.findIndex(({ id }) => id === payload.id);
+    commit('updateCartItem', {
+      index: existItemIndex,
+      count: payload.count,
+    });
+    commit('saveCart');
   },
   removeItem({ state, commit }, payload) {
-    const cart = Object.assign([], state.items);
-    const indexExist = cart.findIndex(({ id }) => id === payload.id);
-    if (indexExist !== -1) {
-      cart.splice(indexExist, 1);
-      commit('setCart', { cart });
+    const index = state.items.findIndex(({ id }) => id === payload.id);
+    if (index !== -1) {
+      commit('removeItem', { index });
     }
+    commit('saveCart');
   },
 };

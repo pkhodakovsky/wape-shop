@@ -3,7 +3,7 @@
     <div class="inner">
       <h2>Корзина:</h2>
       <div class="items-wrapper" v-if="items.length">
-        <div class="cart-item" v-for="item in items" :key="item.id">
+        <div class="cart-item" v-for="item in cartItems" :key="item.id">
           <img width="256px" height="auto" :src="item.image" :alt="item.name"/>
           <h4 class="name">{{ item.name }}</h4>
           <span class="item-amount">
@@ -44,8 +44,20 @@ import { amount as amountFilter } from '@/utils';
 export default {
   name: 'Cart',
   computed: {
+    ...mapState(['shopItems']),
     ...mapState('cart', ['items']),
     ...mapGetters('cart', ['amount']),
+    cartItems() {
+      return this.items
+        .map((item) => {
+          const shopItem = this.shopItems.items.find(({ id }) => id === item.id);
+          return {
+            ...item,
+            ...shopItem,
+            cost: shopItem.cost,
+          };
+        });
+    },
   },
   filters: {
     amountFilter,

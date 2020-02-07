@@ -1,8 +1,10 @@
 export default {
-  amount(state) {
-    return state.items.reduce((summ, { cost, count }) => (summ + (cost * count)), 0);
-  },
-  idsInCard(state) {
-    return state.items.map(({ id }) => id);
+  amount(state, getters, rootState) {
+    const { items } = state;
+    const { shopItems } = rootState;
+    return items.reduce((amount, { id, count }) => {
+      const { cost } = shopItems.items.find(item => item.id === id);
+      return amount + (cost * count);
+    }, 0);
   },
 };

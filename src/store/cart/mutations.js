@@ -1,12 +1,21 @@
-import filterCart from './utils';
+import { saveCart } from './utils';
 
 export default {
-  setCart(state, { cart, filter }) {
-    while (state.items.length) {
-      state.items.pop();
-    }
-    Object.assign(state.items, cart);
-    localStorage.setItem('royal-vape-cart', JSON.stringify(filter ? filterCart(state.items) : state.items));
+  setCart({ items }, payload) {
+    payload.forEach((item) => {
+      items.push(item);
+    });
   },
-  removeItem() {},
+  saveCart({ items }) {
+    saveCart(items);
+  },
+  updateCart(state, payload) {
+    state.items.push(payload);
+  },
+  updateCartItem(state, { index, count }) {
+    state.items[index].count = count;
+  },
+  removeItem(state, { index }) {
+    state.items.splice(index, 1);
+  },
 };
