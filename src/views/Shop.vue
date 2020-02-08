@@ -3,6 +3,12 @@
     <div class="inner">
       <div class="filters">
         <h3 class="label">Фильтры:</h3>
+        <div class="name">
+          Название:
+          <input type="text"
+                 @blur="onBlurNameInput"
+                 @keypress.enter="onEnterNameInput"/>
+        </div>
         <div class="categories">
           <h4 class="filter-label">Категории:</h4>
           <div class="category-item" v-for="(category, index) in shopItems.types" :key="index">
@@ -11,8 +17,18 @@
           </div>
         </div>
       </div>
-      <div class="main" v-if="shownItems.length">
-        <div class="shop-item" v-for="item in shownItems" :key="item.id">
+      <transition-group
+        class="main" v-if="shownItems.length"
+        name="staggered-fade"
+        tag="div"
+        appear
+        @before-enter="beforeEnter"
+        @enter="enter"
+        @leave="leave">
+        <div class="shop-item"
+             v-for="(item, index) in shownItems"
+             :key="item.id"
+             :data-index="index">
           <div class="img">
             <img :src="item.image" :alt="item.name" width="320px" height="auto">
           </div>
@@ -38,33 +54,44 @@
             <svg viewBox="0 0 22 22" id="icon-plus" class="plus">
               <path
                 d="M1233.02,493.993v-9h-9a1,1,0,0,1,0-2h9v-9a1,1,0,1,1,2,0v9h9a1,1,0,0,1,0,
-                2h-9v9A1,1,0,0,1,1233.02,493.993Z"
+              2h-9v9A1,1,0,0,1,1233.02,493.993Z"
                 transform="translate(-1223 -473)"></path>
             </svg>
             <CartIcon :item="item" @click="addItem({
-              id: item.id,
-              type: item.strength && item.strength[0],
-              count: 1,
-            })"></CartIcon>
+            id: item.id,
+            type: item.strength && item.strength[0],
+            count: 1,
+          })"></CartIcon>
           </div>
         </div>
-      </div>
-      <div class="main empty" v-else>
-        <h3 class="no-items">Нет товаров для показа</h3>
-      </div>
+      </transition-group>
+      <transition name="fade" v-else>
+        <div class="main empty">
+          <h3 class="no-items">Нет товаров для показа</h3>
+        </div>
+      </transition>
     </div>
   </div>
 </template>
 
 <script>
+import Velocity from 'velocity-animate';
 import { mapState, mapActions } from 'vuex';
 
 import CartIcon from '@/components/CartIcon.vue';
+
+const DELAY_STEP = 150;
+const MAX_DELAY = 1000;
 
 export default {
   name: 'Shop',
   components: {
     CartIcon,
+  },
+  data() {
+    return {
+      nameQuery: '',
+    };
   },
   computed: {
     ...mapState(['shopItems']),
@@ -75,11 +102,43 @@ export default {
     },
     shownItems() {
       return this.shopItems.items
-        .filter(({ type }) => this.checkedCategories.includes(type));
+        .filter(({ type }) => this.checkedCategories.includes(type))
+        .filter(({ name }) => name.toLowerCase()
+          .includes(this.nameQuery.toLocaleLowerCase().trim()));
     },
   },
   methods: {
     ...mapActions('cart', ['addItem']),
+    beforeEnter(el) {
+      const el2 = el;
+      el2.style.opacity = 0;
+    },
+    enter(el, done) {
+      const delay = el.dataset.index * DELAY_STEP;
+      setTimeout(() => {
+        Velocity(
+          el,
+          { opacity: 1 },
+          { complete: done },
+        );
+      }, delay > MAX_DELAY ? MAX_DELAY : delay);
+    },
+    leave(el, done) {
+      Velocity(
+        el,
+        { opacity: 0 },
+        { complete: done, duration: 150 },
+      );
+    },
+    onBlurNameInput(event) {
+      this.updateNameQuery(event.target.value);
+    },
+    onEnterNameInput(event) {
+      this.updateNameQuery(event.target.value);
+    },
+    updateNameQuery(value) {
+      this.nameQuery = value;
+    },
   },
 };
 </script>
@@ -108,6 +167,9 @@ export default {
     height: 50%;
     margin-right: 0.5em;
     padding: 1em;
+  }
+  .filters .name {
+    color: #fff;
   }
   .filters label:before {
     top: 50%;
@@ -174,15 +236,8 @@ export default {
   .filters {
     transition: background-color .25s;
   }
-  .shop-items {
-    transition: box-shadow .25s;
-  }
   .filters:hover {
     background-color: rgba(0, 0, 0, .7);
-  }
-  .shop-item:hover,
-  .main.empty:hover {
-    box-shadow: 0 0 15px 2px #565656;
   }
   .filters:hover {
     color: #000;
@@ -217,5 +272,11 @@ export default {
     .main {
       width: 100%;
     }
+  }
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave {
+    opacity: 0;
   }
 </style>
