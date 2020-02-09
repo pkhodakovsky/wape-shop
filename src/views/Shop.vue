@@ -4,7 +4,7 @@
       <div class="filters">
         <h3 class="label">Фильтры:</h3>
         <div class="name">
-          Название:
+          <h4>Название:</h4>
           <input type="text"
                  @blur="onBlurNameInput"
                  @keypress.enter="onEnterNameInput"/>
@@ -210,14 +210,29 @@ export default {
     width: 20%;
     height: 50%;
     margin-right: 0.5em;
+    margin-bottom: 0.5em;
     padding: 1em;
+    background-color: rgba(0, 0, 0, .75);
+  }
+  .filters > div {
+    margin-bottom: 1em;
+  }
+  .filters h4 {
+    margin-bottom: .5em;
   }
   .filters .name {
     color: #fff;
   }
+  .filters label {
+    margin-bottom: .5rem;
+  }
   .filters label:before {
     top: 50%;
     transform: translate3d(0, -50%, 0);
+    width: 1.2rem;
+    height: 1.2rem;
+    font-size: .8rem;
+    line-height: 1.1rem;
   }
   .main {
     width: 80%;
@@ -230,7 +245,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, .75);
   }
   .shop-item {
     position: relative;
@@ -246,15 +261,6 @@ export default {
   .filters,
   .shop-item {
     border-radius: 10px;
-  }
-  .filters {
-    transition: background-color .25s;
-  }
-  .filters:hover {
-    background-color: rgba(0, 0, 0, .7);
-  }
-  .filters:hover {
-    color: #000;
   }
 
   @media screen and (max-width: 1023px) {
