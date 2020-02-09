@@ -11,13 +11,12 @@
     <AddToCart :item="item"
                :selectedTypeIndex="selectedTypeIndex"
                @addItem="$emit('addItem', $event)">
-      <select class="strength" slot="pre">
+      <select class="strength" slot="pre" @change="selectType">
         <option
           v-for="(strength, index) in item.types"
           :key="index"
           :selected="index === selectedTypeIndex"
-          :value="strength.value"
-          @change="select(index)">{{ strength.value }} mg
+          :value="strength.value">{{ strength.value }} mg
         </option>
       </select>
     </AddToCart>

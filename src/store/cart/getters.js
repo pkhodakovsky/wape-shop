@@ -3,7 +3,10 @@ export default {
     const { items } = state;
     const { shopItems } = rootState;
     return items.reduce((amount, { id, count }) => {
-      const { cost } = shopItems.items.find(item => item.id === id);
+      const [parsedId, type] = id.split('__');
+      const shopItem = shopItems.items.find(item => item.id === parsedId);
+      const typeIndex = shopItem.types.findIndex(({ value }) => value === +type);
+      const cost = (shopItem.types && shopItem.types[typeIndex].cost) || shopItem.cost;
       return amount + (cost * count);
     }, 0);
   },

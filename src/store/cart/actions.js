@@ -1,24 +1,29 @@
+function prepareCartId({ id, type }) {
+  return `${id}__${type.value}`;
+}
+
 export default {
   addItem({ state, commit }, payload) {
     const cart = state.items;
-    const existItemIndex = cart.findIndex(({ id }) => id === payload.id);
+    const cartId = prepareCartId(payload);
+    const existItemIndex = cart.findIndex(({ id }) => id === cartId);
     if (existItemIndex !== -1) {
       commit('updateCartItem', {
         index: existItemIndex,
         count: cart[existItemIndex].count += payload.count,
       });
     } else {
-      const { id, count, type } = payload;
+      const { count } = payload;
       commit('updateCart', {
-        id,
+        id: cartId,
         count,
-        type,
       });
     }
     commit('saveCart');
   },
   updateItem({ state, commit }, payload) {
-    const existItemIndex = state.items.findIndex(({ id }) => id === payload.id);
+    const cartId = prepareCartId(payload);
+    const existItemIndex = state.items.findIndex(({ id }) => id === cartId);
     commit('updateCartItem', {
       index: existItemIndex,
       count: payload.count,
@@ -26,7 +31,8 @@ export default {
     commit('saveCart');
   },
   removeItem({ state, commit }, payload) {
-    const index = state.items.findIndex(({ id }) => id === payload.id);
+    const cartId = prepareCartId(payload);
+    const index = state.items.findIndex(({ id }) => id === cartId);
     if (index !== -1) {
       commit('removeItem', { index });
     }

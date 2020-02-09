@@ -12,8 +12,9 @@ export default {
     },
   },
   methods: {
-    selectType(index) {
-      this.selectedTypeIndex = index;
+    selectType(event) {
+      const { value } = event.target;
+      this.selectedTypeIndex = this.item.types.findIndex(type => type.value === +value);
     },
   },
 };

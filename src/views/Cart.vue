@@ -3,18 +3,23 @@
     <div class="inner">
       <h2>Корзина:</h2>
       <div class="items-wrapper" v-if="items.length">
-        <div class="cart-item" v-for="item in cartItems" :key="item.id">
+        <div class="cart-item" v-for="item in cartItems" :key="item.cartId">
           <img width="256px" height="auto" :src="item.image" :alt="item.name"/>
           <h4 class="name">{{ item.name }}</h4>
+          {{ item.type }} mg
           <span class="item-amount">
             <span class="cost">{{ item.cost | amountFilter }}</span>
             x
             <input type="number" min="0" max="100" v-model="item.count"
-                   @change="updateItem({ id: item.id, count: +item.count })"/>
+                   @change="updateItem({
+                    id: item.id,
+                    type: { value: item.type },
+                    count: +item.count,
+                   })"/>
             &nbsp;
             <span class="item-amount">{{ item.cost * (+item.count) | amountFilter }}</span>
           </span>
-          <div class="remove-item" @click="removeItem({ id: item.id })">
+          <div class="remove-item" @click="removeItem({ id: item.id, type: { value: item.type } })">
             <svg viewBox="0 0 24.99 24.99" id="icon-close-empty">
               <path
                 d="M18.15,6.84a1,1,0,0,0-1.41,0l-4.24,4.24L8.25,6.84A1,1,0,0,0,6.84,8.25l4.24,
@@ -50,10 +55,14 @@ export default {
     cartItems() {
       return this.items
         .map((item) => {
-          const shopItem = this.shopItems.items.find(({ id }) => id === item.id);
+          const cartId = item.id;
+          const [parsedId, type] = cartId.split('__');
+          const shopItem = this.shopItems.items.find(({ id }) => id === parsedId);
           return {
             ...item,
             ...shopItem,
+            type,
+            cartId,
             cost: shopItem.cost,
           };
         });
