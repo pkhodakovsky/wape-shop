@@ -1,5 +1,8 @@
 function prepareCartId({ id, type }) {
-  return `${id}__${type.value}`;
+  if (type && type.value) {
+    return `${id}__${type.value}`;
+  }
+  return id;
 }
 
 export default {

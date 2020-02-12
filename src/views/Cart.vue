@@ -6,7 +6,8 @@
         <div class="cart-item" v-for="item in cartItems" :key="item.cartId">
           <img width="256px" height="auto" :src="item.images[0]" :alt="item.name"/>
           <h4 class="name">{{ item.name }}</h4>
-          {{ item.type }} mg
+          <span v-if="item.type">{{ item.type }} mg</span>
+          <span v-else></span>
           <span class="item-amount">
             <span class="cost">{{ item.cost | amountFilter }}</span>
             x
