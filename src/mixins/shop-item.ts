@@ -7,7 +7,7 @@ export default {
   computed: {
     cost() {
       const itemTypes = this.item.types;
-      const typeCost = itemTypes && itemTypes[this.selectedTypeIndex].cost;
+      const typeCost = itemTypes.length && itemTypes[this.selectedTypeIndex].cost;
       return typeCost || this.item.cost;
     },
   },

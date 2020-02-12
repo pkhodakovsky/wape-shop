@@ -8,6 +8,17 @@ import deadPirateImage from '../../public/images/liquids/dead-pirate.png';
 import simpsonsImage from '../../public/images/liquids/simpsons.png';
 import iceApowImage from '../../public/images/liquids/ice-apow.png';
 import vapeDrinksImage from '../../public/images/liquids/vape-drinks.png';
+import selfMixinImage1 from '../../public/images/self-mixing/base1.png';
+import selfMixinImage2 from '../../public/images/self-mixing/base2.png';
+import selfMixinImage3 from '../../public/images/self-mixing/base3.png';
+import selfMixinImage4 from '../../public/images/self-mixing/base4.png';
+import selfMixinImage5 from '../../public/images/self-mixing/base5.png';
+import selfMixinImage6 from '../../public/images/self-mixing/base6.png';
+import selfMixinImage7 from '../../public/images/self-mixing/base7.png';
+import otherImage1 from '../../public/images/other/other1.png';
+import otherImage2 from '../../public/images/other/other2.png';
+import otherImage3 from '../../public/images/other/other3.png';
+import otherImage4 from '../../public/images/other/other4.png';
 
 export default {
   types: [
@@ -17,7 +28,7 @@ export default {
       checked: true,
     },
     {
-      id: 'samozames',
+      id: 'selfMixing',
       name: 'Всё для "самозамеса"',
       checked: true,
       sub: [
@@ -756,6 +767,119 @@ export default {
         { value: 1.5 },
         { value: 3 },
       ],
+    },
+    {
+      id: 'selfMixing_base1',
+      type: 'selfMixing',
+      subtype: 'bases',
+      subtypeName: 'Bases',
+      images: [selfMixinImage1],
+      name: 'Base 1',
+      description: '',
+      cost: 37,
+      types: [],
+    },
+    {
+      id: 'selfMixing_base2',
+      type: 'selfMixing',
+      subtype: 'bases',
+      subtypeName: 'Bases',
+      images: [selfMixinImage2],
+      name: 'Base 2',
+      description: '',
+      cost: 37,
+      types: [],
+    },
+    {
+      id: 'selfMixing_base3',
+      type: 'selfMixing',
+      subtype: 'bases',
+      subtypeName: 'Bases',
+      images: [selfMixinImage3],
+      name: 'Base 3',
+      description: '',
+      cost: 37,
+      types: [],
+    },
+    {
+      id: 'selfMixing_base4',
+      type: 'selfMixing',
+      subtype: 'bases',
+      subtypeName: 'Bases',
+      images: [selfMixinImage4],
+      name: 'Base 4',
+      description: '',
+      cost: 37,
+      types: [],
+    },
+    {
+      id: 'selfMixing_base5',
+      type: 'selfMixing',
+      subtype: 'bases',
+      subtypeName: 'Bases',
+      images: [selfMixinImage5],
+      name: 'Base 5',
+      description: '',
+      cost: 37,
+      types: [],
+    },
+    {
+      id: 'selfMixing_base6',
+      type: 'selfMixing',
+      subtype: 'bases',
+      subtypeName: 'Bases',
+      images: [selfMixinImage6],
+      name: 'Base 6',
+      description: '',
+      cost: 37,
+      types: [],
+    },
+    {
+      id: 'selfMixing_base7',
+      type: 'selfMixing',
+      subtype: 'bases',
+      subtypeName: 'Bases',
+      images: [selfMixinImage7],
+      name: 'Base 7',
+      description: '',
+      cost: 37,
+      types: [],
+    },
+    {
+      id: 'other_other1',
+      type: 'other',
+      images: [otherImage1],
+      name: 'Other 1',
+      description: '',
+      cost: 37,
+      types: [],
+    },
+    {
+      id: 'other_other2',
+      type: 'other',
+      images: [otherImage2],
+      name: 'Other 2',
+      description: '',
+      cost: 37,
+      types: [],
+    },
+    {
+      id: 'other_other3',
+      type: 'other',
+      images: [otherImage3],
+      name: 'Other 3',
+      description: '',
+      cost: 37,
+      types: [],
+    },
+    {
+      id: 'other_other4',
+      type: 'other',
+      images: [otherImage4],
+      name: 'Other 4',
+      description: '',
+      cost: 37,
+      types: [],
     },
   ],
 };
