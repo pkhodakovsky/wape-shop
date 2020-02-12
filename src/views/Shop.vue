@@ -1,13 +1,15 @@
 <template>
   <div class="shop">
     <div class="inner">
-      <Filters :types="shopItems.types"
+      <Filters v-if="!isExpandScroll"
+               :types="shopItems.types"
                @updateNameQuery="updateNameQuery"></Filters>
       <div class="main">
         <Sort @sortBy="sortBy"></Sort>
         <ShopItems :shown-items="shownItems"
                    :can-show-more="showItemsCount < shownItems.length"
-                   @showMore="showMore"></ShopItems>
+                   @showMore="showMore"
+                   @changeExpandState="changeExpandState"></ShopItems>
       </div>
     </div>
   </div>
@@ -33,6 +35,7 @@ export default {
       showItemsCountStep: 10,
       nameQuery: '',
       selectedSort: '',
+      isExpandScroll: false,
     };
   },
   computed: {
@@ -77,6 +80,9 @@ export default {
     resetShowItemsCount() {
       this.showItemsCount = 10;
     },
+    changeExpandState(value) {
+      this.isExpandScroll = value;
+    },
   },
   beforeMount() {
     this.resetShowItemsCount();
@@ -113,24 +119,21 @@ export default {
     display: flex;
     flex-direction: column;
   }
+  @media screen and (max-width: 1024px) {
+    .shop {
+      padding-top: 3.25em
+    }
+  }
   @media screen and (max-width: 1023px) {
+    .shop {
+      padding-top: 3em
+    }
     .inner {
       flex-direction: column;
     }
     .main {
       width: 100%;
       height: 90%;
-      margin-top: 10%;
-    }
-  }
-  @media screen and (max-width: 500px) {
-    .main {
-      margin-top: 11%;
-    }
-  }
-  @media screen and (max-width: 400px) {
-    .main {
-      margin-top: 13%;
     }
   }
 </style>

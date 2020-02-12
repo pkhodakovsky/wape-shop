@@ -79,9 +79,9 @@ export default {
   }
   @media screen and (max-width: 1023px) {
     .filters {
-      position: absolute;
-      width: 95vw;
-      z-index: 1;
+      width: 100%;
+      padding: .5em;
+      margin-bottom: .25em;
     }
     .filters > div {
       display: none;

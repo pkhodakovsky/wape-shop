@@ -71,4 +71,10 @@ export default {
   .sort .reverse .up {
     fill: #000;
   }
+  @media screen and (max-width: 1023px) {
+    .sort {
+      padding: .25em 1em;
+      margin-bottom: .25em;
+    }
+  }
 </style>

@@ -43,9 +43,13 @@ export default {
   data() {
     return {
       scrollOpts: {
+        scrollPanel: {
+          scrollingX: false,
+        },
         rail: {
           size: '0px',
           gutterOfSide: '0px',
+          background: '#fff',
         },
       },
     };
