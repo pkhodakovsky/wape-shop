@@ -4,7 +4,7 @@
       <h2>Корзина:</h2>
       <div class="items-wrapper" v-if="items.length">
         <div class="cart-item" v-for="item in cartItems" :key="item.cartId">
-          <img width="256px" height="auto" :src="item.image" :alt="item.name"/>
+          <img width="256px" height="auto" :src="item.images[0]" :alt="item.name"/>
           <h4 class="name">{{ item.name }}</h4>
           {{ item.type }} mg
           <span class="item-amount">

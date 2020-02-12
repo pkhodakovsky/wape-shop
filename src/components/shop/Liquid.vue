@@ -1,7 +1,7 @@
 <template>
   <div class="liquid">
     <div class="img">
-      <img :src="item.image" :alt="item.name" width="320px" height="auto">
+      <img :src="item.images[0]" :alt="item.name" width="320px" height="auto">
     </div>
     <div class="data">
       <h4 class="name">{{ item.name }}</h4>
