@@ -88,9 +88,9 @@ export default {
       description: 'Нежный <i>бисквитный пирог</i> с начинкой из спелой, сочной <i>малины</i>. Мягкий и легкий вкус десерта, дополняет свежая и сладкая ягода на выдохе. Любители попарить и расслабится оценят эту жидкость по достоинству',
       cost: 19,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -103,9 +103,9 @@ export default {
       description: 'Тост с легкой прожаренной корочкой и сладким <i>клубничным вареньем</i>. Эта жидкость заставит вас погрузиться в детство и получить незабываемое наслаждение от всеми любимого лакомства',
       cost: 20,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -118,9 +118,9 @@ export default {
       description: 'Жевательная резинка со вкусом <i>медовой дыни</i> и спелой, сочной <i>клубники</i>. Легкий фруктовый микс со сладким послевкусием. Освежающая жидкость отлично подойдет на повседневное парение',
       cost: 22,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -133,9 +133,9 @@ export default {
       description: 'Невероятно бодрящий вкус крепкого <i>мокачино</i> с тонкой <i>ореховой</i> ноткой. Основной кофейный вкус передан очень четко и насыщено, а ореховое послевкусие не оставит равнодушным ни одного парильщика',
       cost: 23,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -148,9 +148,9 @@ export default {
       description: '',
       cost: 24,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -163,9 +163,9 @@ export default {
       description: '',
       cost: 25,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -178,9 +178,9 @@ export default {
       description: '',
       cost: 25,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -193,9 +193,9 @@ export default {
       description: '',
       cost: 26,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -208,9 +208,9 @@ export default {
       description: '',
       cost: 26,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -223,8 +223,8 @@ export default {
       description: 'Табачный лист в шоколадной глазури пропитанный кокосовым молоком',
       cost: 27,
       types: [
-        { value: 1.5 },
-        { value: 3 },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -237,8 +237,8 @@ export default {
       description: 'Крепкий, с кислиной, табачный вкус для ценителей классики',
       cost: 28,
       types: [
-        { value: 1.5 },
-        { value: 3 },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -251,8 +251,8 @@ export default {
       description: 'Настоящий американский вкус табака с мягким послевкусием',
       cost: 29,
       types: [
-        { value: 1.5 },
-        { value: 3 },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -265,8 +265,8 @@ export default {
       description: 'Классический табачный вкус популярных сигарет. Немного терпкий с кислинкой',
       cost: 30,
       types: [
-        { value: 1.5 },
-        { value: 3 },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -279,8 +279,8 @@ export default {
       description: 'Нежный табачный вкус с нотками меда и шоколада',
       cost: 31,
       types: [
-        { value: 1.5 },
-        { value: 3 },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -293,9 +293,9 @@ export default {
       description: 'Спелое манго',
       cost: 32,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -308,9 +308,9 @@ export default {
       description: 'Освежающий микс апельсина, манго и киви',
       cost: 33,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -323,9 +323,9 @@ export default {
       description: 'Сладкий сочный персик',
       cost: 34,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -338,9 +338,9 @@ export default {
       description: 'Фруктовая жевательная резинка',
       cost: 35,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -353,9 +353,9 @@ export default {
       description: 'Кислая смородина',
       cost: 36,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -368,9 +368,9 @@ export default {
       description: 'Микс граната, грейпфрута, манго и тонкой ноткой лайма',
       cost: 37,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -383,8 +383,8 @@ export default {
       description: '',
       cost: 37,
       types: [
-        { value: 3 },
-        { value: 6 },
+        { value: '3' },
+        { value: '6' },
       ],
     },
     {
@@ -397,8 +397,8 @@ export default {
       description: '',
       cost: 37,
       types: [
-        { value: 3 },
-        { value: 6 },
+        { value: '3' },
+        { value: '6' },
       ],
     },
     {
@@ -411,8 +411,8 @@ export default {
       description: '',
       cost: 37,
       types: [
-        { value: 3 },
-        { value: 6 },
+        { value: '3' },
+        { value: '6' },
       ],
     },
     {
@@ -425,8 +425,8 @@ export default {
       description: '',
       cost: 37,
       types: [
-        { value: 3 },
-        { value: 6 },
+        { value: '3' },
+        { value: '6' },
       ],
     },
     {
@@ -439,8 +439,8 @@ export default {
       description: '',
       cost: 37,
       types: [
-        { value: 3 },
-        { value: 6 },
+        { value: '3' },
+        { value: '6' },
       ],
     },
     {
@@ -453,8 +453,8 @@ export default {
       description: '',
       cost: 37,
       types: [
-        { value: 3 },
-        { value: 6 },
+        { value: '3' },
+        { value: '6' },
       ],
     },
     {
@@ -467,8 +467,8 @@ export default {
       description: '',
       cost: 37,
       types: [
-        { value: 25 },
-        { value: 50 },
+        { value: '25' },
+        { value: '50' },
       ],
     },
     {
@@ -481,8 +481,8 @@ export default {
       description: '',
       cost: 37,
       types: [
-        { value: 25 },
-        { value: 50 },
+        { value: '25' },
+        { value: '50' },
       ],
     },
     {
@@ -495,8 +495,8 @@ export default {
       description: '',
       cost: 37,
       types: [
-        { value: 25 },
-        { value: 50 },
+        { value: '25' },
+        { value: '50' },
       ],
     },
     {
@@ -509,8 +509,8 @@ export default {
       description: '',
       cost: 37,
       types: [
-        { value: 25 },
-        { value: 50 },
+        { value: '25' },
+        { value: '50' },
       ],
     },
     {
@@ -523,9 +523,9 @@ export default {
       description: '',
       cost: 37,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -538,9 +538,9 @@ export default {
       description: '',
       cost: 37,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -553,9 +553,9 @@ export default {
       description: '',
       cost: 37,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -568,9 +568,9 @@ export default {
       description: 'Все слышали, что дети живут эмоциями и порой, чтобы угодить, приходится лезть вон из кожи. Этот вкус создан для удовлетворения любых ваших капризов. Кисто-сладкое сочетание ежевики и смородины отлично дополняет взрывная волна лесных ягод.',
       cost: 37,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -583,9 +583,9 @@ export default {
       description: 'У настоящей девушки все должно быть идально, аккуратно и красиво. Лиза очень постаралась, чтобы создать вкус, который понравится всем. Думаете, что персик и клюква не сочетаются? Вы просто не умеете их готовить.',
       cost: 37,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -598,9 +598,9 @@ export default {
       description: 'Молодежь не любит обыденность. Любимый напиток Барта - мохито, только классический - это банольно. Что будет, если добавить туда черной смородины и клубники? Не узнаешь, пока не попробуешь. Вперёд.',
       cost: 37,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -613,9 +613,9 @@ export default {
       description: 'Какая настоящая хозяйка не любит варить ягодный пунш? Мардж приготовила вам настоящий сюрприз. Микс кисленькх лесных ягод приятно расслабляют, но в то же время заряжают бодростью.',
       cost: 37,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -628,9 +628,9 @@ export default {
       description: 'С виду он брутальнй мужлан. Но, что скрывается внутри? Пока не попробовали эту жидкость, не спешите делать выводы. Кисло-сладкий вкус спелого сочного киви просто взрывает рецепторы.',
       cost: 37,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -643,9 +643,9 @@ export default {
       description: '',
       cost: 37,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -658,9 +658,9 @@ export default {
       description: '',
       cost: 37,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -673,9 +673,9 @@ export default {
       description: '',
       cost: 37,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -688,9 +688,9 @@ export default {
       description: '',
       cost: 37,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -703,9 +703,9 @@ export default {
       description: '',
       cost: 37,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -718,9 +718,9 @@ export default {
       description: '',
       cost: 37,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -733,9 +733,9 @@ export default {
       description: '',
       cost: 37,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -748,9 +748,9 @@ export default {
       description: '',
       cost: 37,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {
@@ -763,9 +763,9 @@ export default {
       description: '',
       cost: 37,
       types: [
-        { value: 0 },
-        { value: 1.5 },
-        { value: 3 },
+        { value: '0' },
+        { value: '1.5' },
+        { value: '3' },
       ],
     },
     {

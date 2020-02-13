@@ -50,7 +50,7 @@
   </div>
 </template>
 <script>
-import { mapMutations } from 'vuex';
+import { mapState, mapMutations } from 'vuex';
 
 import Cart from '@/components/Cart.vue';
 
@@ -58,14 +58,26 @@ export default {
   components: {
     Cart,
   },
+  computed: {
+    ...mapState(['shopItems']),
+  },
   methods: {
     ...mapMutations('cart', ['setCart']),
+    validateCart(storageCart) {
+      const cart = JSON.parse(storageCart);
+      if (!(cart instanceof Array)) return [];
+      return cart
+        .filter(({ id, count }) => count || id)
+        .filter(({ id }) => {
+          const [parsedId, parsedType] = id.split('__');
+          return this.shopItems.items.findIndex(item => item.id === parsedId
+              && (!item.types.length
+              || item.types.findIndex(({ value }) => value === parsedType) !== -1)) !== -1;
+        });
+    },
   },
   beforeMount() {
-    const cart = localStorage.getItem('royal-vape-cart');
-    if (cart) {
-      this.setCart(JSON.parse(cart));
-    }
+    this.setCart(this.validateCart(localStorage.getItem('royal-vape-cart')));
   },
 };
 </script>

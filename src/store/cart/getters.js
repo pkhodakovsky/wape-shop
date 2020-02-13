@@ -5,7 +5,7 @@ export default {
     return items.reduce((amount, { id, count }) => {
       const [parsedId, type] = id.split('__');
       const shopItem = shopItems.items.find(item => item.id === parsedId);
-      const typeIndex = shopItem.types.findIndex(({ value }) => value === +type);
+      const typeIndex = shopItem.types.findIndex(({ value }) => value === type);
       const cost = (shopItem.types.length && shopItem.types[typeIndex].cost) || shopItem.cost;
       return amount + (cost * count);
     }, 0);

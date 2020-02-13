@@ -1,5 +1,5 @@
 function prepareCartId({ id, type }) {
-  if (type && type.value) {
+  if (type && typeof type.value !== 'undefined') {
     return `${id}__${type.value}`;
   }
   return id;
