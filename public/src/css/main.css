@@ -2054,6 +2054,7 @@
 	}
 
 	input[type="text"],
+	input[type="tel"],
 	input[type="password"],
 	input[type="email"],
 	select,
@@ -2074,6 +2075,7 @@
 	}
 
 		input[type="text"]:invalid,
+		input[type="tel"]:invalid,
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
 		select:invalid,
@@ -2114,6 +2116,7 @@
 		}
 
 	input[type="text"],
+	input[type="tel"],
 	input[type="password"],
 	input[type="email"],
 	select {
@@ -2213,6 +2216,7 @@
 	}
 
 	input[type="text"],
+	input[type="tel"],
 	input[type="password"],
 	input[type="email"],
 	select,
@@ -2222,6 +2226,7 @@
 	}
 
 		input[type="text"]:focus,
+		input[type="tel"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
 		select:focus,
@@ -2771,6 +2776,7 @@
 			}
 
 			.wrapper.style1 input[type="text"],
+			.wrapper.style1 input[type="tel"],
 			.wrapper.style1 input[type="password"],
 			.wrapper.style1 input[type="email"],
 			.wrapper.style1 select,
@@ -2780,6 +2786,7 @@
 			}
 
 				.wrapper.style1 input[type="text"]:focus,
+				.wrapper.style1 input[type="tel"]:focus,
 				.wrapper.style1 input[type="password"]:focus,
 				.wrapper.style1 input[type="email"]:focus,
 				.wrapper.style1 select:focus,
@@ -2979,6 +2986,7 @@
 			}
 
 			.wrapper.style2 input[type="text"],
+			.wrapper.style2 input[type="tel"],
 			.wrapper.style2 input[type="password"],
 			.wrapper.style2 input[type="email"],
 			.wrapper.style2 select,
@@ -2988,6 +2996,7 @@
 			}
 
 				.wrapper.style2 input[type="text"]:focus,
+				.wrapper.style2 input[type="tel"]:focus,
 				.wrapper.style2 input[type="password"]:focus,
 				.wrapper.style2 input[type="email"]:focus,
 				.wrapper.style2 select:focus,
@@ -3208,6 +3217,7 @@
 			}
 
 			.wrapper.style3 input[type="text"],
+			.wrapper.style3 input[type="tel"],
 			.wrapper.style3 input[type="password"],
 			.wrapper.style3 input[type="email"],
 			.wrapper.style3 select,
@@ -3217,6 +3227,7 @@
 			}
 
 				.wrapper.style3 input[type="text"]:focus,
+				.wrapper.style3 input[type="tel"]:focus,
 				.wrapper.style3 input[type="password"]:focus,
 				.wrapper.style3 input[type="email"]:focus,
 				.wrapper.style3 select:focus,

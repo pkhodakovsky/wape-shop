@@ -37,7 +37,13 @@
         <h2>Корзина пуста</h2>
       </div>
       <div class="amount" v-if="items.length">Total: {{ amount | amountFilter }}</div>
-      <div class="checkout button special" v-if="items.length">Оформить заказ</div>
+      <OrderForm v-if="items.length"
+                 :cart="cartItems"
+                 @checkout="onCheckout"></OrderForm>
+    </div>
+    <div class="order-success" v-if="isShowPopup">
+      <h2>Спасибо за Ваш заказ</h2>
+      <p>Ожидайте звонка представителя</p>
     </div>
   </div>
 </template>
@@ -46,9 +52,18 @@
 import { mapState, mapGetters, mapActions } from 'vuex';
 
 import { amount as amountFilter } from '@/utils';
+import OrderForm from '@/components/cart/OrderForm.vue';
 
 export default {
   name: 'Cart',
+  components: {
+    OrderForm,
+  },
+  data() {
+    return {
+      isShowPopup: false,
+    };
+  },
   computed: {
     ...mapState(['shopItems']),
     ...mapState('cart', ['items']),
@@ -64,6 +79,7 @@ export default {
             ...shopItem,
             type,
             cartId,
+            itemType: shopItem.type,
             cost: shopItem.cost,
           };
         });
@@ -74,6 +90,10 @@ export default {
   },
   methods: {
     ...mapActions('cart', ['updateItem', 'removeItem']),
+    onCheckout() {
+      this.isShowPopup = true;
+      setTimeout(() => { this.isShowPopup = false; }, 2000);
+    },
   },
 };
 </script>
@@ -156,5 +176,16 @@ export default {
     .cart-item .remove-item {
       margin-top: 1em;
     }
+  }
+  .order-success {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    padding: 10em;
+    border-radius: 10px;
+    background-color: greenyellow;
+    text-align: center;
+    color: #000;
   }
 </style>
