@@ -19,7 +19,10 @@
     <CartIcon :item="item" @click="$emit('addItem', {
               count,
               id: item.id,
-              type: item.types && item.types[selectedTypeIndex],
+              types: item.types.map(({ id, values }) => ({
+                id,
+                value: values[selectedTypesIndexes[id]].id,
+              })),
             })"></CartIcon>
   </div>
 </template>
@@ -37,9 +40,9 @@ export default {
       type: Object,
       required: true,
     },
-    selectedTypeIndex: {
-      type: Number,
-      default: null,
+    selectedTypesIndexes: {
+      type: Object,
+      required: true,
     },
   },
   data() {

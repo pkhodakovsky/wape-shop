@@ -1,20 +1,33 @@
 export default {
   data() {
     return {
-      selectedTypeIndex: 0,
+      selectedTypesIndexes: {},
     };
   },
   computed: {
     cost() {
+      const { cost } = this.item;
       const itemTypes = this.item.types;
-      const typeCost = itemTypes.length && itemTypes[this.selectedTypeIndex].cost;
-      return typeCost || this.item.cost;
+      if (itemTypes.length) {
+        return itemTypes
+          .reduce((amount, type) => cost + (type
+            .values[this.selectedTypesIndexes[type.id]].cost || 0), cost);
+      }
+      return cost;
     },
   },
   methods: {
+    findType(searchId) {
+      return this.item.types.find(({ id }) => id === searchId);
+    },
     selectType(event) {
       const { value } = event.target;
       this.selectedTypeIndex = this.item.types.findIndex(type => type.value === +value);
     },
+  },
+  beforeMount() {
+    this.item.types.forEach((type) => {
+      this.selectedTypesIndexes[type.id] = 0;
+    });
   },
 };

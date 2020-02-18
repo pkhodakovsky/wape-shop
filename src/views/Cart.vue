@@ -135,9 +135,6 @@ export default {
     padding: 1em 4em;
     transition: box-shadow .25s;
   }
-  .cart-item:hover {
-    box-shadow: 0 0 15px 2px #565656;
-  }
   .cart-item img {
     width: 128px;
   }

@@ -9,7 +9,7 @@
       <span class="cost">Стоимость: {{ cost }} грн.</span>
     </div>
     <AddToCart :item="item"
-               :selectedTypeIndex="selectedTypeIndex"
+               :selectedTypesIndexes="selectedTypesIndexes"
                @addItem="$emit('addItem', $event)">
     </AddToCart>
   </div>

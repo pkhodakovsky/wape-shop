@@ -32,7 +32,10 @@ export default {
   methods: {
     getList() {
       return this.$store.state.shopItems.items
-        .filter(({ subtype }) => subtype === this.id)
+        .find(({ id }) => id === this.id)
+        .types
+        .find(({ id }) => id === 'name')
+        .values
         .map(({ name, description }) => `<b>${name}</b> – ${description}`);
     },
   },

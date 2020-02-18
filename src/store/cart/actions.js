@@ -5,40 +5,41 @@ function prepareCartId({ id, type }) {
   return id;
 }
 
+function compareItems(item, index, arr) {
+  return arr.findIndex(item2 => JSON.stringify(item) === JSON.stringify(item2));
+}
+
 export default {
-  addItem({ state, commit }, payload) {
-    const cart = state.items;
-    const cartId = prepareCartId(payload);
-    const existItemIndex = cart.findIndex(({ id }) => id === cartId);
-    if (existItemIndex !== -1) {
-      commit('updateCartItem', {
-        index: existItemIndex,
-        count: cart[existItemIndex].count += payload.count,
-      });
-    } else {
-      const { count } = payload;
-      commit('updateCart', {
-        id: cartId,
-        count,
-      });
-    }
-    commit('saveCart');
+  saveCart({ state, commit }) {
+    const newCart = state.items.map((item, index, arr) => {
+      const foundIndex = arr.findIndex(compareItems);
+      if (foundIndex !== index) {
+        const foundItem = arr[foundIndex];
+        foundItem.count += item.count;
+      }
+      return item;
+    }).filter(compareItems);
+    commit('saveCart', newCart);
   },
-  updateItem({ state, commit }, payload) {
+  addItem({ dispatch, commit }, payload) {
+    commit('updateCart', payload);
+    dispatch('saveCart');
+  },
+  updateItem({ state, dispatch, commit }, payload) {
     const cartId = prepareCartId(payload);
     const existItemIndex = state.items.findIndex(({ id }) => id === cartId);
     commit('updateCartItem', {
       index: existItemIndex,
       count: payload.count,
     });
-    commit('saveCart');
+    dispatch('saveCart');
   },
-  removeItem({ state, commit }, payload) {
+  removeItem({ state, dispatch, commit }, payload) {
     const cartId = prepareCartId(payload);
     const index = state.items.findIndex(({ id }) => id === cartId);
     if (index !== -1) {
       commit('removeItem', { index });
     }
-    commit('saveCart');
+    dispatch('saveCart');
   },
 };

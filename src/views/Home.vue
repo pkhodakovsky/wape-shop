@@ -9,7 +9,11 @@
     <section id="banner" data-video="images/banner">
       <div class="inner">
         <div class="logo"></div>
-        <a href="#one" class="button special scrolly">Наша продукция</a>
+        <div href="#one" class="button special scrolly">
+          <router-link to="/shop">
+            Перейти в магазин
+          </router-link>
+        </div>
       </div>
     </section>
 
@@ -64,11 +68,6 @@
             id="vapeDrinks"
             :image="vapeDrinksImage"
             :title='`<h2>VAPE DRINK</h2>`'/>
-        </div>
-        <div class="button special open-shop">
-          <router-link to="/shop">
-            Перейти в магазин
-          </router-link>
         </div>
       </div>
     </section>

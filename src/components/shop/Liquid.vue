@@ -5,20 +5,30 @@
     </div>
     <div class="data">
       <h4 class="name">{{ item.name }}</h4>
-      <span class="descr" v-html="item.description"></span><br/>
+      <span class="descr" v-html="description"></span><br/>
       <span class="cost">Стоимость: {{ cost }} грн.</span>
     </div>
     <AddToCart :item="item"
-               :selectedTypeIndex="selectedTypeIndex"
+               :selectedTypesIndexes="selectedTypesIndexes"
                @addItem="$emit('addItem', $event)">
-      <select class="strength" slot="pre" @change="selectType">
-        <option
-          v-for="(strength, index) in item.types"
-          :key="index"
-          :selected="index === selectedTypeIndex"
-          :value="strength.value">{{ strength.value }} mg
-        </option>
-      </select>
+      <template slot="pre">
+        <select class="name" @change="selectNameType">
+          <option
+            v-for="(name, index) in nameType.values"
+            :key="index"
+            :selected="index === selectedTypesIndexes.name"
+            :value="name.id">{{ name.name }}
+          </option>
+        </select>
+        <select class="strength" @change="selectStrengthType">
+          <option
+            v-for="(strength, index) in strengthType.values"
+            :key="index"
+            :selected="index === selectedTypesIndexes.strength"
+            :value="strength.value">{{ strength.value }} mg
+          </option>
+        </select>
+      </template>
     </AddToCart>
   </div>
 </template>
@@ -35,18 +45,43 @@ export default {
   mixins: [
     ShopItemMixin,
   ],
+  data() {
+    return {
+      nameType: this.findType('name'),
+      strengthType: this.findType('strength'),
+      description: '',
+    };
+  },
   props: {
     item: {
       type: Object,
       required: true,
     },
   },
+  methods: {
+    updateDescription() {
+      this.description = this.nameType.values[this.selectedTypesIndexes.name].description;
+    },
+    selectNameType(event) {
+      const { value } = event.target;
+      this.selectedTypesIndexes.name = this.nameType.values.findIndex(({ id }) => id === value);
+      this.updateDescription();
+    },
+    selectStrengthType(event) {
+      const { value } = event.target;
+      this.selectedTypesIndexes.strength = this.strengthType.values
+        .findIndex(type => type.value === +value);
+    },
+  },
+  beforeMount() {
+    this.updateDescription();
+  },
 };
 </script>
 
 <style scoped>
   .liquid >>> .add-to-cart {
-    width: 16em;
+    width: 26em;
   }
   .img img {
     width: 160px;
@@ -61,15 +96,21 @@ export default {
   }
   .add-to-cart {
     display: flex;
-    width: 16em;
   }
-  .strength {
-    width: 4em;
+  .add-to-cart .name,
+  .add-to-cart .strength {
     height: 2em;
     padding: 0 .5em;
   }
-  .strength option {
+  .add-to-cart .name option,
+  .add-to-cart .strength option {
     background-color: #000;
+  }
+  .add-to-cart .name {
+    width: 10em;
+  }
+  .add-to-cart .strength {
+    width: 4em;
   }
 
   @media screen and (max-width: 1023px) {
