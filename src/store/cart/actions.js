@@ -1,3 +1,5 @@
+import omit from 'object.omit';
+
 function prepareCartId({ id, type }) {
   if (type && typeof type.value !== 'undefined') {
     return `${id}__${type.value}`;
@@ -6,19 +8,21 @@ function prepareCartId({ id, type }) {
 }
 
 function compareItems(item, index, arr) {
-  return arr.findIndex(item2 => JSON.stringify(item) === JSON.stringify(item2));
+  return arr.findIndex(item2 => (
+    JSON.stringify(omit(item, ['count'])) === JSON.stringify(omit(item2, ['count']))
+  ));
 }
 
 export default {
   saveCart({ state, commit }) {
     const newCart = state.items.map((item, index, arr) => {
-      const foundIndex = arr.findIndex(compareItems);
+      const foundIndex = arr.findIndex((...args) => compareItems(...args) !== -1);
       if (foundIndex !== index) {
         const foundItem = arr[foundIndex];
         foundItem.count += item.count;
       }
       return item;
-    }).filter(compareItems);
+    }).filter((item, index, arr) => arr.indexOf(item) === compareItems(item, index, arr));
     commit('saveCart', newCart);
   },
   addItem({ dispatch, commit }, payload) {

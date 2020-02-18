@@ -9,7 +9,7 @@
     <section id="banner" data-video="images/banner">
       <div class="inner">
         <div class="logo"></div>
-        <div href="#one" class="button special scrolly">
+        <div class="button special scrolly">
           <router-link to="/shop">
             Перейти в магазин
           </router-link>
