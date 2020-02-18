@@ -1,11 +1,6 @@
 import omit from 'object.omit';
 
-function prepareCartId({ id, type }) {
-  if (type && typeof type.value !== 'undefined') {
-    return `${id}__${type.value}`;
-  }
-  return id;
-}
+import { prepareCartId } from './utils';
 
 function compareItems(item, index, arr) {
   return arr.findIndex(item2 => (
@@ -16,17 +11,22 @@ function compareItems(item, index, arr) {
 export default {
   saveCart({ state, commit }) {
     const newCart = state.items.map((item, index, arr) => {
-      const foundIndex = arr.findIndex((...args) => compareItems(...args) !== -1);
+      const foundIndex = compareItems(item, index, arr);
       if (foundIndex !== index) {
         const foundItem = arr[foundIndex];
         foundItem.count += item.count;
       }
       return item;
-    }).filter((item, index, arr) => arr.indexOf(item) === compareItems(item, index, arr));
+    })
+      .filter((item, index, arr) => arr.indexOf(item) === compareItems(item, index, arr));
     commit('saveCart', newCart);
   },
   addItem({ dispatch, commit }, payload) {
-    commit('updateCart', payload);
+    const cartId = prepareCartId(payload);
+    commit('updateCart', {
+      id: cartId,
+      count: payload.count,
+    });
     dispatch('saveCart');
   },
   updateItem({ state, dispatch, commit }, payload) {

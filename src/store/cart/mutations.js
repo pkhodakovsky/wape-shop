@@ -6,8 +6,9 @@ export default {
       items.push(item);
     });
   },
-  saveCart({ items }) {
-    saveCart(items);
+  saveCart(state, newCart) {
+    state.items = newCart;
+    saveCart(newCart);
   },
   updateCart(state, payload) {
     state.items.push(payload);
