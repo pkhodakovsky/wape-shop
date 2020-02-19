@@ -6,7 +6,9 @@
         <div class="cart-item" v-for="item in cartItems" :key="item.cartId">
           <img width="256px" height="auto" :src="item.images[0]" :alt="item.name"/>
           <h4 class="name">{{ item.name }}</h4>
-          <span v-if="item.type">{{ item.type }} mg</span>
+          <span v-if="item.types">
+            <span v-for="(type, key) in item.types" :key="key">{{ type.value }}</span>
+          </span>
           <span v-else></span>
           <span class="item-amount">
             <span class="cost">{{ item.cost | amountFilter }}</span>
@@ -51,7 +53,7 @@
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex';
 
-import { amount as amountFilter } from '@/utils';
+import { amount as amountFilter, parseCartId } from '@/utils';
 import OrderForm from '@/components/cart/OrderForm.vue';
 
 export default {
@@ -72,15 +74,12 @@ export default {
       return this.items
         .map((item) => {
           const cartId = item.id;
-          const [parsedId, type] = cartId.split('__');
-          const shopItem = this.shopItems.items.find(({ id }) => id === parsedId);
+          const cartItem = parseCartId(cartId);
+          const shopItem = this.shopItems.items.find(({ id }) => id === cartItem.id);
           return {
-            ...item,
             ...shopItem,
-            type,
+            ...item,
             cartId,
-            itemType: shopItem.type,
-            cost: shopItem.cost,
           };
         });
     },

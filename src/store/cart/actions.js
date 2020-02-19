@@ -1,6 +1,6 @@
 import omit from 'object.omit';
 
-import { prepareCartId } from './utils';
+import { prepareCartId } from '../../utils';
 
 function compareItems(item, index, arr) {
   return arr.findIndex(item2 => (
