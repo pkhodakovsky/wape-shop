@@ -88,7 +88,7 @@ export default {
   computed: {
     orderText() {
       return this.cart.map((item) => {
-        switch (item.itemType) {
+        switch (item.type) {
           case 'liquid':
             return this.prepareLiquidText(item);
           case 'selfMixing':
