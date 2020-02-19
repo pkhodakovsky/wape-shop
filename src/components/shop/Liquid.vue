@@ -70,7 +70,7 @@ export default {
     selectStrengthType(event) {
       const { value } = event.target;
       this.selectedTypesIndexes.strength = this.strengthType.values
-        .findIndex(type => type.value === +value);
+        .findIndex(type => type.value === value);
     },
   },
   beforeMount() {

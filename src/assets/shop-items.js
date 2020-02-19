@@ -67,22 +67,22 @@ export default {
           values: [
             {
               id: 'cowboyGirl',
-              name: 'Cowboy girl',
+              value: 'Cowboy girl',
               description: 'Нежный <i>бисквитный пирог</i> с начинкой из спелой, сочной <i>малины</i>. Мягкий и легкий вкус десерта, дополняет свежая и сладкая ягода на выдохе. Любители попарить и расслабится оценят эту жидкость по достоинству',
             },
             {
               id: 'sherif',
-              name: 'Sherif',
+              value: 'Sherif',
               description: 'Тост с легкой прожаренной корочкой и сладким <i>клубничным вареньем</i>. Эта жидкость заставит вас погрузиться в детство и получить незабываемое наслаждение от всеми любимого лакомства',
             },
             {
               id: 'legends',
-              name: 'Legends',
+              value: 'Legends',
               description: 'Жевательная резинка со вкусом <i>медовой дыни</i> и спелой, сочной <i>клубники</i>. Легкий фруктовый микс со сладким послевкусием. Освежающая жидкость отлично подойдет на повседневное парение',
             },
             {
               id: 'bandit',
-              name: 'Bandit',
+              value: 'Bandit',
               description: 'Невероятно бодрящий вкус крепкого <i>мокачино</i> с тонкой <i>ореховой</i> ноткой. Основной кофейный вкус передан очень четко и насыщено, а ореховое послевкусие не оставит равнодушным ни одного парильщика',
             },
           ],
@@ -112,27 +112,27 @@ export default {
           values: [
             {
               id: 'ten',
-              name: 'Ten',
+              value: 'Ten',
               description: '',
             },
             {
               id: 'jack',
-              name: 'Jack',
+              value: 'Jack',
               description: '',
             },
             {
               id: 'queen',
-              name: 'Queen',
+              value: 'Queen',
               description: '',
             },
             {
               id: 'king',
-              name: 'King',
+              value: 'King',
               description: '',
             },
             {
               id: 'ace',
-              name: 'Ace',
+              value: 'Ace',
               description: '',
             },
           ],
@@ -161,27 +161,27 @@ export default {
           values: [
             {
               id: 'island',
-              name: 'Island',
+              value: 'Island',
               description: 'Табачный лист в шоколадной глазури пропитанный кокосовым молоком',
             },
             {
               id: 'ry4',
-              name: 'RY4',
+              value: 'RY4',
               description: 'Крепкий, с кислиной, табачный вкус для ценителей классики',
             },
             {
               id: 'luckyStrike',
-              name: 'Lucky strike',
+              value: 'Lucky strike',
               description: 'Настоящий американский вкус табака с мягким послевкусием',
             },
             {
               id: 'kent',
-              name: 'Kent',
+              value: 'Kent',
               description: 'Классический табачный вкус популярных сигарет. Немного терпкий с кислинкой',
             },
             {
               id: 'davidoff',
-              name: 'Davidoff',
+              value: 'Davidoff',
               description: 'Нежный табачный вкус с нотками меда и шоколада',
             },
           ],
@@ -209,32 +209,32 @@ export default {
           values: [
             {
               id: 'mango',
-              name: 'Mango',
+              value: 'Mango',
               description: 'Спелое манго',
             },
             {
               id: 'exotic',
-              name: 'Exotic',
+              value: 'Exotic',
               description: 'Освежающий микс апельсина, манго и киви',
             },
             {
               id: 'peach',
-              name: 'Peach',
+              value: 'Peach',
               description: 'Сладкий сочный персик',
             },
             {
               id: 'gum',
-              name: 'Gum',
+              value: 'Gum',
               description: 'Фруктовая жевательная резинка',
             },
             {
               id: 'currant',
-              name: 'Currant',
+              value: 'Currant',
               description: 'Кислая смородина',
             },
             {
               id: 'juice',
-              name: 'Juice',
+              value: 'Juice',
               description: 'Микс граната, грейпфрута, манго и тонкой ноткой лайма',
             },
           ],
@@ -263,32 +263,32 @@ export default {
           values: [
             {
               id: 'captainBlack',
-              name: 'Captain Black',
+              value: 'Captain Black',
               description: '',
             },
             {
               id: 'lm',
-              name: 'L&M',
+              value: 'L&M',
               description: '',
             },
             {
               id: 'camel',
-              name: 'CAMEL',
+              value: 'CAMEL',
               description: '',
             },
             {
               id: 'winston',
-              name: 'WINSTON',
+              value: 'WINSTON',
               description: '',
             },
             {
               id: 'parliament',
-              name: 'PARLIAMENT',
+              value: 'PARLIAMENT',
               description: '',
             },
             {
               id: 'marlboro',
-              name: 'MARLBORO',
+              value: 'MARLBORO',
               description: '',
             },
           ],
@@ -316,22 +316,22 @@ export default {
           values: [
             {
               id: 'camel',
-              name: 'CAMEL',
+              value: 'CAMEL',
               description: '',
             },
             {
               id: 'lm',
-              name: 'L&M',
+              value: 'L&M',
               description: '',
             },
             {
               id: 'winston',
-              name: 'WINSTON',
+              value: 'WINSTON',
               description: '',
             },
             {
               id: 'camelRed',
-              name: 'CAMEL (RED)',
+              value: 'CAMEL (RED)',
               description: '',
             },
           ],
@@ -359,17 +359,17 @@ export default {
           values: [
             {
               id: 'captainBlood',
-              name: 'Captain blood',
+              value: 'Captain blood',
               description: 'Ярко выраженный вкус лесных ягод, с дополнением клюквы и красной смородины создали неповторимый микс, который разлит в этом флаконе.',
             },
             {
               id: 'greenIsland',
-              name: 'Green island',
+              value: 'Green island',
               description: 'Крепкий абсент завораживает своим неповторимым вкусом, а кислый лайм дает возможность понять насколько глубоко жидкость может зацепить.',
             },
             {
               id: 'purpleSail',
-              name: 'Purple sail',
+              value: 'Purple sail',
               description: 'Всеми любимый энергетический напиток Red Bull, с черничным привкусом, приятно бодрит своей кислинкой.',
             },
           ],
@@ -398,27 +398,27 @@ export default {
           values: [
             {
               id: 'homer',
-              name: 'Homer',
+              value: 'Homer',
               description: 'С виду он брутальнй мужлан. Но, что скрывается внутри? Пока не попробовали эту жидкость, не спешите делать выводы. Кисло-сладкий вкус спелого сочного киви просто взрывает рецепторы.',
             },
             {
               id: 'marge',
-              name: 'Marge',
+              value: 'Marge',
               description: 'Какая настоящая хозяйка не любит варить ягодный пунш? Мардж приготовила вам настоящий сюрприз. Микс кисленькх лесных ягод приятно расслабляют, но в то же время заряжают бодростью.',
             },
             {
               id: 'bart',
-              name: 'Bart',
+              value: 'Bart',
               description: 'Молодежь не любит обыденность. Любимый напиток Барта - мохито, только классический - это банольно. Что будет, если добавить туда черной смородины и клубники? Не узнаешь, пока не попробуешь. Вперёд.',
             },
             {
               id: 'lisa',
-              name: 'Lisa',
+              value: 'Lisa',
               description: 'У настоящей девушки все должно быть идально, аккуратно и красиво. Лиза очень постаралась, чтобы создать вкус, который понравится всем. Думаете, что персик и клюква не сочетаются? Вы просто не умеете их готовить.',
             },
             {
               id: 'maggie',
-              name: 'Maggie',
+              value: 'Maggie',
               description: 'Все слышали, что дети живут эмоциями и порой, чтобы угодить, приходится лезть вон из кожи. Этот вкус создан для удовлетворения любых ваших капризов. Кисто-сладкое сочетание ежевики и смородины отлично дополняет взрывная волна лесных ягод.',
             },
           ],
@@ -447,22 +447,22 @@ export default {
           values: [
             {
               id: 'restFruits',
-              name: 'REST FRUITS',
+              value: 'REST FRUITS',
               description: '',
             },
             {
               id: 'iceLime',
-              name: 'ICE LIME',
+              value: 'ICE LIME',
               description: '',
             },
             {
               id: 'iceCurrant',
-              name: 'ICE CURRANT',
+              value: 'ICE CURRANT',
               description: '',
             },
             {
               id: 'trawb',
-              name: 'TRAWB',
+              value: 'TRAWB',
               description: '',
             },
           ],
@@ -492,27 +492,27 @@ export default {
           values: [
             {
               id: 'cocaCola',
-              name: 'COCA COLA',
+              value: 'COCA COLA',
               description: '',
             },
             {
               id: 'sprite',
-              name: 'SPRITE',
+              value: 'SPRITE',
               description: '',
             },
             {
               id: 'fanta',
-              name: 'FANTA',
+              value: 'FANTA',
               description: '',
             },
             {
               id: 'redBull',
-              name: 'RED BULL',
+              value: 'RED BULL',
               description: '',
             },
             {
               id: 'drPepper',
-              name: 'Dr PEPPER',
+              value: 'Dr PEPPER',
               description: '',
             },
           ],

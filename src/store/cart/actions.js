@@ -30,8 +30,7 @@ export default {
     dispatch('saveCart');
   },
   updateItem({ state, dispatch, commit }, payload) {
-    const cartId = prepareCartId(payload);
-    const existItemIndex = state.items.findIndex(({ id }) => id === cartId);
+    const existItemIndex = state.items.findIndex(({ id }) => id === payload.cartId);
     commit('updateCartItem', {
       index: existItemIndex,
       count: payload.count,
@@ -39,8 +38,7 @@ export default {
     dispatch('saveCart');
   },
   removeItem({ state, dispatch, commit }, payload) {
-    const cartId = prepareCartId(payload);
-    const index = state.items.findIndex(({ id }) => id === cartId);
+    const index = state.items.findIndex(({ id }) => id === payload.cartId);
     if (index !== -1) {
       commit('removeItem', { index });
     }

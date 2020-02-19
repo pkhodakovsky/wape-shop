@@ -7,7 +7,7 @@
           <img width="256px" height="auto" :src="item.images[0]" :alt="item.name"/>
           <h4 class="name">{{ item.name }}</h4>
           <span v-if="item.types">
-            <span v-for="(type, key) in item.types" :key="key">{{ type.value }}</span>
+            {{ item.types }}
           </span>
           <span v-else></span>
           <span class="item-amount">
@@ -15,14 +15,13 @@
             x
             <input type="number" min="0" max="100" v-model="item.count"
                    @change="updateItem({
-                    id: item.id,
-                    type: { value: item.type },
+                    cartId: item.cartId,
                     count: +item.count,
                    })"/>
             &nbsp;
             <span class="item-amount">{{ item.cost * (+item.count) | amountFilter }}</span>
           </span>
-          <div class="remove-item" @click="removeItem({ id: item.id, type: { value: item.type } })">
+          <div class="remove-item" @click="removeItem({ cartId: item.cartId })">
             <svg viewBox="0 0 24.99 24.99" id="icon-close-empty">
               <path
                 d="M18.15,6.84a1,1,0,0,0-1.41,0l-4.24,4.24L8.25,6.84A1,1,0,0,0,6.84,8.25l4.24,
@@ -76,10 +75,17 @@ export default {
           const cartId = item.id;
           const cartItem = parseCartId(cartId);
           const shopItem = this.shopItems.items.find(({ id }) => id === cartItem.id);
+          const foundTypes = cartItem.types
+            .map(type => shopItem.types.find(({ id }) => type.id === id)
+              .values
+              .find(({ id }) => type.value === id));
           return {
             ...shopItem,
-            ...item,
             cartId,
+            types: foundTypes.map(type => type.value).join('; '),
+            count: item.count,
+            cost: shopItem.cost + foundTypes
+              .reduce((additionalCost, type) => additionalCost + (type.cost || 0), 0),
           };
         });
     },

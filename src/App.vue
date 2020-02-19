@@ -52,6 +52,7 @@
 <script>
 import { mapState, mapMutations } from 'vuex';
 
+import { parseCartId } from './utils';
 import Cart from '@/components/Cart.vue';
 
 export default {
@@ -68,11 +69,13 @@ export default {
       if (!(cart instanceof Array)) return [];
       return cart
         .filter(({ id, count }) => count || id)
-        .filter(({ id }) => {
-          const [parsedId, parsedType] = id.split('__');
-          return this.shopItems.items.findIndex(item => item.id === parsedId
-              && (!item.types.length
-              || item.types.findIndex(({ value }) => value === parsedType) !== -1)) !== -1;
+        .filter((cartItem) => {
+          const { id, types } = parseCartId(cartItem.id);
+          return this.shopItems.items.findIndex(item => item.id === id
+              && (!types.length
+              || types.every(type => item.types.find(itemType => itemType.id === type.id)
+                .values
+                .findIndex(typeValue => typeValue.id === type.value) !== -1))) !== -1;
         });
     },
   },

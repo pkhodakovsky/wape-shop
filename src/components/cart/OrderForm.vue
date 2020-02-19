@@ -12,11 +12,9 @@
              :type="row.type"
              v-model="row.value"/>
     </div>
-    <textarea cols="1000"
-              rows="1000"
-              name="order"
-              style="display: none"
-              v-model="orderText"></textarea>
+    <input type="hidden"
+           name="order"
+           v-model="orderText"/>
     <button class="checkout button special"
             type="submit"
             @click="$emit('checkout')">Оформить заказ</button>
