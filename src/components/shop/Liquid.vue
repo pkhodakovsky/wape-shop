@@ -17,7 +17,7 @@
             v-for="(name, index) in nameType.values"
             :key="index"
             :selected="index === selectedTypesIndexes.name"
-            :value="name.id">{{ name.name }}
+            :value="name.id">{{ name.value }}
           </option>
         </select>
         <select class="strength" @change="selectStrengthType">
@@ -25,7 +25,7 @@
             v-for="(strength, index) in strengthType.values"
             :key="index"
             :selected="index === selectedTypesIndexes.strength"
-            :value="strength.value">{{ strength.value }} mg
+            :value="strength.value">{{ strength.value }}
           </option>
         </select>
       </template>

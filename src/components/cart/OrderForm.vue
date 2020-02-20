@@ -56,10 +56,11 @@ export default {
   },
   methods: {
     prepareLiquidText(liquid) {
+      const [name, strength] = liquid.types.split('; ');
       return [
-        `Линейка:\t${liquid.subtypeName}\t`,
-        `Название:\t${liquid.name}\t`,
-        `Никотин:\t${liquid.type} мг\t`,
+        `Линейка:\t${liquid.name}\t`,
+        `Название:\t${name}\t`,
+        `Никотин:\t${strength} мг\t`,
         `Количество:\t${liquid.count} шт.\t`,
         `Стоимость:\t${liquid.cost} грн.\t`,
         `Сумма:\t${liquid.count * liquid.cost}\t`,
@@ -69,6 +70,7 @@ export default {
     prepareSelfMixingText(selfMixing) {
       return [
         `Название:\t${selfMixing.name}\t`,
+        `Тип:\t${selfMixing.types}\t`,
         `Количество:\t${selfMixing.count} шт.\t`,
         `Стоимость:\t${selfMixing.cost} грн.\t`,
         `Сумма:\t${selfMixing.count * selfMixing.cost}\t`,

@@ -91,9 +91,9 @@ export default {
           id: 'strength',
           label: 'Крепость',
           values: [
-            { id: 'str1', value: '0' },
-            { id: 'str2', value: '1.5' },
-            { id: 'str3', value: '3' },
+            { id: 'str1', value: '0 mg' },
+            { id: 'str2', value: '1.5 mg' },
+            { id: 'str3', value: '3 mg' },
           ],
         },
       ],
@@ -141,9 +141,9 @@ export default {
           id: 'strength',
           label: 'Крепость',
           values: [
-            { id: 'str1', value: '0' },
-            { id: 'str2', value: '1.5' },
-            { id: 'str3', value: '3' },
+            { id: 'str1', value: '0 mg' },
+            { id: 'str2', value: '1.5 mg' },
+            { id: 'str3', value: '3 mg' },
           ],
         },
       ],
@@ -151,7 +151,7 @@ export default {
     {
       id: 'dailySteamTobacco',
       type: 'liquid',
-      name: '<h2>DAILY STEAM</h2><p>(Табачка)</p>',
+      name: 'DAILY STEAM (Табачка)',
       images: [dailySteamTobaccoImage],
       cost: 27,
       types: [
@@ -190,8 +190,8 @@ export default {
           id: 'strength',
           label: 'Крепость',
           values: [
-            { id: 'str1', value: '1.5' },
-            { id: 'str2', value: '3' },
+            { id: 'str1', value: '1.5 mg' },
+            { id: 'str2', value: '3 mg' },
           ],
         },
       ],
@@ -199,7 +199,7 @@ export default {
     {
       id: 'dailySteamFruits',
       type: 'liquid',
-      name: '<h2>DAILY STEAM</h2><p>(Фрукты)</p>',
+      name: 'DAILY STEAM (Фрукты)',
       images: [dailySteamFruitsImage],
       cost: 32,
       types: [
@@ -243,9 +243,9 @@ export default {
           id: 'strength',
           label: 'Крепость',
           values: [
-            { id: 'str1', value: '0' },
-            { id: 'str2', value: '1.5' },
-            { id: 'str3', value: '3' },
+            { id: 'str1', value: '0 mg' },
+            { id: 'str2', value: '1.5 mg' },
+            { id: 'str3', value: '3 mg' },
           ],
         },
       ],
@@ -297,8 +297,8 @@ export default {
           id: 'strength',
           label: 'Крепость',
           values: [
-            { id: 'str1', value: '3' },
-            { id: 'str2', value: '6' },
+            { id: 'str1', value: '3 mg' },
+            { id: 'str2', value: '6 mg' },
           ],
         },
       ],
@@ -306,7 +306,7 @@ export default {
     {
       id: 'tobaccoSmall',
       type: 'liquid',
-      name: '<h2>TOBACCO</h2><p>(small)</p>',
+      name: 'TOBACCO (small)',
       images: [tobaccoSmallImage],
       cost: 37,
       types: [
@@ -340,8 +340,8 @@ export default {
           id: 'strength',
           label: 'Крепость',
           values: [
-            { id: 'str1', value: '25' },
-            { id: 'str2', value: '50' },
+            { id: 'str1', value: '25 mg' },
+            { id: 'str2', value: '50 mg' },
           ],
         },
       ],
@@ -378,9 +378,9 @@ export default {
           id: 'strength',
           label: 'Крепость',
           values: [
-            { id: 'str1', value: '0' },
-            { id: 'str2', value: '1.5' },
-            { id: 'str3', value: '3' },
+            { id: 'str1', value: '0 mg' },
+            { id: 'str2', value: '1.5 mg' },
+            { id: 'str3', value: '3 mg' },
           ],
         },
       ],
@@ -427,9 +427,9 @@ export default {
           id: 'strength',
           label: 'Крепость',
           values: [
-            { id: 'str1', value: '0' },
-            { id: 'str2', value: '1.5' },
-            { id: 'str3', value: '3' },
+            { id: 'str1', value: '0 mg' },
+            { id: 'str2', value: '1.5 mg' },
+            { id: 'str3', value: '3 mg' },
           ],
         },
       ],
@@ -471,9 +471,9 @@ export default {
           id: 'strength',
           label: 'Крепость',
           values: [
-            { id: 'str1', value: '0' },
-            { id: 'str2', value: '1.5' },
-            { id: 'str3', value: '3' },
+            { id: 'str1', value: '0 mg' },
+            { id: 'str2', value: '1.5 mg' },
+            { id: 'str3', value: '3 mg' },
           ],
         },
       ],
@@ -521,9 +521,9 @@ export default {
           id: 'strength',
           label: 'Крепость',
           values: [
-            { id: 'str1', value: '0' },
-            { id: 'str2', value: '1.5' },
-            { id: 'str3', value: '3' },
+            { id: 'str1', value: '0 mg' },
+            { id: 'str2', value: '1.5 mg' },
+            { id: 'str3', value: '3 mg' },
           ],
         },
       ],
@@ -543,11 +543,11 @@ export default {
           values: [
             {
               id: 'comp1',
-              label: '50/50',
+              value: '50/50',
             },
             {
               id: 'comp2',
-              label: '70/30',
+              value: '70/30',
             },
           ],
         },
@@ -557,22 +557,22 @@ export default {
           values: [
             {
               id: 'str1',
-              value: '0',
+              value: '0 mg',
               cost: 10,
             },
             {
               id: 'str2',
-              value: '2',
+              value: '2 mg',
               cost: 20,
             },
             {
               id: 'str3',
-              value: '4',
+              value: '4 mg',
               cost: 30,
             },
             {
               id: 'str5',
-              value: '6',
+              value: '6 mg',
               cost: 40,
             },
           ],
@@ -594,11 +594,11 @@ export default {
           values: [
             {
               id: 'comp1',
-              label: '50/50',
+              value: '50/50',
             },
             {
               id: 'comp2',
-              label: '70/30',
+              value: '70/30',
             },
           ],
         },
@@ -608,22 +608,22 @@ export default {
           values: [
             {
               id: 'str1',
-              value: '0',
+              value: '0 mg',
               cost: 10,
             },
             {
               id: 'str2',
-              value: '1.5',
+              value: '1.5 mg',
               cost: 20,
             },
             {
               id: 'str3',
-              value: '3',
+              value: '3 mg',
               cost: 30,
             },
             {
               id: 'str4',
-              value: '6',
+              value: '6 mg',
               cost: 40,
             },
           ],
@@ -645,11 +645,11 @@ export default {
           values: [
             {
               id: 'comp1',
-              label: '50/50',
+              value: '50/50',
             },
             {
               id: 'comp2',
-              label: '70/30',
+              value: '70/30',
             },
           ],
         },
@@ -659,22 +659,22 @@ export default {
           values: [
             {
               id: 'str1',
-              value: '0',
+              value: '0 mg',
               cost: 10,
             },
             {
               id: 'str2',
-              value: '1.5',
+              value: '1.5 mg',
               cost: 20,
             },
             {
               id: 'str3',
-              value: '3',
+              value: '3 mg',
               cost: 30,
             },
             {
               id: 'str4',
-              value: '6',
+              value: '6 mg',
               cost: 40,
             },
           ],

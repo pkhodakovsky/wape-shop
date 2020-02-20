@@ -17,7 +17,7 @@
             v-for="(composition, index) in compositionType.values"
             :key="index"
             :selected="index === selectedTypesIndexes.composition"
-            :value="composition.id">{{ composition.label }}
+            :value="composition.id">{{ composition.value }}
           </option>
         </select>
         <select class="strength" v-if="strengthType" @change="selectStrengthType">
@@ -85,7 +85,7 @@ export default {
 
 <style scoped>
   .self-mixing >>> .add-to-cart {
-    width: 16em;
+    width: 11em;
   }
   .self-mixing.base >>> .add-to-cart {
     width: 22em;
