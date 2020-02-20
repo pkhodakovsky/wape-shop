@@ -59,7 +59,7 @@ export default {
       type: 'liquid',
       name: 'Wild West',
       images: [wildWestImage],
-      cost: 19,
+      cost: 110,
       types: [
         {
           id: 'name',
@@ -99,12 +99,12 @@ export default {
       ],
     },
     {
-      id: 'cards',
+      id: 'flushRoyal',
       type: 'liquid',
-      subtype: 'cards',
-      name: 'Cards',
+      subtype: 'flushRoyal',
+      name: 'Flush Royal',
       images: [cardsImage],
-      cost: 24,
+      cost: 190,
       types: [
         {
           id: 'name',
@@ -153,7 +153,7 @@ export default {
       type: 'liquid',
       name: 'DAILY STEAM (Табачка)',
       images: [dailySteamTobaccoImage],
-      cost: 27,
+      cost: 120,
       types: [
         {
           id: 'name',
@@ -201,7 +201,7 @@ export default {
       type: 'liquid',
       name: 'DAILY STEAM (Фрукты)',
       images: [dailySteamFruitsImage],
-      cost: 32,
+      cost: 120,
       types: [
         {
           id: 'name',
@@ -251,11 +251,11 @@ export default {
       ],
     },
     {
-      id: 'tobacco',
+      id: 'sigaretteSeries',
       type: 'liquid',
-      name: 'TOBACCO',
+      name: 'Sigarette series',
       images: [tobaccoImage],
-      cost: 37,
+      cost: 90,
       types: [
         {
           id: 'name',
@@ -304,9 +304,9 @@ export default {
       ],
     },
     {
-      id: 'tobaccoSmall',
+      id: 'sigaretteSeriesSalt',
       type: 'liquid',
-      name: 'TOBACCO (small)',
+      name: 'Sigarette series SALT',
       images: [tobaccoSmallImage],
       cost: 37,
       types: [
@@ -351,7 +351,7 @@ export default {
       type: 'liquid',
       name: 'Dead Pirates',
       images: [deadPirateImage],
-      cost: 37,
+      cost: 160,
       types: [
         {
           id: 'name',
@@ -390,7 +390,7 @@ export default {
       type: 'liquid',
       name: 'The Simpsons',
       images: [simpsonsImage],
-      cost: 37,
+      cost: 120,
       types: [
         {
           id: 'name',
@@ -435,11 +435,11 @@ export default {
       ],
     },
     {
-      id: 'iceApow',
+      id: 'iceVapour',
       type: 'liquid',
-      name: 'ICE APOW',
+      name: 'Ice vapour',
       images: [iceApowImage],
-      cost: 37,
+      cost: 90,
       types: [
         {
           id: 'name',
@@ -481,10 +481,10 @@ export default {
     {
       id: 'vapeDrinks',
       type: 'liquid',
-      name: 'VAPE DRINKS',
+      name: 'Vape drinks',
       images: [vapeDrinksImage],
       description: '',
-      cost: 37,
+      cost: 120,
       types: [
         {
           id: 'name',
@@ -492,28 +492,28 @@ export default {
           values: [
             {
               id: 'cocaCola',
-              value: 'COCA COLA',
-              description: '',
+              value: 'Coca-Coca',
+              description: 'СВЯТО НАБЛИЖАЄТЬСЯ с первого вдоха! Парь легенду!',
             },
             {
               id: 'sprite',
-              value: 'SPRITE',
-              description: '',
+              value: 'Spirite',
+              description: 'Освежающий спрайт как ив рекламе, но без пузырьков. Имидж - ничто, жажда - всё!',
             },
             {
               id: 'fanta',
-              value: 'FANTA',
-              description: '',
+              value: 'Fantan',
+              description: 'Та самая из бутылки с пупырышками! Парь Fantan. Будь Бамбуча.',
             },
             {
               id: 'redBull',
-              value: 'RED BULL',
-              description: '',
+              value: 'Energy Bull',
+              description: 'Нашумевший энергетик теперь может быть и в твоём девайсе! Взбодрись с VAPE DRINK\'S Energy Bull.',
             },
             {
               id: 'drPepper',
-              value: 'Dr PEPPER',
-              description: '',
+              value: 'Dr Peppe',
+              description: 'Это вкус для настоящих ценителей - легендарная газировка с вишневым привкусом, которая отдает пряностью и отзывается легкой прохладой при выдохе.',
             },
           ],
         },

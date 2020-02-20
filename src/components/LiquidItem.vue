@@ -36,7 +36,7 @@ export default {
         .types
         .find(({ id }) => id === 'name')
         .values
-        .map(({ name, description }) => `<b>${name}</b> – ${description}`);
+        .map(({ value, description }) => `<b>${value}</b> – ${description}`);
     },
   },
 };

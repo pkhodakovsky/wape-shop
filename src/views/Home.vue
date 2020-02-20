@@ -33,9 +33,9 @@
             :image="wildWestImage"
             :title="`<h2>WILD WEST</h2>`"/>
           <liquidItem
-            id="cards"
+            id="flushRoyal"
             :image="cardsImage"
-            :title="`<h2>CARDS</h2>`"/>
+            :title="`<h2>FLUSH ROYAL</h2>`"/>
           <liquidItem
             id="dailySteamTobacco"
             :image="dailySteamTobaccoImage"
@@ -45,13 +45,13 @@
             :image="dailySteamFruitsImage"
             :title='`<h2>DAILY STEAM</h2><p>(Фрукты)</p>`'/>
           <liquidItem
-            id="tobacco"
+            id="sigaretteSeries"
             :image="tobaccoImage"
-            :title='`<h2>TOBACCO</h2>`'/>
+            :title='`<h2>SIGARETTE SERIES</h2>`'/>
           <liquidItem
-            id="tobaccoSmall"
+            id="sigaretteSeriesSalt"
             :image="tobaccoSmallImage"
-            :title='`<h2>TOBACCO</h2><p>(small)</p>`'/>
+            :title='`<h2>SIGARETTE SERIES</h2><p>(SALT)</p>`'/>
           <liquidItem
             id="deadPirate"
             :image="deadPirateImage"
@@ -59,11 +59,11 @@
           <liquidItem
             id="simpsons"
             :image="simpsonsImage"
-            :title='`<h2>SIMPSONS</h2>`'/>
+            :title='`<h2>THE SIMPSONS</h2>`'/>
           <liquidItem
-            id="iceApow"
+            id="iceVapour"
             :image="iceApowImage"
-            :title='`<h2>ICE APOW</h2>`'/>
+            :title='`<h2>ICE VAPOUR</h2>`'/>
           <liquidItem
             id="vapeDrinks"
             :image="vapeDrinksImage"

@@ -2054,6 +2054,7 @@
 	}
 
 	input[type="text"],
+	input[type="number"],
 	input[type="tel"],
 	input[type="password"],
 	input[type="email"],
@@ -2116,6 +2117,7 @@
 		}
 
 	input[type="text"],
+	input[type="number"],
 	input[type="tel"],
 	input[type="password"],
 	input[type="email"],
@@ -2216,6 +2218,7 @@
 	}
 
 	input[type="text"],
+	input[type="number"],
 	input[type="tel"],
 	input[type="password"],
 	input[type="email"],
@@ -2776,6 +2779,7 @@
 			}
 
 			.wrapper.style1 input[type="text"],
+			.wrapper.style1 input[type="number"],
 			.wrapper.style1 input[type="tel"],
 			.wrapper.style1 input[type="password"],
 			.wrapper.style1 input[type="email"],
@@ -2986,6 +2990,7 @@
 			}
 
 			.wrapper.style2 input[type="text"],
+			.wrapper.style2 input[type="number"],
 			.wrapper.style2 input[type="tel"],
 			.wrapper.style2 input[type="password"],
 			.wrapper.style2 input[type="email"],
@@ -3217,6 +3222,7 @@
 			}
 
 			.wrapper.style3 input[type="text"],
+			.wrapper.style3 input[type="number"],
 			.wrapper.style3 input[type="tel"],
 			.wrapper.style3 input[type="password"],
 			.wrapper.style3 input[type="email"],
