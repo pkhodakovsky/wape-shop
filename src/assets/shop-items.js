@@ -714,6 +714,7 @@ export default {
     {
       id: 'other_accum',
       type: 'other',
+      subtype: 'accum',
       images: [otherImage1],
       name: 'Аккумулятор',
       description: '',
@@ -725,17 +726,17 @@ export default {
           values: [
             {
               id: 'count1',
-              value: '1',
+              value: '1 шт.',
               cost: 0,
             },
             {
               id: 'count2',
-              value: '4',
+              value: '4 шт.',
               cost: 30,
             },
             {
               id: 'count3',
-              value: '10',
+              value: '10 шт.',
               cost: 90,
             },
           ],

@@ -5,6 +5,14 @@
     </div>
     <div class="data">
       <h4 class="name">{{ item.name }}</h4>
+      <select class="select-name" @change="selectNameType">
+        <option
+          v-for="(name, index) in nameType.values"
+          :key="index"
+          :selected="index === selectedTypesIndexes.name"
+          :value="name.id">{{ name.value }}
+        </option>
+      </select>
       <span class="descr" v-html="description"></span><br/>
       <span class="cost">Стоимость: {{ cost }} грн.</span>
     </div>
@@ -12,14 +20,6 @@
                :selectedTypesIndexes="selectedTypesIndexes"
                @addItem="$emit('addItem', $event)">
       <template slot="pre">
-        <select class="name" @change="selectNameType">
-          <option
-            v-for="(name, index) in nameType.values"
-            :key="index"
-            :selected="index === selectedTypesIndexes.name"
-            :value="name.id">{{ name.value }}
-          </option>
-        </select>
         <select class="strength" @change="selectStrengthType">
           <option
             v-for="(strength, index) in strengthType.values"
@@ -81,7 +81,7 @@ export default {
 
 <style scoped>
   .liquid >>> .add-to-cart {
-    width: 26em;
+    width: 16em;
   }
   .img img {
     width: 160px;
@@ -97,17 +97,18 @@ export default {
   .add-to-cart {
     display: flex;
   }
-  .add-to-cart .name,
+  .select-name,
   .add-to-cart .strength {
     height: 2em;
     padding: 0 .5em;
   }
-  .add-to-cart .name option,
+  .select-name option,
   .add-to-cart .strength option {
     background-color: #000;
   }
-  .add-to-cart .name {
+  .select-name {
     width: 10em;
+    margin: .5em 0;
   }
   .add-to-cart .strength {
     width: 4em;
@@ -120,6 +121,9 @@ export default {
     .name,
     .cost {
       text-align: center;
+    }
+    .select-name {
+      margin: 0.5em auto;
     }
   }
 </style>

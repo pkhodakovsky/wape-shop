@@ -1,5 +1,10 @@
 <template>
-  <span class="types liquid"></span>
+  <div class="types liquid">
+    <div v-for="(type, index) in item.types" :key="index">
+      <span>{{ type.label }}: </span>
+      <span>{{ type.value }}</span>
+    </div>
+  </div>
 </template>
 
 <script>

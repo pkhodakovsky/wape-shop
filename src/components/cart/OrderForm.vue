@@ -22,6 +22,10 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
+import { amount as amountFilter } from '@/utils';
+
 export default {
   name: 'OrderForm',
   props: {
@@ -55,52 +59,76 @@ export default {
     };
   },
   methods: {
+    addRow(text) {
+      return `<tr>${text}</tr>`;
+    },
+    addCell(text) {
+      return `<td>${text}</td>`;
+    },
     prepareLiquidText(liquid) {
-      const [name, strength] = liquid.types.split('; ');
-      return [
-        `Линейка:\t${liquid.name}\t`,
-        `Название:\t${name}\t`,
-        `Никотин:\t${strength} мг\t`,
-        `Количество:\t${liquid.count} шт.\t`,
-        `Стоимость:\t${liquid.cost} грн.\t`,
-        `Сумма:\t${liquid.count * liquid.cost}\t`,
-        '\n',
-      ].join('');
+      const [name, strength] = liquid.types.map(type => `${type.label}: ${type.value}`);
+      return ''.concat(this.addCell(`${liquid.name}. ${name}`))
+        .concat(this.addCell(strength))
+        .concat(this.addCell(`${liquid.count} шт.`))
+        .concat(this.addCell(amountFilter(liquid.cost)))
+        .concat(this.addCell(amountFilter(liquid.count * liquid.cost)));
     },
     prepareSelfMixingText(selfMixing) {
-      return [
-        `Название:\t${selfMixing.name}\t`,
-        `Тип:\t${selfMixing.types}\t`,
-        `Количество:\t${selfMixing.count} шт.\t`,
-        `Стоимость:\t${selfMixing.cost} грн.\t`,
-        `Сумма:\t${selfMixing.count * selfMixing.cost}\t`,
-        '\n',
-      ].join('');
+      let typeString;
+      switch (selfMixing.subtype) {
+        case 'base':
+          typeString = selfMixing.types.map(type => `${type.label}: ${type.value}`).join('. \n');
+          break;
+        default:
+          typeString = '';
+          break;
+      }
+      return ''.concat(this.addCell(selfMixing.name))
+        .concat(this.addCell(typeString))
+        .concat(this.addCell(`${selfMixing.count} шт.`))
+        .concat(this.addCell(amountFilter(selfMixing.cost)))
+        .concat(this.addCell(amountFilter(selfMixing.count * selfMixing.cost)));
     },
     prepareOtherText(other) {
-      return [
-        `Название:\t${other.name}\t`,
-        `Количество:\t${other.count} шт.\t`,
-        `Стоимость:\t${other.cost} грн.\t`,
-        `Сумма:\t${other.count * other.cost}\t`,
-        '\n',
-      ].join('');
+      let typeString;
+      switch (other.subtype) {
+        case 'accum':
+          typeString = other.types.map(type => `${type.label}: ${type.value}`).join('. \n');
+          break;
+        default:
+          typeString = '';
+          break;
+      }
+      return ''.concat(this.addCell(other.name))
+        .concat(this.addCell(typeString))
+        .concat(this.addCell(`${other.count} шт.`))
+        .concat(this.addCell(amountFilter(other.cost)))
+        .concat(this.addCell(amountFilter(other.count * other.cost)));
     },
   },
   computed: {
+    ...mapGetters('cart', ['amount']),
     orderText() {
-      return this.cart.map((item) => {
+      const title = this.addRow(
+        ''.concat(this.addCell('Название:'))
+          .concat(this.addCell('Тип:'))
+          .concat(this.addCell('Количество:'))
+          .concat(this.addCell('Стоимость:'))
+          .concat(this.addCell('Сумма:')),
+      );
+      const orderTable = this.cart.map((item) => {
         switch (item.type) {
           case 'liquid':
-            return this.prepareLiquidText(item);
+            return this.addRow(this.prepareLiquidText(item));
           case 'selfMixing':
-            return this.prepareSelfMixingText(item);
+            return this.addRow(this.prepareSelfMixingText(item));
           case 'other':
-            return this.prepareOtherText(item);
+            return this.addRow(this.prepareOtherText(item));
           default:
             return '';
         }
       }).join('');
+      return `<table border="1">${title}${orderTable}</table>`;
     },
   },
 };

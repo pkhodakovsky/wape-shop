@@ -1,17 +1,17 @@
 <template>
-  <component :is="item.type"></component>
+  <component :is="item.type" :item="item"></component>
 </template>
 
 <script>
-import LiquidTypes from './LiquidTypes';
-import SelfMixingTypes from './SelfMixingTypes';
-import OtherTypes from './OtherTypes';
+import LiquidTypes from './LiquidTypes.vue';
+import SelfMixingTypes from './SelfMixingTypes.vue';
+import OtherTypes from './OtherTypes.vue';
 
 export default {
   name: 'CartItemType',
   components: {
     liquid: LiquidTypes,
-    selfMixinig: SelfMixingTypes,
+    selfMixing: SelfMixingTypes,
     other: OtherTypes,
   },
   props: {

@@ -50,13 +50,20 @@ export default {
           const cartItem = parseCartId(cartId);
           const shopItem = this.shopItems.items.find(({ id }) => id === cartItem.id);
           const foundTypes = cartItem.types
-            .map(type => shopItem.types.find(({ id }) => type.id === id)
-              .values
-              .find(({ id }) => type.value === id));
+            .map((type) => {
+              const shopType = shopItem.types.find(({ id }) => type.id === id);
+              const typeData = shopType
+                .values
+                .find(({ id }) => type.value === id);
+              return {
+                label: shopType.label,
+                value: typeData.value,
+              };
+            });
           return {
             ...shopItem,
             cartId,
-            types: foundTypes.map(type => type.value).join('; '),
+            types: foundTypes,
             count: item.count,
             cost: shopItem.cost + foundTypes
               .reduce((additionalCost, type) => additionalCost + (type.cost || 0), 0),

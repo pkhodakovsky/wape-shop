@@ -1,29 +1,31 @@
 <template>
   <div class="add-to-cart">
     <slot name="pre"></slot>
-    <div class="minus" @click="decrement">
-      <svg viewBox="0 0 22 2" id="icon-minus" class="minus">
-        <path d="M1115.02,480.993a1,1,0,0,1,0-2h20a1,1,0,0,1,0,2h-20Z"
-              transform="translate(-1114 -479)"></path>
-      </svg>
-    </div>
-    <input class="count" type="number" min="1" max="1000" v-model="count"/>
-    <div class="plus" @click="increment">
-      <svg viewBox="0 0 22 22" id="icon-plus" class="plus">
-        <path
-          d="M1233.02,493.993v-9h-9a1,1,0,0,1,0-2h9v-9a1,1,0,1,1,2,0v9h9a1,1,0,0,1,0,
-                  2h-9v9A1,1,0,0,1,1233.02,493.993Z"
-          transform="translate(-1223 -473)"></path>
-      </svg>
-    </div>
-    <CartIcon :item="item" @click="$emit('addItem', {
-              count,
-              id: item.id,
-              types: item.types.map(({ id, values }) => ({
-                id,
-                value: values[selectedTypesIndexes[id]].id,
-              })),
-            })"></CartIcon>
+    <span class="count-handler">
+      <div class="minus" @click="decrement">
+        <svg viewBox="0 0 22 2" id="icon-minus" class="minus">
+          <path d="M1115.02,480.993a1,1,0,0,1,0-2h20a1,1,0,0,1,0,2h-20Z"
+                transform="translate(-1114 -479)"></path>
+        </svg>
+      </div>
+      <input class="count" type="number" min="1" max="1000" v-model="count"/>
+      <div class="plus" @click="increment">
+        <svg viewBox="0 0 22 22" id="icon-plus" class="plus">
+          <path
+            d="M1233.02,493.993v-9h-9a1,1,0,0,1,0-2h9v-9a1,1,0,1,1,2,0v9h9a1,1,0,0,1,0,
+                    2h-9v9A1,1,0,0,1,1233.02,493.993Z"
+            transform="translate(-1223 -473)"></path>
+        </svg>
+      </div>
+      <CartIcon :item="item" @click="$emit('addItem', {
+                count,
+                id: item.id,
+                types: item.types.map(({ id, values }) => ({
+                  id,
+                  value: values[selectedTypesIndexes[id]].id,
+                })),
+              })"></CartIcon>
+    </span>
   </div>
 </template>
 
@@ -77,6 +79,13 @@ export default {
     align-items: center;
     cursor: pointer;
   }
+  .count-handler {
+    width: 11em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
   .add-to-cart .minus,
   .add-to-cart .plus {
     width: 1em;
@@ -88,7 +97,10 @@ export default {
   }
   .add-to-cart .count {
     width: 3em;
-    height: 1.5em;
+    height: 2em;
     text-align: center;
+  }
+  input.count::-webkit-inner-spin-button {
+    display: none;
   }
 </style>

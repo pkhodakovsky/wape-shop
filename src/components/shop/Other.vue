@@ -1,5 +1,5 @@
 <template>
-  <div class="other">
+  <div class="other" :class="{ [item.subtype]: true }">
     <div class="img">
       <img :src="item.images[0]" :alt="item.name" width="320px" height="auto">
     </div>
@@ -11,6 +11,16 @@
     <AddToCart :item="item"
                :selectedTypesIndexes="selectedTypesIndexes"
                @addItem="$emit('addItem', $event)">
+      <span slot="pre" class="pre" v-if="countType">
+        <select class="count" @change="selectCountType">
+          <option
+            v-for="(count, index) in countType.values"
+            :key="index"
+            :selected="index === selectedTypesIndexes.count"
+            :value="count.value">{{ count.value }}
+          </option>
+        </select>
+      </span>
     </AddToCart>
   </div>
 </template>
@@ -27,10 +37,30 @@ export default {
   mixins: [
     ShopItemMixin,
   ],
+  data() {
+    return {
+      countType: this.item.subtype === 'accum' && this.findType('count'),
+      calculatedCost: this.item.cost,
+    };
+  },
   props: {
     item: {
       type: Object,
       required: true,
+    },
+  },
+  methods: {
+    updateCost() {
+      if (this.countType) {
+        this.calculatedCost = this.item.cost + (this.countType
+          .values[this.selectedTypesIndexes.count].cost || 0);
+      }
+    },
+    selectCountType(event) {
+      const { value } = event.target;
+      this.selectedTypesIndexes.count = this.countType.values
+        .findIndex(type => type.value === value);
+      this.updateCost();
     },
   },
 };
@@ -63,6 +93,12 @@ export default {
     .name,
     .cost {
       text-align: center;
+    }
+    .other.accum .add-to-cart {
+      width: 18em;
+    }
+    .other.accum .add-to-cart .count {
+      width: 5em;
     }
   }
 </style>

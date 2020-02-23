@@ -11,7 +11,7 @@
     <AddToCart :item="item"
                :selectedTypesIndexes="selectedTypesIndexes"
                @addItem="$emit('addItem', $event)">
-      <template slot="pre">
+      <span slot="pre" class="pre" v-if="compositionType && strengthType">
         <select class="composition" v-if="compositionType" @change="selectCompositionType">
           <option
             v-for="(composition, index) in compositionType.values"
@@ -25,10 +25,10 @@
             v-for="(strength, index) in strengthType.values"
             :key="index"
             :selected="index === selectedTypesIndexes.strength"
-            :value="strength.value">{{ strength.value }} mg
+            :value="strength.value">{{ strength.value }}
           </option>
         </select>
-      </template>
+      </span>
     </AddToCart>
   </div>
 </template>
@@ -114,6 +114,12 @@ export default {
   .add-to-cart .strength option {
     background-color: #000;
   }
+  .add-to-cart .pre {
+    width: 11em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .add-to-cart .composition {
     width: 6em;
   }
@@ -128,6 +134,15 @@ export default {
     .name,
     .cost {
       text-align: center;
+    }
+    .self-mixing.base {
+      padding-bottom: 7em;
+    }
+    .self-mixing.base .add-to-cart {
+      height: 5em;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
     }
   }
 </style>
