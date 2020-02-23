@@ -15,10 +15,7 @@
                  :cart="cartItems"
                  @checkout="onCheckout"></OrderForm>
     </div>
-    <div class="order-success" v-if="isShowPopup">
-      <h2>Спасибо за Ваш заказ</h2>
-      <p>Ожидайте звонка представителя</p>
-    </div>
+    <OrderSuccessPopup v-if="isShowPopup"></OrderSuccessPopup>
   </div>
 </template>
 
@@ -28,12 +25,14 @@ import { mapState, mapGetters } from 'vuex';
 import { amount as amountFilter, parseCartId } from '@/utils';
 import CartItem from '@/components/cart/CartItem.vue';
 import OrderForm from '@/components/cart/OrderForm.vue';
+import OrderSuccessPopup from '@/components/cart/OrderSuccessPopup.vue';
 
 export default {
   name: 'Cart',
   components: {
     CartItem,
     OrderForm,
+    OrderSuccessPopup,
   },
   data() {
     return {
@@ -102,17 +101,5 @@ export default {
     align-items: center;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, .7);
-  }
-
-  .order-success {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    padding: 10em;
-    border-radius: 10px;
-    background-color: greenyellow;
-    text-align: center;
-    color: #000;
   }
 </style>
