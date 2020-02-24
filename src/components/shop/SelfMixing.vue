@@ -84,11 +84,11 @@ export default {
 </script>
 
 <style scoped>
-  .self-mixing >>> .add-to-cart {
+  .self-mixing .add-to-cart {
     width: 11em;
   }
-  .self-mixing.base >>> .add-to-cart {
-    width: 22em;
+  .self-mixing.base .add-to-cart {
+    width: 23em;
   }
   .img img {
     width: 160px;
@@ -96,6 +96,7 @@ export default {
   .data {
     width: 100%;
     margin: 0 1em;
+    white-space: pre-wrap;
   }
   .data .name {
     font-weight: bold;

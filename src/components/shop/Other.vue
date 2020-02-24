@@ -76,6 +76,7 @@ export default {
   .data {
     width: 100%;
     margin: 0 1em;
+    white-space: pre-wrap;
   }
   .data .name {
     font-weight: bold;
@@ -83,7 +84,13 @@ export default {
   }
   .add-to-cart {
     display: flex;
-    width: 12em;
+    width: 11em;
+  }
+  .other.accum .add-to-cart {
+    width: 17em;
+  }
+  .other.accum .add-to-cart .count {
+    width: 5em;
   }
 
   @media screen and (max-width: 1023px) {
@@ -93,9 +100,6 @@ export default {
     .name,
     .cost {
       text-align: center;
-    }
-    .other.accum .add-to-cart {
-      width: 17em;
     }
     .other.accum .add-to-cart .count {
       width: 5em;

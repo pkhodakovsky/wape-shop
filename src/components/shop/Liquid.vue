@@ -89,6 +89,7 @@ export default {
   .data {
     width: 100%;
     margin: 0 1em;
+    white-space: pre-wrap;
   }
   .data .name {
     font-weight: bold;
