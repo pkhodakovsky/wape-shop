@@ -46,10 +46,9 @@ export default {
         scrollPanel: {
           scrollingX: false,
         },
-        rail: {
-          size: '0px',
-          gutterOfSide: '0px',
-          background: '#fff',
+        bar: {
+          keepShow: true,
+          background: 'gray',
         },
       },
     };
