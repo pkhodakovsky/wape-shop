@@ -100,6 +100,9 @@ export default {
     height: 2em;
     text-align: center;
   }
+  .add-to-cart select option {
+    background-color: #000;
+  }
   input.count::-webkit-inner-spin-button {
     display: none;
   }

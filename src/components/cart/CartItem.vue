@@ -78,10 +78,9 @@ export default {
     height: 1.5em;
     cursor: pointer;
   }
-  .cart-item .item-amount {
-  }
   .cart-item .item-amount input[type=number] {
     width: initial;
+    height: 2em;
     display: initial;
     text-align: center;
     padding: 0;

@@ -60,10 +60,10 @@ export default {
   },
   methods: {
     addRow(text) {
-      return `<tr>${text}</tr>`;
+      return `<tr>${text}</tr>\r\n`;
     },
     addCell(text) {
-      return `<td>${text}</td>`;
+      return `<td>${text}</td>\r\n`;
     },
     prepareLiquidText(liquid) {
       const [name, strength] = liquid.types.map(type => `${type.label}: ${type.value}`);
@@ -128,7 +128,8 @@ export default {
             return '';
         }
       }).join('');
-      return `<table border="1">${title}${orderTable}</table>`;
+      const summ = `<tr><td>Сумма заказа:</td><td colspan="4" align="right">${amountFilter(this.amount)}</td></tr>`;
+      return `<table border="1">${title}${orderTable}${summ}</table>`;
     },
   },
 };
@@ -137,6 +138,7 @@ export default {
 <style scoped>
   .order {
     width: 100%;
+    margin-top: 1em;
   }
   .order .order-row {
     display: flex;
@@ -151,5 +153,18 @@ export default {
   }
   .checkout {
     margin-top: 2em;
+    padding: 0 1em;
+  }
+  @media screen and (max-width: 1023px) {
+    .order .order-row {
+      flex-direction: column;
+      margin-bottom: .5em;
+    }
+    .order-row h3,
+    .order-row input,
+    .order-row textarea {
+      width: 100%;
+      margin: 0;
+    }
   }
 </style>

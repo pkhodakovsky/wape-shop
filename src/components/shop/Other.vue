@@ -95,7 +95,7 @@ export default {
       text-align: center;
     }
     .other.accum .add-to-cart {
-      width: 18em;
+      width: 17em;
     }
     .other.accum .add-to-cart .count {
       width: 5em;
