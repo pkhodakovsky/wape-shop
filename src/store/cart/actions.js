@@ -19,7 +19,7 @@ export default {
       return item;
     })
       .filter((item, index, arr) => arr.indexOf(item) === compareItems(item, index, arr));
-    commit('saveCart', newCart);
+    commit('saveCart', { ...state, items: newCart });
   },
   addItem({ dispatch, commit }, payload) {
     const cartId = prepareCartId(payload);
@@ -42,6 +42,10 @@ export default {
     if (index !== -1) {
       commit('removeItem', { index });
     }
+    dispatch('saveCart');
+  },
+  setOrderSuccessStatus({ commit, dispatch }, payload) {
+    commit('setOrderSuccessStatus', payload);
     dispatch('saveCart');
   },
 };

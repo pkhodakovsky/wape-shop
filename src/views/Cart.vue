@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex';
+import { mapState, mapGetters, mapActions } from 'vuex';
 
 import { amount as amountFilter, parseCartId } from '@/utils';
 import CartItem from '@/components/cart/CartItem.vue';
@@ -41,8 +41,9 @@ export default {
   },
   computed: {
     ...mapState(['shopItems']),
-    ...mapState('cart', ['items']),
+    ...mapState('cart', ['items', 'orderStatus']),
     ...mapGetters('cart', ['amount']),
+    ...mapActions('cart', ['setOrderSuccessStatus']),
     cartItems() {
       return this.items
         .map((item) => {
@@ -76,8 +77,20 @@ export default {
   },
   methods: {
     onCheckout() {
+      this.setOrderSuccessStatus(true);
+    },
+  },
+  mounted() {
+    if (this.orderStatus) {
       this.isShowPopup = true;
-      setTimeout(() => { this.isShowPopup = false; }, 2000);
+      setTimeout(() => {
+        this.setOrderSuccessStatus(false);
+      }, 2000);
+    }
+  },
+  watch: {
+    orderStatus(newValue) {
+      this.isShowPopup = newValue;
     },
   },
 };

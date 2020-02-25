@@ -65,17 +65,19 @@ export default {
     ...mapMutations('cart', ['setCart']),
     validateCart(storageCart) {
       const cart = JSON.parse(storageCart);
-      if (!(cart instanceof Array)) return [];
-      return cart
-        .filter(({ id, count }) => count || id)
-        .filter((cartItem) => {
-          const { id, types } = parseCartId(cartItem.id);
-          return this.shopItems.items.findIndex(item => item.id === id
+      if (!(cart instanceof Object) || !(cart.items instanceof Array)) return { items: [] };
+      return {
+        items: cart.items
+          .filter(({ id, count }) => count || id)
+          .filter((cartItem) => {
+            const { id, types } = parseCartId(cartItem.id);
+            return this.shopItems.items.findIndex(item => item.id === id
               && (!types.length
-              || types.every(type => item.types.find(itemType => itemType.id === type.id)
-                .values
-                .findIndex(typeValue => typeValue.id === type.value) !== -1))) !== -1;
-        });
+                || types.every(type => item.types.find(itemType => itemType.id === type.id)
+                  .values
+                  .findIndex(typeValue => typeValue.id === type.value) !== -1))) !== -1;
+          }),
+      };
     },
   },
   beforeMount() {
