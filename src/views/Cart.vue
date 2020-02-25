@@ -15,7 +15,7 @@
                  :cart="cartItems"
                  @checkout="setOrderSuccessStatus(true)"></OrderForm>
     </div>
-    <OrderSuccessPopup></OrderSuccessPopup>
+    <OrderSuccessPopup v-if="isShowPopup"></OrderSuccessPopup>
   </div>
 </template>
 
