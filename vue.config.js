@@ -7,7 +7,7 @@ module.exports = {
     if (process.env.NODE_ENV === 'production') {
       config.plugins.push(new PrerenderSPAPlugin({
         staticDir: path.join(__dirname, 'dist'),
-        routes: ['/'],
+        routes: ['/', '/shop', '/gallery'],
       }));
     }
   }

@@ -28,7 +28,12 @@ export default {
   .inner {
     width: 60%;
     height: 60%;
-    padding: 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 2em;
     border-radius: 10px;
     background-color: #646464;
     text-align: center;

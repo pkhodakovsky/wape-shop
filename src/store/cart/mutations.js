@@ -1,13 +1,13 @@
 import { saveCart } from './utils';
 
 export default {
-  setCart({ items }, payload) {
-    payload.items.forEach((item) => {
-      items.push(item);
+  setCart(state, payload) {
+    Object.assign(state, {
+      ...payload,
     });
   },
   saveCart(state, newCart) {
-    state.items = newCart;
+    Object.assign(state, newCart);
     saveCart(state);
   },
   updateCart(state, payload) {

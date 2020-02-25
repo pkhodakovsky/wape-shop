@@ -65,8 +65,16 @@ export default {
     ...mapMutations('cart', ['setCart']),
     validateCart(storageCart) {
       const cart = JSON.parse(storageCart);
-      if (!(cart instanceof Object) || !(cart.items instanceof Array)) return { items: [] };
+      if (cart.orderSuccess
+        || !(cart instanceof Object)
+        || !(cart.items instanceof Array)) {
+        return {
+          orderSuccess: cart.orderSuccess,
+          items: [],
+        };
+      }
       return {
+        ...cart,
         items: cart.items
           .filter(({ id, count }) => count || id)
           .filter((cartItem) => {
