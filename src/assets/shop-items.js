@@ -439,30 +439,35 @@ export default {
       type: 'liquid',
       name: 'Ice vapour',
       images: [iceApowImage],
-      cost: 90,
+      cost: 100,
       types: [
         {
           id: 'name',
           label: 'Название',
           values: [
             {
-              id: 'restFruits',
-              value: 'REST FRUITS',
+              id: 'iceMango',
+              value: 'Ice Mango',
               description: 'Объем 60 мл.\n',
             },
             {
-              id: 'iceLime',
-              value: 'ICE LIME',
+              id: 'iceStrawberry',
+              value: 'Ice Strawberry',
+              description: 'Объем 60 мл.\n',
+            },
+            {
+              id: 'iceForestFruits',
+              value: 'Ice Forest Fruits',
               description: 'Объем 60 мл.\n',
             },
             {
               id: 'iceCurrant',
-              value: 'ICE CURRANT',
+              value: 'Ice Currant',
               description: 'Объем 60 мл.\n',
             },
             {
-              id: 'trawb',
-              value: 'TRAWB',
+              id: 'iceLime',
+              value: 'Ice Lime',
               description: 'Объем 60 мл.\n',
             },
           ],
@@ -535,7 +540,7 @@ export default {
       images: [selfMixinImage2],
       name: 'База',
       description: 'Емкость: 100 мл.',
-      cost: 37,
+      cost: 28,
       types: [
         {
           id: 'composition',
@@ -558,22 +563,22 @@ export default {
             {
               id: 'str1',
               value: '0 mg',
-              cost: 10,
+              cost: 0,
             },
             {
               id: 'str2',
               value: '2 mg',
-              cost: 20,
+              cost: 6,
             },
             {
               id: 'str3',
               value: '4 mg',
-              cost: 30,
+              cost: 12,
             },
             {
               id: 'str5',
               value: '6 mg',
-              cost: 40,
+              cost: 18,
             },
           ],
         },
