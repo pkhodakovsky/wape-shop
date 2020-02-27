@@ -59,6 +59,7 @@ export default {
       type: 'liquid',
       name: 'Wild West',
       images: [wildWestImage],
+      volume: 'Объем 60 мл.',
       cost: 110,
       types: [
         {
@@ -68,22 +69,22 @@ export default {
             {
               id: 'cowboyGirl',
               value: 'Cowboy girl',
-              description: 'Объем 60 мл.\nНежный <i>бисквитный пирог</i> с начинкой из спелой, сочной <i>малины</i>. Мягкий и легкий вкус десерта, дополняет свежая и сладкая ягода на выдохе. Любители попарить и расслабится оценят эту жидкость по достоинству',
+              description: 'Нежный <i>бисквитный пирог</i> с начинкой из спелой, сочной <i>малины</i>. Мягкий и легкий вкус десерта, дополняет свежая и сладкая ягода на выдохе. Любители попарить и расслабится оценят эту жидкость по достоинству',
             },
             {
               id: 'sherif',
               value: 'Sherif',
-              description: 'Объем 60 мл.\nТост с легкой прожаренной корочкой и сладким <i>клубничным вареньем</i>. Эта жидкость заставит вас погрузиться в детство и получить незабываемое наслаждение от всеми любимого лакомства',
+              description: 'Тост с легкой прожаренной корочкой и сладким <i>клубничным вареньем</i>. Эта жидкость заставит вас погрузиться в детство и получить незабываемое наслаждение от всеми любимого лакомства',
             },
             {
               id: 'legends',
               value: 'Legends',
-              description: 'Объем 60 мл.\nЖевательная резинка со вкусом <i>медовой дыни</i> и спелой, сочной <i>клубники</i>. Легкий фруктовый микс со сладким послевкусием. Освежающая жидкость отлично подойдет на повседневное парение',
+              description: 'Жевательная резинка со вкусом <i>медовой дыни</i> и спелой, сочной <i>клубники</i>. Легкий фруктовый микс со сладким послевкусием. Освежающая жидкость отлично подойдет на повседневное парение',
             },
             {
               id: 'bandit',
               value: 'Bandit',
-              description: 'Объем 60 мл.\nНевероятно бодрящий вкус крепкого <i>мокачино</i> с тонкой <i>ореховой</i> ноткой. Основной кофейный вкус передан очень четко и насыщено, а ореховое послевкусие не оставит равнодушным ни одного парильщика',
+              description: 'Невероятно бодрящий вкус крепкого <i>мокачино</i> с тонкой <i>ореховой</i> ноткой. Основной кофейный вкус передан очень четко и насыщено, а ореховое послевкусие не оставит равнодушным ни одного парильщика',
             },
           ],
         },
@@ -104,6 +105,7 @@ export default {
       subtype: 'flushRoyal',
       name: 'Flush Royal',
       images: [cardsImage],
+      volume: 'Объем 60 мл.',
       cost: 190,
       types: [
         {
@@ -113,27 +115,27 @@ export default {
             {
               id: 'ten',
               value: 'Ten',
-              description: 'Объем 60 мл.\n',
+              description: '',
             },
             {
               id: 'jack',
               value: 'Jack',
-              description: 'Объем 60 мл.\n',
+              description: '',
             },
             {
               id: 'queen',
               value: 'Queen',
-              description: 'Объем 60 мл.\n',
+              description: '',
             },
             {
               id: 'king',
               value: 'King',
-              description: 'Объем 60 мл.\n',
+              description: '',
             },
             {
               id: 'ace',
               value: 'Ace',
-              description: 'Объем 60 мл.\n',
+              description: '',
             },
           ],
         },
@@ -153,6 +155,7 @@ export default {
       type: 'liquid',
       name: 'DAILY STEAM (Табачка)',
       images: [dailySteamTobaccoImage],
+      volume: 'Объем 120 мл.',
       cost: 120,
       types: [
         {
@@ -162,27 +165,27 @@ export default {
             {
               id: 'island',
               value: 'Island',
-              description: 'Объем 120 мл.\nТабачный лист в шоколадной глазури пропитанный кокосовым молоком',
+              description: 'Табачный лист в шоколадной глазури пропитанный кокосовым молоком',
             },
             {
               id: 'ry4',
               value: 'RY4',
-              description: 'Объем 120 мл.\nКрепкий, с кислиной, табачный вкус для ценителей классики',
+              description: 'Крепкий, с кислиной, табачный вкус для ценителей классики',
             },
             {
               id: 'luckyStrike',
               value: 'Lucky strike',
-              description: 'Объем 120 мл.\nНастоящий американский вкус табака с мягким послевкусием',
+              description: 'Настоящий американский вкус табака с мягким послевкусием',
             },
             {
               id: 'kent',
               value: 'Kent',
-              description: 'Объем 120 мл.\nКлассический табачный вкус популярных сигарет. Немного терпкий с кислинкой',
+              description: 'Классический табачный вкус популярных сигарет. Немного терпкий с кислинкой',
             },
             {
               id: 'davidoff',
               value: 'Davidoff',
-              description: 'Объем 120 мл.\nНежный табачный вкус с нотками меда и шоколада',
+              description: 'Нежный табачный вкус с нотками меда и шоколада',
             },
           ],
         },
@@ -201,6 +204,7 @@ export default {
       type: 'liquid',
       name: 'DAILY STEAM (Фрукты)',
       images: [dailySteamFruitsImage],
+      volume: 'Объем 120 мл.',
       cost: 120,
       types: [
         {
@@ -210,32 +214,32 @@ export default {
             {
               id: 'mango',
               value: 'Mango',
-              description: 'Объем 120 мл.\nСпелое манго',
+              description: 'Спелое манго',
             },
             {
               id: 'exotic',
               value: 'Exotic',
-              description: 'Объем 120 мл.\nОсвежающий микс апельсина, манго и киви',
+              description: 'Освежающий микс апельсина, манго и киви',
             },
             {
               id: 'peach',
               value: 'Peach',
-              description: 'Объем 120 мл.\nСладкий сочный персик',
+              description: 'Сладкий сочный персик',
             },
             {
               id: 'gum',
               value: 'Gum',
-              description: 'Объем 120 мл.\nФруктовая жевательная резинка',
+              description: 'Фруктовая жевательная резинка',
             },
             {
               id: 'currant',
               value: 'Currant',
-              description: 'Объем 120 мл.\nКислая смородина',
+              description: 'Кислая смородина',
             },
             {
               id: 'juice',
               value: 'Juice',
-              description: 'Объем 120 мл.\nМикс граната, грейпфрута, манго и тонкой ноткой лайма',
+              description: 'Микс граната, грейпфрута, манго и тонкой ноткой лайма',
             },
           ],
         },
@@ -255,6 +259,7 @@ export default {
       type: 'liquid',
       name: 'Sigarette series',
       images: [tobaccoImage],
+      volume: 'Объем 60 мл.',
       cost: 90,
       types: [
         {
@@ -264,32 +269,32 @@ export default {
             {
               id: 'captainBlack',
               value: 'Captain Black',
-              description: 'Объем 60 мл.\n',
+              description: '',
             },
             {
               id: 'lm',
               value: 'L&M',
-              description: 'Объем 60 мл.\n',
+              description: '',
             },
             {
               id: 'camel',
-              value: 'CAMEL',
-              description: 'Объем 60 мл.\n',
+              value: 'Camel',
+              description: '',
             },
             {
               id: 'winston',
-              value: 'WINSTON',
-              description: 'Объем 60 мл.\n',
+              value: 'Winston',
+              description: '',
             },
             {
               id: 'parliament',
-              value: 'PARLIAMENT',
-              description: 'Объем 60 мл.\n',
+              value: 'Parliament',
+              description: '',
             },
             {
               id: 'marlboro',
-              value: 'MARLBORO',
-              description: 'Объем 60 мл.\n',
+              value: 'Marlboro',
+              description: '',
             },
           ],
         },
@@ -308,7 +313,8 @@ export default {
       type: 'liquid',
       name: 'Sigarette series SALT',
       images: [tobaccoSmallImage],
-      cost: 37,
+      volume: 'Объем 30 мл.',
+      cost: 90,
       types: [
         {
           id: 'name',
@@ -316,23 +322,23 @@ export default {
           values: [
             {
               id: 'camel',
-              value: 'CAMEL',
-              description: 'Объем 30 мл.\n',
+              value: 'Camel',
+              description: '',
             },
             {
               id: 'lm',
               value: 'L&M',
-              description: 'Объем 30 мл.\n',
+              description: '',
             },
             {
               id: 'winston',
-              value: 'WINSTON',
-              description: 'Объем 30 мл.\n',
+              value: 'Winston',
+              description: '',
             },
             {
               id: 'camelRed',
-              value: 'CAMEL (RED)',
-              description: 'Объем 30 мл.\n',
+              value: 'Camel (red)',
+              description: '',
             },
           ],
         },
@@ -351,6 +357,7 @@ export default {
       type: 'liquid',
       name: 'Dead Pirates',
       images: [deadPirateImage],
+      volume: 'Объем 60 мл.',
       cost: 160,
       types: [
         {
@@ -360,17 +367,17 @@ export default {
             {
               id: 'captainBlood',
               value: 'Captain blood',
-              description: 'Объем 60 мл.\nЯрко выраженный вкус лесных ягод, с дополнением клюквы и красной смородины создали неповторимый микс, который разлит в этом флаконе.',
+              description: 'Ярко выраженный вкус лесных ягод, с дополнением клюквы и красной смородины создали неповторимый микс, который разлит в этом флаконе.',
             },
             {
               id: 'greenIsland',
               value: 'Green island',
-              description: 'Объем 60 мл.\nКрепкий абсент завораживает своим неповторимым вкусом, а кислый лайм дает возможность понять насколько глубоко жидкость может зацепить.',
+              description: 'Крепкий абсент завораживает своим неповторимым вкусом, а кислый лайм дает возможность понять насколько глубоко жидкость может зацепить.',
             },
             {
               id: 'purpleSail',
               value: 'Purple sail',
-              description: 'Объем 60 мл.\nВсеми любимый энергетический напиток Red Bull, с черничным привкусом, приятно бодрит своей кислинкой.',
+              description: 'Всеми любимый энергетический напиток Red Bull, с черничным привкусом, приятно бодрит своей кислинкой.',
             },
           ],
         },
@@ -390,6 +397,7 @@ export default {
       type: 'liquid',
       name: 'The Simpsons',
       images: [simpsonsImage],
+      volume: 'Объем 60 мл.',
       cost: 120,
       types: [
         {
@@ -399,27 +407,27 @@ export default {
             {
               id: 'homer',
               value: 'Homer',
-              description: 'Объем 60 мл.\nС виду он брутальнй мужлан. Но, что скрывается внутри? Пока не попробовали эту жидкость, не спешите делать выводы. Кисло-сладкий вкус спелого сочного киви просто взрывает рецепторы.',
+              description: 'С виду он брутальнй мужлан. Но, что скрывается внутри? Пока не попробовали эту жидкость, не спешите делать выводы. Кисло-сладкий вкус спелого сочного киви просто взрывает рецепторы.',
             },
             {
               id: 'marge',
               value: 'Marge',
-              description: 'Объем 60 мл.\nКакая настоящая хозяйка не любит варить ягодный пунш? Мардж приготовила вам настоящий сюрприз. Микс кисленькх лесных ягод приятно расслабляют, но в то же время заряжают бодростью.',
+              description: 'Какая настоящая хозяйка не любит варить ягодный пунш? Мардж приготовила вам настоящий сюрприз. Микс кисленькх лесных ягод приятно расслабляют, но в то же время заряжают бодростью.',
             },
             {
               id: 'bart',
               value: 'Bart',
-              description: 'Объем 60 мл.\nМолодежь не любит обыденность. Любимый напиток Барта - мохито, только классический - это банольно. Что будет, если добавить туда черной смородины и клубники? Не узнаешь, пока не попробуешь. Вперёд.',
+              description: 'Молодежь не любит обыденность. Любимый напиток Барта - мохито, только классический - это банольно. Что будет, если добавить туда черной смородины и клубники? Не узнаешь, пока не попробуешь. Вперёд.',
             },
             {
               id: 'lisa',
               value: 'Lisa',
-              description: 'Объем 60 мл.\nУ настоящей девушки все должно быть идально, аккуратно и красиво. Лиза очень постаралась, чтобы создать вкус, который понравится всем. Думаете, что персик и клюква не сочетаются? Вы просто не умеете их готовить.',
+              description: 'У настоящей девушки все должно быть идально, аккуратно и красиво. Лиза очень постаралась, чтобы создать вкус, который понравится всем. Думаете, что персик и клюква не сочетаются? Вы просто не умеете их готовить.',
             },
             {
               id: 'maggie',
               value: 'Maggie',
-              description: 'Объем 60 мл.\nВсе слышали, что дети живут эмоциями и порой, чтобы угодить, приходится лезть вон из кожи. Этот вкус создан для удовлетворения любых ваших капризов. Кисто-сладкое сочетание ежевики и смородины отлично дополняет взрывная волна лесных ягод.',
+              description: 'Все слышали, что дети живут эмоциями и порой, чтобы угодить, приходится лезть вон из кожи. Этот вкус создан для удовлетворения любых ваших капризов. Кисто-сладкое сочетание ежевики и смородины отлично дополняет взрывная волна лесных ягод.',
             },
           ],
         },
@@ -439,6 +447,7 @@ export default {
       type: 'liquid',
       name: 'Ice vapour',
       images: [iceApowImage],
+      volume: 'Объем 60 мл.',
       cost: 100,
       types: [
         {
@@ -448,27 +457,27 @@ export default {
             {
               id: 'iceMango',
               value: 'Ice Mango',
-              description: 'Объем 60 мл.\n',
+              description: '',
             },
             {
               id: 'iceStrawberry',
               value: 'Ice Strawberry',
-              description: 'Объем 60 мл.\n',
+              description: '',
             },
             {
               id: 'iceForestFruits',
               value: 'Ice Forest Fruits',
-              description: 'Объем 60 мл.\n',
+              description: '',
             },
             {
               id: 'iceCurrant',
               value: 'Ice Currant',
-              description: 'Объем 60 мл.\n',
+              description: '',
             },
             {
               id: 'iceLime',
               value: 'Ice Lime',
-              description: 'Объем 60 мл.\n',
+              description: '',
             },
           ],
         },
@@ -489,6 +498,7 @@ export default {
       name: 'Vape drinks',
       images: [vapeDrinksImage],
       description: '',
+      volume: 'Объем 60 мл.',
       cost: 120,
       types: [
         {
@@ -498,27 +508,27 @@ export default {
             {
               id: 'cocaCola',
               value: 'Coca-Coca',
-              description: 'Объем 60 мл.\nСВЯТО НАБЛИЖАЄТЬСЯ с первого вдоха! Парь легенду!',
+              description: 'СВЯТО НАБЛИЖАЄТЬСЯ с первого вдоха! Парь легенду!',
             },
             {
               id: 'sprite',
               value: 'Spirite',
-              description: 'Объем 60 мл.\nОсвежающий спрайт как ив рекламе, но без пузырьков. Имидж - ничто, жажда - всё!',
+              description: 'Освежающий спрайт как ив рекламе, но без пузырьков. Имидж - ничто, жажда - всё!',
             },
             {
               id: 'fanta',
               value: 'Fantan',
-              description: 'Объем 60 мл.\nТа самая из бутылки с пупырышками! Парь Fantan. Будь Бамбуча.',
+              description: 'Та самая из бутылки с пупырышками! Парь Fantan. Будь Бамбуча.',
             },
             {
               id: 'redBull',
               value: 'Energy Bull',
-              description: 'Объем 60 мл.\nНашумевший энергетик теперь может быть и в твоём девайсе! Взбодрись с VAPE DRINK\'S Energy Bull.',
+              description: 'Нашумевший энергетик теперь может быть и в твоём девайсе! Взбодрись с VAPE DRINK\'S Energy Bull.',
             },
             {
               id: 'drPepper',
               value: 'Dr Peppe',
-              description: 'Объем 60 мл.\nЭто вкус для настоящих ценителей - легендарная газировка с вишневым привкусом, которая отдает пряностью и отзывается легкой прохладой при выдохе.',
+              description: 'Это вкус для настоящих ценителей - легендарная газировка с вишневым привкусом, которая отдает пряностью и отзывается легкой прохладой при выдохе.',
             },
           ],
         },
@@ -538,8 +548,8 @@ export default {
       type: 'selfMixing',
       subtype: 'base',
       images: [selfMixinImage2],
-      name: 'База',
-      description: 'Емкость: 100 мл.',
+      name: 'База. 100 мл',
+      description: '',
       cost: 28,
       types: [
         {
@@ -589,8 +599,8 @@ export default {
       type: 'selfMixing',
       subtype: 'base',
       images: [selfMixinImage3],
-      name: 'База',
-      description: 'Емкость: 350 мл.',
+      name: 'База. 350 мл',
+      description: '',
       cost: 37,
       types: [
         {
@@ -640,8 +650,8 @@ export default {
       type: 'selfMixing',
       subtype: 'base',
       images: [selfMixinImage3],
-      name: 'База',
-      description: 'Емкость: 500 мл.',
+      name: 'База. 500 мл',
+      description: '',
       cost: 37,
       types: [
         {

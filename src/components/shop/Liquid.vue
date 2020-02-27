@@ -60,7 +60,9 @@ export default {
   },
   methods: {
     updateDescription() {
-      this.description = this.nameType.values[this.selectedTypesIndexes.name].description;
+      const { volume } = this.item;
+      const { description } = this.nameType.values[this.selectedTypesIndexes.name];
+      this.description = `${volume}\n${description}`;
     },
     selectNameType(event) {
       const { value } = event.target;
