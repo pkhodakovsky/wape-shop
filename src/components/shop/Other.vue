@@ -6,7 +6,7 @@
     <div class="data">
       <h4 class="name">{{ item.name }}</h4>
       <span class="descr" v-html="item.description"></span><br/>
-      <span class="cost">Стоимость: {{ cost }} грн.</span>
+      <span class="cost">Стоимость: {{ calculatedCost }} грн.</span>
     </div>
     <AddToCart :item="item"
                :selectedTypesIndexes="selectedTypesIndexes"

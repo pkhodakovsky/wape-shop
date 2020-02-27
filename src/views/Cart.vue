@@ -13,7 +13,7 @@
       <div class="amount" v-if="items.length">Total: {{ amount | amountFilter }}</div>
       <OrderForm v-if="items.length"
                  :cart="cartItems"
-                 @checkout="onCheckout"></OrderForm>
+                 @checkout="setOrderSuccessStatus(true)"></OrderForm>
     </div>
     <OrderSuccessPopup v-if="isShowPopup"></OrderSuccessPopup>
   </div>
@@ -41,9 +41,8 @@ export default {
   },
   computed: {
     ...mapState(['shopItems']),
-    ...mapState('cart', ['items', 'orderStatus']),
+    ...mapState('cart', ['items', 'orderSuccess']),
     ...mapGetters('cart', ['amount']),
-    ...mapActions('cart', ['setOrderSuccessStatus']),
     cartItems() {
       return this.items
         .map((item) => {
@@ -76,22 +75,16 @@ export default {
     amountFilter,
   },
   methods: {
-    onCheckout() {
-      this.setOrderSuccessStatus(true);
-    },
+    ...mapActions('cart', ['setOrderSuccessStatus']),
   },
   mounted() {
-    if (this.orderStatus) {
+    if (this.orderSuccess) {
       this.isShowPopup = true;
       setTimeout(() => {
         this.setOrderSuccessStatus(false);
+        this.isShowPopup = false;
       }, 2000);
     }
-  },
-  watch: {
-    orderStatus(newValue) {
-      this.isShowPopup = newValue;
-    },
   },
 };
 </script>

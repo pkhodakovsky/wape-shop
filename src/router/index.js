@@ -6,11 +6,6 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: Home,
-  },
-  {
     path: '/gallery',
     name: 'gallery',
     component: () => import('../views/Gallery.vue'),
@@ -24,6 +19,16 @@ const routes = [
     path: '/cart',
     name: 'cart',
     component: () => import('../views/Cart.vue'),
+  },
+  {
+    path: '/',
+    name: 'home',
+    component: Home,
+    children: [
+      {
+        path: '*',
+      },
+    ],
   },
 ];
 
