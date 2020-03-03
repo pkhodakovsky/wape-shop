@@ -601,7 +601,7 @@ export default {
       images: [selfMixinImage3],
       name: 'База. 350 мл',
       description: '',
-      cost: 37,
+      cost: 90,
       types: [
         {
           id: 'composition',
@@ -624,7 +624,7 @@ export default {
             {
               id: 'str1',
               value: '0 mg',
-              cost: 10,
+              cost: 0,
             },
             {
               id: 'str2',
@@ -634,12 +634,12 @@ export default {
             {
               id: 'str3',
               value: '3 mg',
-              cost: 30,
+              cost: 40,
             },
             {
               id: 'str4',
               value: '6 mg',
-              cost: 40,
+              cost: 60,
             },
           ],
         },
@@ -652,7 +652,7 @@ export default {
       images: [selfMixinImage3],
       name: 'База. 500 мл',
       description: '',
-      cost: 37,
+      cost: 125,
       types: [
         {
           id: 'composition',
@@ -675,22 +675,22 @@ export default {
             {
               id: 'str1',
               value: '0 mg',
-              cost: 10,
+              cost: 0,
             },
             {
               id: 'str2',
               value: '1.5 mg',
-              cost: 20,
+              cost: 30,
             },
             {
               id: 'str3',
               value: '3 mg',
-              cost: 30,
+              cost: 60,
             },
             {
               id: 'str4',
               value: '6 mg',
-              cost: 40,
+              cost: 85,
             },
           ],
         },
@@ -703,28 +703,204 @@ export default {
       images: [selfMixinImage4],
       name: 'Никотин Hiliq. Концентрат',
       description: '',
-      cost: 37,
-      types: [],
+      cost: 230,
+      currency: '$',
+      types: [
+        {
+          id: 'volume',
+          name: 'Объем',
+          values: [
+            {
+              id: 'vol1',
+              value: '0.5 л',
+              cost: 0,
+            },
+            {
+              id: 'vol2',
+              value: '1 л',
+              cost: 220,
+            },
+          ],
+        },
+      ],
     },
     {
-      id: 'selfMixing_nicotineHiliq',
+      id: 'selfMixing_nicotineShanghaiConcentrate',
+      type: 'selfMixing',
+      subtype: 'nicotine',
+      images: [selfMixinImage4],
+      name: 'Никотин Shanghai. Концентрат',
+      description: '',
+      cost: 180,
+      currency: '$',
+      types: [
+        {
+          id: 'volume',
+          name: 'Объем',
+          values: [
+            {
+              id: 'vol1',
+              value: '0.5 л',
+              cost: 0,
+            },
+            {
+              id: 'vol2',
+              value: '1 л',
+              cost: 170,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'selfMixing_nicotineHiliqSaline',
+      type: 'selfMixing',
+      subtype: 'nicotine',
+      images: [selfMixinImage4],
+      name: 'Никотин Hiliq. Солевой 500 мг',
+      description: '',
+      cost: 150,
+      currency: '$',
+      types: [
+        {
+          id: 'volume',
+          name: 'Объем',
+          values: [
+            {
+              id: 'vol1',
+              value: '0.5 л',
+              cost: 0,
+            },
+            {
+              id: 'vol2',
+              value: '1 л',
+              cost: 150,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'selfMixing_nicotineShanghaiSaline',
+      type: 'selfMixing',
+      subtype: 'nicotine',
+      images: [selfMixinImage4],
+      name: 'Никотин Shanghai. Солевой 500 мг',
+      description: '',
+      cost: 130,
+      currency: '$',
+      types: [
+        {
+          id: 'volume',
+          name: 'Объем',
+          values: [
+            {
+              id: 'vol1',
+              value: '0.5 л',
+              cost: 0,
+            },
+            {
+              id: 'vol2',
+              value: '1 л',
+              cost: 120,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'selfMixing_nicotineHiliq100',
       type: 'selfMixing',
       subtype: 'nicotine',
       images: [selfMixinImage5],
-      name: 'Никотин Hiliq',
+      name: 'Никотин Hiliq. 100 мг',
       description: '',
-      cost: 37,
-      types: [],
+      cost: 50,
+      types: [
+        {
+          id: 'volume',
+          name: 'Объем',
+          values: [
+            {
+              id: 'vol1',
+              value: '10 мл',
+              cost: 0,
+            },
+            {
+              id: 'vol2',
+              value: '30 мл',
+              cost: 50,
+            },
+            {
+              id: 'vol3',
+              value: '50 мл',
+              cost: 105,
+            },
+            {
+              id: 'vol4',
+              value: '100 мл',
+              cost: 220,
+            },
+            {
+              id: 'vol5',
+              value: '0.5 л',
+              cost: 700,
+            },
+            {
+              id: 'vol6',
+              value: '1 л',
+              cost: 1350,
+            },
+          ],
+        },
+      ],
     },
     {
-      id: 'selfMixing_nicotine',
+      id: 'selfMixing_nicotineShanghai100',
       type: 'selfMixing',
       subtype: 'nicotine',
       images: [selfMixinImage6],
-      name: 'Никотин',
+      name: 'Никотин Shanghai. 100 мг',
       description: '',
-      cost: 37,
-      types: [],
+      cost: 30,
+      types: [
+        {
+          id: 'volume',
+          name: 'Объем',
+          values: [
+            {
+              id: 'vol1',
+              value: '10 мл',
+              cost: 0,
+            },
+            {
+              id: 'vol2',
+              value: '30 мл',
+              cost: 50,
+            },
+            {
+              id: 'vol3',
+              value: '50 мл',
+              cost: 90,
+            },
+            {
+              id: 'vol4',
+              value: '100 мл',
+              cost: 170,
+            },
+            {
+              id: 'vol5',
+              value: '0.5 л',
+              cost: 570,
+            },
+            {
+              id: 'vol6',
+              value: '1 л',
+              cost: 1070,
+            },
+          ],
+        },
+      ],
     },
     {
       id: 'other_accum',
@@ -733,7 +909,7 @@ export default {
       images: [otherImage1],
       name: 'Аккумулятор',
       description: '',
-      cost: 10,
+      cost: 170,
       types: [
         {
           id: 'count',
@@ -747,12 +923,12 @@ export default {
             {
               id: 'count2',
               value: '4 шт.',
-              cost: 30,
+              cost: 510,
             },
             {
               id: 'count3',
               value: '10 шт.',
-              cost: 90,
+              cost: 1530,
             },
           ],
         },
