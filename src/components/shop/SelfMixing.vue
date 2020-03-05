@@ -6,12 +6,12 @@
     <div class="data">
       <h4 class="name">{{ item.name }}</h4>
       <span class="descr" v-html="item.description"></span><br/>
-      <span class="cost">Стоимость: {{ calculatedCost }} грн.</span>
+      <span class="cost">Стоимость: {{ calculatedCost }}</span>
     </div>
     <AddToCart :item="item"
                :selectedTypesIndexes="selectedTypesIndexes"
                @addItem="$emit('addItem', $event)">
-      <span slot="pre" class="pre" v-if="compositionType && strengthType">
+      <span slot="pre" class="pre" v-if="(compositionType && strengthType) || volumeType">
         <select class="composition" v-if="compositionType" @change="selectCompositionType">
           <option
             v-for="(composition, index) in compositionType.values"
@@ -28,12 +28,22 @@
             :value="strength.value">{{ strength.value }}
           </option>
         </select>
+        <select class="volume" v-if="volumeType" @change="selectVolumeType">
+          <option
+            v-for="(volume, index) in volumeType.values"
+            :key="index"
+            :selected="index === selectedTypesIndexes.volume"
+            :value="volume.value">{{ volume.value }}
+          </option>
+        </select>
       </span>
     </AddToCart>
   </div>
 </template>
 
 <script>
+import { amount as amountFilter } from '@/utils';
+
 import AddToCart from '@/components/shop/AddToCart.vue';
 import ShopItemMixin from '@/mixins/shop-item.ts';
 
@@ -49,6 +59,7 @@ export default {
     return {
       compositionType: this.item.subtype === 'base' && this.findType('composition'),
       strengthType: this.item.subtype === 'base' && this.findType('strength'),
+      volumeType: this.item.subtype === 'nicotine' && this.findType('volume'),
       calculatedCost: this.item.cost,
     };
   },
@@ -60,10 +71,16 @@ export default {
   },
   methods: {
     updateCost() {
+      let cost;
       if (this.strengthType) {
-        this.calculatedCost = this.item.cost + (this.strengthType
+        cost = this.item.cost + (this.strengthType
           .values[this.selectedTypesIndexes.strength].cost || 0);
+      } else if (this.volumeType) {
+        cost = this.item.cost + (this.volumeType
+          .values[this.selectedTypesIndexes.volume].cost || 0);
       }
+      const { currency } = this.item;
+      this.calculatedCost = amountFilter(cost, currency);
     },
     selectCompositionType(event) {
       const { value } = event.target;
@@ -73,6 +90,12 @@ export default {
     selectStrengthType(event) {
       const { value } = event.target;
       this.selectedTypesIndexes.strength = this.strengthType.values
+        .findIndex(type => type.value === value);
+      this.updateCost();
+    },
+    selectVolumeType(event) {
+      const { value } = event.target;
+      this.selectedTypesIndexes.volume = this.volumeType.values
         .findIndex(type => type.value === value);
       this.updateCost();
     },
@@ -89,6 +112,9 @@ export default {
   }
   .self-mixing.base .add-to-cart {
     width: 23em;
+  }
+  .self-mixing.nicotine .add-to-cart {
+    width: 16em;
   }
   .img img {
     width: 160px;
@@ -107,24 +133,34 @@ export default {
     width: 12em;
   }
   .add-to-cart .composition,
-  .add-to-cart .strength {
+  .add-to-cart .strength,
+  .add-to-cart .volume {
     height: 2em;
     padding: 0 .5em;
   }
   .add-to-cart .composition option,
-  .add-to-cart .strength option {
+  .add-to-cart .strength option,
+  .add-to-cart .volume option {
     background-color: #000;
   }
   .add-to-cart .pre {
-    width: 11em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+  .base .add-to-cart .pre {
+    width: 11em;
+  }
+  .nicotine .add-to-cart .pre {
+    width: 4em;
   }
   .add-to-cart .composition {
     width: 6em;
   }
   .add-to-cart .strength {
+    width: 4em;
+  }
+  .add-to-cart .volume {
     width: 4em;
   }
 

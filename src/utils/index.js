@@ -2,8 +2,8 @@ export function number(v) {
   return v.toLocaleString();
 }
 
-export function amount(v) {
-  return `${number(v)} грн.`;
+export function amount(v, currency = 'грн.') {
+  return `${number(v)} ${currency}`;
 }
 
 export function prepareCartId({ id, types }) {
