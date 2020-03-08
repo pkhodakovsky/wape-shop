@@ -86,8 +86,10 @@ export default {
       return ''.concat(this.addCell(selfMixing.name))
         .concat(this.addCell(typeString))
         .concat(this.addCell(`${selfMixing.count} шт.`))
-        .concat(this.addCell(amountFilter(selfMixing.cost)))
-        .concat(this.addCell(amountFilter(selfMixing.count * selfMixing.cost)));
+        .concat(this.addCell(amountFilter(selfMixing.cost, selfMixing.currency)))
+        .concat(
+          this.addCell(amountFilter(selfMixing.count * selfMixing.cost, selfMixing.currency)),
+        );
     },
     prepareOtherText(other) {
       let typeString;
@@ -128,7 +130,11 @@ export default {
             return '';
         }
       }).join('');
-      const summ = `<tr><td>Сумма заказа:</td><td colspan="4" align="right">${amountFilter(this.amount)}</td></tr>`;
+      const summString = [
+        amountFilter(this.amount.default),
+        amountFilter(this.amount.dollars, '$'),
+      ].join(' + ');
+      const summ = `<tr><td>Сумма заказа:</td><td colspan="4" align="right">${summString}</td></tr>`;
       return `<table border="1">${title}${orderTable}${summ}</table>`;
     },
   },

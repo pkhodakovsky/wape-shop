@@ -708,7 +708,7 @@ export default {
       types: [
         {
           id: 'volume',
-          name: 'Объем',
+          label: 'Объем',
           values: [
             {
               id: 'vol1',
@@ -736,7 +736,7 @@ export default {
       types: [
         {
           id: 'volume',
-          name: 'Объем',
+          label: 'Объем',
           values: [
             {
               id: 'vol1',
@@ -764,7 +764,7 @@ export default {
       types: [
         {
           id: 'volume',
-          name: 'Объем',
+          label: 'Объем',
           values: [
             {
               id: 'vol1',
@@ -792,7 +792,7 @@ export default {
       types: [
         {
           id: 'volume',
-          name: 'Объем',
+          label: 'Объем',
           values: [
             {
               id: 'vol1',
@@ -819,7 +819,7 @@ export default {
       types: [
         {
           id: 'volume',
-          name: 'Объем',
+          label: 'Объем',
           values: [
             {
               id: 'vol1',
@@ -866,7 +866,7 @@ export default {
       types: [
         {
           id: 'volume',
-          name: 'Объем',
+          label: 'Объем',
           values: [
             {
               id: 'vol1',

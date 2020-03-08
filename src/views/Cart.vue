@@ -10,7 +10,10 @@
       <div class="items-wrapper empty" v-else>
         <h2>Корзина пуста</h2>
       </div>
-      <div class="amount" v-if="items.length">Total: {{ amount | amountFilter }}</div>
+      <div class="amount" v-if="items.length">
+        <span>Total: {{ amountFilter(amount.default) }}</span>
+        <span v-if="amount.dollars"> + {{ amountFilter(amount.dollars, '$') }}</span>
+      </div>
       <OrderForm v-if="items.length"
                  :cart="cartItems"
                  @checkout="setOrderSuccessStatus(true)"></OrderForm>
@@ -71,11 +74,9 @@ export default {
         });
     },
   },
-  filters: {
-    amountFilter,
-  },
   methods: {
     ...mapActions('cart', ['setOrderSuccessStatus']),
+    amountFilter,
   },
   mounted() {
     if (this.orderSuccess) {

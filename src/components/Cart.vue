@@ -18,7 +18,10 @@
         2
       </text>
     </svg>
-    <span class="amount">{{ amount | amountFilter }}</span>
+    <span class="amount" :class="{ combined: amount.dollars }">
+      <span>{{ amountFilter(amount.default) }}</span>
+      <span v-if="amount.dollars"> + {{ amountFilter(amount.dollars, '$') }}</span>
+    </span>
   </router-link>
 </template>
 
@@ -33,7 +36,7 @@ export default {
     return {
     };
   },
-  filters: {
+  methods: {
     amountFilter,
   },
   computed: {
@@ -57,5 +60,10 @@ export default {
   .amount {
     padding-top: 8px;
     color: #a6a6a6;
+  }
+  @media screen and (max-width: 374px) {
+    .amount.combined {
+      font-size: 12px;
+    }
   }
 </style>

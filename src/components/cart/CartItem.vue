@@ -6,7 +6,7 @@
                   :item="item"></CartItemType>
     <span v-else></span>
     <span class="item-amount">
-            <span class="cost">{{ item.cost | amountFilter }}</span>
+            <span class="cost">{{ amountFilter(item.cost, item.currency) }}</span>
             x
             <input type="number" min="0" max="100" v-model="item.count"
                    @change="updateItem({
@@ -14,7 +14,9 @@
                     count: +item.count,
                    })"/>
             &nbsp;
-            <span class="item-amount">{{ item.cost * (+item.count) | amountFilter }}</span>
+            <span class="item-amount">
+              {{ amountFilter(item.cost * (+item.count), item.currency) }}
+            </span>
           </span>
     <RemoveItemIcon @click="removeItem({ cartId: item.cartId })"></RemoveItemIcon>
   </div>
@@ -39,11 +41,9 @@ export default {
       required: true,
     },
   },
-  filters: {
-    amountFilter,
-  },
   methods: {
     ...mapActions('cart', ['updateItem', 'removeItem']),
+    amountFilter,
   },
 };
 </script>
