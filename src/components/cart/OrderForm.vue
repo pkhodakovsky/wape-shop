@@ -77,6 +77,7 @@ export default {
       let typeString;
       switch (selfMixing.subtype) {
         case 'base':
+        case 'nicotine':
           typeString = selfMixing.types.map(type => `${type.label}: ${type.value}`).join('. \n');
           break;
         default:
