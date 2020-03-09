@@ -8,11 +8,11 @@ import deadPirateImage from '../../public/images/liquids/dead-pirate.png';
 import simpsonsImage from '../../public/images/liquids/simpsons.png';
 import iceApowImage from '../../public/images/liquids/ice-apow.png';
 import vapeDrinksImage from '../../public/images/liquids/vape-drinks.png';
-import selfMixinImage2 from '../../public/images/self-mixing/base2.png';
-import selfMixinImage3 from '../../public/images/self-mixing/base3.png';
-import selfMixinImage4 from '../../public/images/self-mixing/base4.png';
-import selfMixinImage5 from '../../public/images/self-mixing/base5.png';
-import selfMixinImage6 from '../../public/images/self-mixing/base6.png';
+import base350 from '../../public/images/self-mixing/base350.png';
+import base500 from '../../public/images/self-mixing/base500.png';
+import nicotineHiliqConcentrate from '../../public/images/self-mixing/nicotineHiliqConcentrate.png';
+import nicotineHiliq from '../../public/images/self-mixing/nicotineHiliq.png';
+import nicotineShanghai from '../../public/images/self-mixing/nicotineShanghai.png';
 import otherImage1 from '../../public/images/other/other1.png';
 import otherImage2 from '../../public/images/other/other2.png';
 import otherImage3 from '../../public/images/other/other3.png';
@@ -547,7 +547,7 @@ export default {
       id: 'selfMixing_base100',
       type: 'selfMixing',
       subtype: 'base',
-      images: [selfMixinImage2],
+      images: [base350],
       name: 'База. 100 мл',
       description: '',
       cost: 28,
@@ -598,7 +598,7 @@ export default {
       id: 'selfMixing_base350',
       type: 'selfMixing',
       subtype: 'base',
-      images: [selfMixinImage3],
+      images: [base500],
       name: 'База. 350 мл',
       description: '',
       cost: 90,
@@ -649,7 +649,7 @@ export default {
       id: 'selfMixing_base500',
       type: 'selfMixing',
       subtype: 'base',
-      images: [selfMixinImage3],
+      images: [base500],
       name: 'База. 500 мл',
       description: '',
       cost: 125,
@@ -700,7 +700,7 @@ export default {
       id: 'selfMixing_nicotineHiliqConcentrate',
       type: 'selfMixing',
       subtype: 'nicotine',
-      images: [selfMixinImage4],
+      images: [nicotineHiliqConcentrate],
       name: 'Никотин Hiliq. Концентрат',
       description: '',
       cost: 230,
@@ -728,7 +728,7 @@ export default {
       id: 'selfMixing_nicotineShanghaiConcentrate',
       type: 'selfMixing',
       subtype: 'nicotine',
-      images: [selfMixinImage4],
+      images: [nicotineShanghai],
       name: 'Никотин Shanghai. Концентрат',
       description: '',
       cost: 180,
@@ -756,7 +756,7 @@ export default {
       id: 'selfMixing_nicotineHiliqSaline',
       type: 'selfMixing',
       subtype: 'nicotine',
-      images: [selfMixinImage4],
+      images: [nicotineHiliq],
       name: 'Никотин Hiliq. Солевой 500 мг',
       description: '',
       cost: 150,
@@ -784,7 +784,7 @@ export default {
       id: 'selfMixing_nicotineShanghaiSaline',
       type: 'selfMixing',
       subtype: 'nicotine',
-      images: [selfMixinImage4],
+      images: [nicotineShanghai],
       name: 'Никотин Shanghai. Солевой 500 мг',
       description: '',
       cost: 130,
@@ -812,7 +812,7 @@ export default {
       id: 'selfMixing_nicotineHiliq100',
       type: 'selfMixing',
       subtype: 'nicotine',
-      images: [selfMixinImage5],
+      images: [nicotineHiliq],
       name: 'Никотин Hiliq. 100 мг',
       description: '',
       cost: 50,
@@ -859,7 +859,7 @@ export default {
       id: 'selfMixing_nicotineShanghai100',
       type: 'selfMixing',
       subtype: 'nicotine',
-      images: [selfMixinImage6],
+      images: [nicotineShanghai],
       name: 'Никотин Shanghai. 100 мг',
       description: '',
       cost: 30,
