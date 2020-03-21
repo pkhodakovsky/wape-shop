@@ -1,5 +1,5 @@
 <template>
-  <form class="order" action="order.php" method="post">
+  <form class="order" action="order.php" method="post" @submit="$emit('checkout')">
     <div class="order-row" v-for="row in formData" :key="row.label">
       <h3>{{ row.label }}</h3>
       <textarea v-if="row.type === 'textarea'"
@@ -10,14 +10,16 @@
       <input v-else
              :name="row.name"
              :type="row.type"
+             :required="row.required"
+             :pattern="row.pattern"
+             :minlength="row.minlength"
              v-model="row.value"/>
     </div>
     <input type="hidden"
            name="order"
            v-model="orderText"/>
     <button class="checkout button special"
-            type="submit"
-            @click="$emit('checkout')">Оформить заказ</button>
+            type="submit">Оформить заказ</button>
   </form>
 </template>
 
@@ -42,12 +44,16 @@ export default {
           name: 'name',
           type: 'text',
           value: '',
+          required: true,
         },
         {
           label: 'Номер телефона',
           name: 'phone',
           type: 'tel',
           value: '',
+          required: true,
+          pattern: '[0-9]*',
+          minlength: 10,
         },
         {
           label: 'Адрес доставки',
