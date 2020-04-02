@@ -61,6 +61,7 @@ export default {
               return {
                 label: shopType.label,
                 value: typeData.value,
+                cost: typeData.cost,
               };
             });
           return {
