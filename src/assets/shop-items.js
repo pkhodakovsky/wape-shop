@@ -321,8 +321,8 @@ export default {
           label: 'Название',
           values: [
             {
-              id: 'camel',
-              value: 'Camel',
+              id: 'captainBlack',
+              value: 'Captain Black',
               description: '',
             },
             {
@@ -331,13 +331,23 @@ export default {
               description: '',
             },
             {
+              id: 'camel',
+              value: 'Camel',
+              description: '',
+            },
+            {
               id: 'winston',
               value: 'Winston',
               description: '',
             },
             {
-              id: 'camelRed',
-              value: 'Camel (red)',
+              id: 'parliament',
+              value: 'Parliament',
+              description: '',
+            },
+            {
+              id: 'marlboro',
+              value: 'Marlboro',
               description: '',
             },
           ],
@@ -598,7 +608,7 @@ export default {
       id: 'selfMixing_base350',
       type: 'selfMixing',
       subtype: 'base',
-      images: [base500],
+      images: [base350],
       name: 'База. 350 мл',
       description: '',
       cost: 90,
@@ -923,12 +933,12 @@ export default {
             {
               id: 'count2',
               value: '4 шт.',
-              cost: 510,
+              cost: 470,
             },
             {
               id: 'count3',
               value: '10 шт.',
-              cost: 1530,
+              cost: 1330,
             },
           ],
         },
@@ -937,20 +947,76 @@ export default {
     {
       id: 'other_spiral',
       type: 'other',
+      subtype: 'spiral',
       images: [otherImage2],
       name: 'Спираль',
       description: '',
       cost: 10,
-      types: [],
+      types: [
+        {
+          id: 'type',
+          label: 'Тип',
+          values: [
+            {
+              id: 'type1',
+              value: 'Fused clapton',
+            },
+            {
+              id: 'type2',
+              value: 'Alien clapton',
+            },
+            {
+              id: 'type3',
+              value: 'Clapton',
+            },
+            {
+              id: 'type4',
+              value: 'Tiger coil',
+            },
+            {
+              id: 'type5',
+              value: 'Quad coil',
+            },
+            {
+              id: 'type6',
+              value: 'Twised coil',
+            },
+          ],
+        },
+      ],
     },
     {
       id: 'other_spiral2',
       type: 'other',
+      subtype: 'spiral',
       images: [otherImage3],
       name: 'Спираль',
       description: '',
       cost: 30,
-      types: [],
+      types: [
+        {
+          id: 'type',
+          label: 'Тип',
+          values: [
+            {
+              id: 'type1',
+              value: 'Tsuka coil',
+            },
+            {
+              id: 'type2',
+              value: 'Clapseption coil',
+            },
+            {
+              id: 'type3',
+              value: 'Tri twised coil',
+            },
+            {
+              id: 'type4',
+              value: 'Framed coil',
+            },
+          ],
+        },
+      ],
     },
     {
       id: 'other_other4',

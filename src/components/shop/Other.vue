@@ -21,6 +21,16 @@
           </option>
         </select>
       </span>
+      <span slot="pre" class="pre" v-if="spiralType">
+        <select class="spiral" @change="selectSpiralType">
+          <option
+            v-for="(spiral, index) in spiralType.values"
+            :key="index"
+            :selected="index === selectedTypesIndexes.spiral"
+            :value="spiral.value">{{ spiral.value }}
+          </option>
+        </select>
+      </span>
     </AddToCart>
   </div>
 </template>
@@ -40,6 +50,7 @@ export default {
   data() {
     return {
       countType: this.item.subtype === 'accum' && this.findType('count'),
+      spiralType: this.item.subtype === 'spiral' && this.findType('type'),
       calculatedCost: this.item.cost,
     };
   },
@@ -59,6 +70,12 @@ export default {
     selectCountType(event) {
       const { value } = event.target;
       this.selectedTypesIndexes.count = this.countType.values
+        .findIndex(type => type.value === value);
+      this.updateCost();
+    },
+    selectSpiralType(event) {
+      const { value } = event.target;
+      this.selectedTypesIndexes.spiral = this.spiralType.values
         .findIndex(type => type.value === value);
       this.updateCost();
     },
@@ -86,11 +103,22 @@ export default {
     display: flex;
     width: 11em;
   }
+  .add-to-cart .count,
+  .add-to-cart .spiral {
+    height: 2em;
+    padding: 0 .5em;
+  }
   .other.accum .add-to-cart {
     width: 17em;
   }
+  .other.spiral .add-to-cart {
+    width: 22em;
+  }
   .other.accum .add-to-cart .count {
     width: 5em;
+  }
+  .other.spiral .add-to-cart .spiral {
+    width: 10em;
   }
 
   @media screen and (max-width: 1023px) {
@@ -103,6 +131,15 @@ export default {
     }
     .other.accum .add-to-cart .count {
       width: 5em;
+    }
+    .other.spiral {
+      padding-bottom: 7em;
+    }
+    .other.spiral .add-to-cart {
+      height: 5em;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
     }
   }
 </style>

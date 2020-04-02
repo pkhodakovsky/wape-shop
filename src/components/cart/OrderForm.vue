@@ -104,6 +104,9 @@ export default {
         case 'accum':
           typeString = other.types.map(type => `${type.label}: ${type.value}`).join('. \n');
           break;
+        case 'spiral':
+          typeString = other.types.map(type => `${type.label}: ${type.value}`).join('. \n');
+          break;
         default:
           typeString = '';
           break;
