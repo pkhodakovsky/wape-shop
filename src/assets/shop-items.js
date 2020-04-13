@@ -8,6 +8,7 @@ import deadPirateImage from '../../public/images/liquids/dead-pirate.png';
 import simpsonsImage from '../../public/images/liquids/simpsons.png';
 import iceApowImage from '../../public/images/liquids/ice-apow.png';
 import vapeDrinksImage from '../../public/images/liquids/vape-drinks.png';
+import vapeDrinksSmallImage from '../../public/images/liquids/vape-drinks-small.png';
 import base350 from '../../public/images/self-mixing/base350.png';
 import base500 from '../../public/images/self-mixing/base500.png';
 import nicotineHiliqConcentrate from '../../public/images/self-mixing/nicotineHiliqConcentrate.png';
@@ -549,6 +550,56 @@ export default {
             { id: 'str1', value: '0 mg' },
             { id: 'str2', value: '1.5 mg' },
             { id: 'str3', value: '3 mg' },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'vapeDrinksSmall',
+      type: 'liquid',
+      name: 'Vape drinks (Salt)',
+      images: [vapeDrinksSmallImage],
+      description: '',
+      volume: 'Объем 30 мл.',
+      cost: 120,
+      types: [
+        {
+          id: 'name',
+          label: 'Название',
+          values: [
+            {
+              id: 'cocaCola',
+              value: 'Coca-Coca',
+              description: 'СВЯТО НАБЛИЖАЄТЬСЯ с первого вдоха! Парь легенду!',
+            },
+            {
+              id: 'sprite',
+              value: 'Spirite',
+              description: 'Освежающий спрайт как ив рекламе, но без пузырьков. Имидж - ничто, жажда - всё!',
+            },
+            {
+              id: 'fanta',
+              value: 'Fantan',
+              description: 'Та самая из бутылки с пупырышками! Парь Fantan. Будь Бамбуча.',
+            },
+            {
+              id: 'redBull',
+              value: 'Energy Bull',
+              description: 'Нашумевший энергетик теперь может быть и в твоём девайсе! Взбодрись с VAPE DRINK\'S Energy Bull.',
+            },
+            {
+              id: 'drPepper',
+              value: 'Dr Peppe',
+              description: 'Это вкус для настоящих ценителей - легендарная газировка с вишневым привкусом, которая отдает пряностью и отзывается легкой прохладой при выдохе.',
+            },
+          ],
+        },
+        {
+          id: 'strength',
+          label: 'Крепость',
+          values: [
+            { id: 'str1', value: '25 mg' },
+            { id: 'str2', value: '50 mg' },
           ],
         },
       ],

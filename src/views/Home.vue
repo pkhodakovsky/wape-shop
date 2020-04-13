@@ -68,6 +68,10 @@
             id="vapeDrinks"
             :image="vapeDrinksImage"
             :title='`<h2>VAPE DRINK</h2>`'/>
+          <liquidItem
+            id="vapeDrinksSmall"
+            :image="vapeDrinksSmallImage"
+            :title='`<h2>VAPE DRINK</h2><p>(SALT)</p>`'/>
         </div>
       </div>
     </section>
@@ -195,6 +199,7 @@ import deadPirateImage from '../../public/images/liquids/dead-pirate.png';
 import simpsonsImage from '../../public/images/liquids/simpsons.png';
 import iceApowImage from '../../public/images/liquids/ice-apow.png';
 import vapeDrinksImage from '../../public/images/liquids/vape-drinks.png';
+import vapeDrinksSmallImage from '../../public/images/liquids/vape-drinks-small.png';
 
 export default {
   name: 'home',
@@ -213,6 +218,7 @@ export default {
       simpsonsImage,
       iceApowImage,
       vapeDrinksImage,
+      vapeDrinksSmallImage,
     };
   },
   mounted() {
