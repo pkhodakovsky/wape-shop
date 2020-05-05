@@ -35,7 +35,7 @@
           <liquidItem
             id="flushRoyal"
             :image="cardsImage"
-            :title="`<h2>FLUSH ROYAL</h2>`"/>
+            :title="`<h2>ROYAL FLUSH</h2>`"/>
           <liquidItem
             id="dailySteamTobacco"
             :image="dailySteamTobaccoImage"

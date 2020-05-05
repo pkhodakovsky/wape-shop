@@ -15,6 +15,16 @@ export default {
       }
       return cost;
     },
+    actionCost() {
+      const { actionCost } = this.item;
+      const itemTypes = this.item.types;
+      if (itemTypes.length) {
+        return itemTypes
+          .reduce((amount, type) => actionCost + (type
+            .values[this.selectedTypesIndexes[type.id]].actionCost || 0), actionCost);
+      }
+      return actionCost;
+    },
   },
   methods: {
     findType(searchId) {

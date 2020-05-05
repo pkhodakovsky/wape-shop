@@ -69,7 +69,7 @@ export default {
             cartId,
             types: foundTypes,
             count: item.count,
-            cost: shopItem.cost + foundTypes
+            cost: (shopItem.actionCost || shopItem.cost) + foundTypes
               .reduce((additionalCost, type) => additionalCost + (type.cost || 0), 0),
           };
         });

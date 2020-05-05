@@ -62,6 +62,7 @@ export default {
       images: [wildWestImage],
       volume: 'Объем 60 мл.',
       cost: 110,
+      actionCost: 90,
       types: [
         {
           id: 'name',
@@ -104,10 +105,11 @@ export default {
       id: 'flushRoyal',
       type: 'liquid',
       subtype: 'flushRoyal',
-      name: 'Flush Royal',
+      name: 'Royal Flush',
       images: [cardsImage],
       volume: 'Объем 60 мл.',
       cost: 190,
+      actionCost: 150,
       types: [
         {
           id: 'name',
@@ -116,27 +118,27 @@ export default {
             {
               id: 'ten',
               value: 'Ten',
-              description: '',
+              description: 'Кисло-сладкий компот, который достали из холодильника. Свежую ежевику на вдохе заменяет персиковая сладость с легким холодком.',
             },
             {
               id: 'jack',
               value: 'Jack',
-              description: '',
+              description: 'Легендарная фруктовая жвачка всех времен. Клубника и киви - лучшая начинка для жевательной резинки.',
             },
             {
               id: 'queen',
               value: 'Queen',
-              description: '',
+              description: 'Для любителей нежных, десертных вкусов. Жидкость не сравнима ни с чем. Молочное печенье с заварным ванильным кремом и взбитыми сливками.',
             },
             {
               id: 'king',
               value: 'King',
-              description: '',
+              description: 'Вкуснейшые молочные вафли в карамели. Twix просто отдыхает. Словами не обьяснить. Заказывай и наслаждайся!',
             },
             {
               id: 'ace',
               value: 'Ace',
-              description: '',
+              description: 'В райском уголке, когда становится жарко, подают экзотичесские напитки со льдом... Так вот, рецепт у нас в флаконе.',
             },
           ],
         },
@@ -370,6 +372,7 @@ export default {
       images: [deadPirateImage],
       volume: 'Объем 60 мл.',
       cost: 160,
+      actionCost: 90,
       types: [
         {
           id: 'name',
@@ -410,6 +413,7 @@ export default {
       images: [simpsonsImage],
       volume: 'Объем 60 мл.',
       cost: 120,
+      actionCost: 90,
       types: [
         {
           id: 'name',
@@ -460,6 +464,7 @@ export default {
       images: [iceApowImage],
       volume: 'Объем 60 мл.',
       cost: 100,
+      actionCost: 90,
       types: [
         {
           id: 'name',
@@ -511,6 +516,7 @@ export default {
       description: '',
       volume: 'Объем 60 мл.',
       cost: 120,
+      actionCost: 90,
       types: [
         {
           id: 'name',
@@ -562,6 +568,7 @@ export default {
       description: '',
       volume: 'Объем 30 мл.',
       cost: 120,
+      actionCost: 90,
       types: [
         {
           id: 'name',

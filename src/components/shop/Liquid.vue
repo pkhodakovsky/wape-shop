@@ -14,7 +14,16 @@
         </option>
       </select>
       <span class="descr" v-html="description"></span><br/>
-      <span class="cost">Стоимость: {{ cost }} грн.</span>
+      <span class="cost" :class="{ action: item.actionCost }">
+        Стоимость:
+        <span class="action-cost" v-if="item.actionCost">
+          <span style="text-decoration: line-through; text-decoration-color: #555;">
+            <b>{{ cost }} грн.</b>
+          </span>
+          <span> {{ actionCost }} грн.</span>
+        </span>
+        <span v-else>{{ cost }}</span>
+      </span>
     </div>
     <AddToCart :item="item"
                :selectedTypesIndexes="selectedTypesIndexes"

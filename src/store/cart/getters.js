@@ -8,7 +8,7 @@ export default {
       const amount = _amount;
       const cartItem = parseCartId(id);
       const shopItem = shopItems.items.find(item => item.id === cartItem.id);
-      const cost = shopItem.cost + cartItem.types
+      const cost = (shopItem.actionCost || shopItem.cost) + cartItem.types
         .reduce(
           (additionalCost, selectedType) => additionalCost + shopItem.types
             .find(type => type.id === selectedType.id)
