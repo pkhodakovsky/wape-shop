@@ -22,7 +22,7 @@
           </span>
           <span> {{ actionCost }} грн.</span>
         </span>
-        <span v-else>{{ cost }}</span>
+        <span v-else>{{ cost }} грн.</span>
       </span>
     </div>
     <AddToCart :item="item"
