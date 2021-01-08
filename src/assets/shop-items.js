@@ -9,11 +9,6 @@ import simpsonsImage from '../../public/images/liquids/simpsons.png';
 import iceApowImage from '../../public/images/liquids/ice-apow.png';
 import vapeDrinksImage from '../../public/images/liquids/vape-drinks.png';
 import vapeDrinksSmallImage from '../../public/images/liquids/vape-drinks-small.png';
-import base350 from '../../public/images/self-mixing/base350.png';
-import base500 from '../../public/images/self-mixing/base500.png';
-import nicotineHiliqConcentrate from '../../public/images/self-mixing/nicotineHiliqConcentrate.png';
-import nicotineHiliq from '../../public/images/self-mixing/nicotineHiliq.png';
-import nicotineShanghai from '../../public/images/self-mixing/nicotineShanghai.png';
 import otherImage1 from '../../public/images/other/other1.png';
 import otherImage2 from '../../public/images/other/other2.png';
 import otherImage3 from '../../public/images/other/other3.png';
@@ -23,30 +18,8 @@ export default {
   types: [
     {
       id: 'liquid',
-      name: 'Жидкости для электронных сигарет',
+      name: 'Ароматические добавки',
       checked: true,
-    },
-    {
-      id: 'selfMixing',
-      name: 'Всё для "самозамеса"',
-      checked: true,
-      sub: [
-        {
-          id: 'nicotine',
-          name: 'Никотин',
-          checked: true,
-        },
-        {
-          id: 'bases',
-          name: 'Готовые базы',
-          checked: true,
-        },
-        {
-          id: 'aroma',
-          name: 'Ароматизаторы',
-          checked: true,
-        },
-      ],
     },
     {
       id: 'other',
@@ -61,8 +34,7 @@ export default {
       name: 'Wild West',
       images: [wildWestImage],
       volume: 'Объем 60 мл.',
-      cost: 110,
-      actionCost: 90,
+      cost: 100,
       types: [
         {
           id: 'name',
@@ -108,8 +80,7 @@ export default {
       name: 'Royal Flush',
       images: [cardsImage],
       volume: 'Объем 60 мл.',
-      cost: 190,
-      actionCost: 150,
+      cost: 150,
       types: [
         {
           id: 'name',
@@ -263,7 +234,7 @@ export default {
       name: 'Sigarette series',
       images: [tobaccoImage],
       volume: 'Объем 60 мл.',
-      cost: 90,
+      cost: 100,
       types: [
         {
           id: 'name',
@@ -317,7 +288,7 @@ export default {
       name: 'Sigarette series SALT',
       images: [tobaccoSmallImage],
       volume: 'Объем 30 мл.',
-      cost: 90,
+      cost: 100,
       types: [
         {
           id: 'name',
@@ -371,8 +342,7 @@ export default {
       name: 'Dead Pirates',
       images: [deadPirateImage],
       volume: 'Объем 60 мл.',
-      cost: 160,
-      actionCost: 90,
+      cost: 100,
       types: [
         {
           id: 'name',
@@ -412,8 +382,7 @@ export default {
       name: 'The Simpsons',
       images: [simpsonsImage],
       volume: 'Объем 60 мл.',
-      cost: 120,
-      actionCost: 90,
+      cost: 100,
       types: [
         {
           id: 'name',
@@ -464,7 +433,6 @@ export default {
       images: [iceApowImage],
       volume: 'Объем 60 мл.',
       cost: 100,
-      actionCost: 90,
       types: [
         {
           id: 'name',
@@ -511,12 +479,11 @@ export default {
     {
       id: 'vapeDrinks',
       type: 'liquid',
-      name: 'Vape drinks',
+      name: 'Drinks',
       images: [vapeDrinksImage],
       description: '',
       volume: 'Объем 60 мл.',
       cost: 120,
-      actionCost: 90,
       types: [
         {
           id: 'name',
@@ -540,7 +507,7 @@ export default {
             {
               id: 'redBull',
               value: 'Energy Bull',
-              description: 'Нашумевший энергетик теперь может быть и в твоём девайсе! Взбодрись с VAPE DRINK\'S Energy Bull.',
+              description: 'Нашумевший энергетик теперь может быть и в твоём девайсе! Взбодрись с DRINK\'S Energy Bull.',
             },
             {
               id: 'drPepper',
@@ -563,12 +530,11 @@ export default {
     {
       id: 'vapeDrinksSmall',
       type: 'liquid',
-      name: 'Vape drinks (Salt)',
+      name: 'Drinks (Salt)',
       images: [vapeDrinksSmallImage],
       description: '',
       volume: 'Объем 30 мл.',
       cost: 120,
-      actionCost: 90,
       types: [
         {
           id: 'name',
@@ -592,7 +558,7 @@ export default {
             {
               id: 'redBull',
               value: 'Energy Bull',
-              description: 'Нашумевший энергетик теперь может быть и в твоём девайсе! Взбодрись с VAPE DRINK\'S Energy Bull.',
+              description: 'Нашумевший энергетик теперь может быть и в твоём девайсе! Взбодрись с DRINK\'S Energy Bull.',
             },
             {
               id: 'drPepper',
@@ -607,365 +573,6 @@ export default {
           values: [
             { id: 'str1', value: '25 mg' },
             { id: 'str2', value: '50 mg' },
-          ],
-        },
-      ],
-    },
-    {
-      id: 'selfMixing_base100',
-      type: 'selfMixing',
-      subtype: 'base',
-      images: [base350],
-      name: 'База. 100 мл',
-      description: '',
-      cost: 28,
-      types: [
-        {
-          id: 'composition',
-          label: 'Состав',
-          values: [
-            {
-              id: 'comp1',
-              value: '50/50',
-            },
-            {
-              id: 'comp2',
-              value: '70/30',
-            },
-          ],
-        },
-        {
-          id: 'strength',
-          label: 'Крепость',
-          values: [
-            {
-              id: 'str1',
-              value: '0 mg',
-              cost: 0,
-            },
-            {
-              id: 'str2',
-              value: '2 mg',
-              cost: 6,
-            },
-            {
-              id: 'str3',
-              value: '4 mg',
-              cost: 12,
-            },
-            {
-              id: 'str5',
-              value: '6 mg',
-              cost: 18,
-            },
-          ],
-        },
-      ],
-    },
-    {
-      id: 'selfMixing_base350',
-      type: 'selfMixing',
-      subtype: 'base',
-      images: [base350],
-      name: 'База. 350 мл',
-      description: '',
-      cost: 90,
-      types: [
-        {
-          id: 'composition',
-          label: 'Состав',
-          values: [
-            {
-              id: 'comp1',
-              value: '50/50',
-            },
-            {
-              id: 'comp2',
-              value: '70/30',
-            },
-          ],
-        },
-        {
-          id: 'strength',
-          label: 'Крепость',
-          values: [
-            {
-              id: 'str1',
-              value: '0 mg',
-              cost: 0,
-            },
-            {
-              id: 'str2',
-              value: '1.5 mg',
-              cost: 20,
-            },
-            {
-              id: 'str3',
-              value: '3 mg',
-              cost: 40,
-            },
-            {
-              id: 'str4',
-              value: '6 mg',
-              cost: 60,
-            },
-          ],
-        },
-      ],
-    },
-    {
-      id: 'selfMixing_base500',
-      type: 'selfMixing',
-      subtype: 'base',
-      images: [base500],
-      name: 'База. 500 мл',
-      description: '',
-      cost: 125,
-      types: [
-        {
-          id: 'composition',
-          label: 'Состав',
-          values: [
-            {
-              id: 'comp1',
-              value: '50/50',
-            },
-            {
-              id: 'comp2',
-              value: '70/30',
-            },
-          ],
-        },
-        {
-          id: 'strength',
-          label: 'Крепость',
-          values: [
-            {
-              id: 'str1',
-              value: '0 mg',
-              cost: 0,
-            },
-            {
-              id: 'str2',
-              value: '1.5 mg',
-              cost: 30,
-            },
-            {
-              id: 'str3',
-              value: '3 mg',
-              cost: 60,
-            },
-            {
-              id: 'str4',
-              value: '6 mg',
-              cost: 85,
-            },
-          ],
-        },
-      ],
-    },
-    {
-      id: 'selfMixing_nicotineHiliqConcentrate',
-      type: 'selfMixing',
-      subtype: 'nicotine',
-      images: [nicotineHiliqConcentrate],
-      name: 'Никотин Hiliq. Концентрат',
-      description: '',
-      cost: 230,
-      currency: '$',
-      types: [
-        {
-          id: 'volume',
-          label: 'Объем',
-          values: [
-            {
-              id: 'vol1',
-              value: '0.5 л',
-              cost: 0,
-            },
-            {
-              id: 'vol2',
-              value: '1 л',
-              cost: 220,
-            },
-          ],
-        },
-      ],
-    },
-    {
-      id: 'selfMixing_nicotineShanghaiConcentrate',
-      type: 'selfMixing',
-      subtype: 'nicotine',
-      images: [nicotineShanghai],
-      name: 'Никотин Shanghai. Концентрат',
-      description: '',
-      cost: 180,
-      currency: '$',
-      types: [
-        {
-          id: 'volume',
-          label: 'Объем',
-          values: [
-            {
-              id: 'vol1',
-              value: '0.5 л',
-              cost: 0,
-            },
-            {
-              id: 'vol2',
-              value: '1 л',
-              cost: 170,
-            },
-          ],
-        },
-      ],
-    },
-    {
-      id: 'selfMixing_nicotineHiliqSaline',
-      type: 'selfMixing',
-      subtype: 'nicotine',
-      images: [nicotineHiliq],
-      name: 'Никотин Hiliq. Солевой 500 мг',
-      description: '',
-      cost: 150,
-      currency: '$',
-      types: [
-        {
-          id: 'volume',
-          label: 'Объем',
-          values: [
-            {
-              id: 'vol1',
-              value: '0.5 л',
-              cost: 0,
-            },
-            {
-              id: 'vol2',
-              value: '1 л',
-              cost: 150,
-            },
-          ],
-        },
-      ],
-    },
-    {
-      id: 'selfMixing_nicotineShanghaiSaline',
-      type: 'selfMixing',
-      subtype: 'nicotine',
-      images: [nicotineShanghai],
-      name: 'Никотин Shanghai. Солевой 500 мг',
-      description: '',
-      cost: 130,
-      currency: '$',
-      types: [
-        {
-          id: 'volume',
-          label: 'Объем',
-          values: [
-            {
-              id: 'vol1',
-              value: '0.5 л',
-              cost: 0,
-            },
-            {
-              id: 'vol2',
-              value: '1 л',
-              cost: 120,
-            },
-          ],
-        },
-      ],
-    },
-    {
-      id: 'selfMixing_nicotineHiliq100',
-      type: 'selfMixing',
-      subtype: 'nicotine',
-      images: [nicotineHiliq],
-      name: 'Никотин Hiliq. 100 мг',
-      description: '',
-      cost: 50,
-      types: [
-        {
-          id: 'volume',
-          label: 'Объем',
-          values: [
-            {
-              id: 'vol1',
-              value: '10 мл',
-              cost: 0,
-            },
-            {
-              id: 'vol2',
-              value: '30 мл',
-              cost: 50,
-            },
-            {
-              id: 'vol3',
-              value: '50 мл',
-              cost: 105,
-            },
-            {
-              id: 'vol4',
-              value: '100 мл',
-              cost: 220,
-            },
-            {
-              id: 'vol5',
-              value: '0.5 л',
-              cost: 700,
-            },
-            {
-              id: 'vol6',
-              value: '1 л',
-              cost: 1350,
-            },
-          ],
-        },
-      ],
-    },
-    {
-      id: 'selfMixing_nicotineShanghai100',
-      type: 'selfMixing',
-      subtype: 'nicotine',
-      images: [nicotineShanghai],
-      name: 'Никотин Shanghai. 100 мг',
-      description: '',
-      cost: 30,
-      types: [
-        {
-          id: 'volume',
-          label: 'Объем',
-          values: [
-            {
-              id: 'vol1',
-              value: '10 мл',
-              cost: 0,
-            },
-            {
-              id: 'vol2',
-              value: '30 мл',
-              cost: 50,
-            },
-            {
-              id: 'vol3',
-              value: '50 мл',
-              cost: 90,
-            },
-            {
-              id: 'vol4',
-              value: '100 мл',
-              cost: 170,
-            },
-            {
-              id: 'vol5',
-              value: '0.5 л',
-              cost: 570,
-            },
-            {
-              id: 'vol6',
-              value: '1 л',
-              cost: 1070,
-            },
           ],
         },
       ],

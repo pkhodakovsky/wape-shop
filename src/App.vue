@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1 class="hide" style="display: none;">
-      Royal vape. Vapes. Вейпы. Liquids. Жидкости. Ukraine. Украина
+      Royal vape. Liquids. Жидкости. Ароматические добавки. Ukraine. Украина
     </h1>
 
     <!-- Header -->
