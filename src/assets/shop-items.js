@@ -80,7 +80,7 @@ export default {
       name: 'Royal Flush',
       images: [cardsImage],
       volume: 'Объем 60 мл.',
-      cost: 150,
+      cost: 190,
       types: [
         {
           id: 'name',
@@ -130,7 +130,7 @@ export default {
       name: 'DAILY STEAM (Табачка)',
       images: [dailySteamTobaccoImage],
       volume: 'Объем 120 мл.',
-      cost: 120,
+      cost: 130,
       types: [
         {
           id: 'name',
@@ -179,7 +179,7 @@ export default {
       name: 'DAILY STEAM (Фрукты)',
       images: [dailySteamFruitsImage],
       volume: 'Объем 120 мл.',
-      cost: 120,
+      cost: 130,
       types: [
         {
           id: 'name',
