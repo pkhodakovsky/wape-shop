@@ -288,7 +288,7 @@ export default {
       name: 'Sigarette series SALT',
       images: [tobaccoSmallImage],
       volume: 'Объем 30 мл.',
-      cost: 100,
+      cost: 120,
       types: [
         {
           id: 'name',
