@@ -189,7 +189,7 @@
 // @ is an alias to /src
 import LiquidItem from '@/components/LiquidItem.vue';
 
-import wildWestImage from '../../public/images/liquids/wild-west.png';
+import wildWestImage from '../../public/images/liquids/wild-west-new.png';
 import cardsImage from '../../public/images/liquids/cards.png';
 import dailySteamFruitsImage from '../../public/images/liquids/daily-steam-fruits.png';
 import dailySteamTobaccoImage from '../../public/images/liquids/daily-steam-tobacco.png';

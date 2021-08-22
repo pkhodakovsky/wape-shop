@@ -103,6 +103,7 @@ export default {
     white-space: pre-wrap;
   }
   .data .name {
+    color: #fff;
     font-weight: bold;
     margin: 0;
   }

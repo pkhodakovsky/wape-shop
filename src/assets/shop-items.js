@@ -1,29 +1,24 @@
 import wildWestImage from '../../public/images/liquids/wild-west.png';
 import cardsImage from '../../public/images/liquids/cards.png';
 import dailySteamFruitsImage from '../../public/images/liquids/daily-steam-fruits.png';
+import dailySteamFruitsSmallImage from '../../public/images/liquids/daily-steam-fruilts-salt.png';
 import dailySteamTobaccoImage from '../../public/images/liquids/daily-steam-tobacco.png';
+import dailySteamTobaccoSaltImage from '../../public/images/liquids/daily-steam-tobacco-salt.png';
 import tobaccoImage from '../../public/images/liquids/tobacco.png';
 import tobaccoSmallImage from '../../public/images/liquids/tobacco-small.png';
 import deadPirateImage from '../../public/images/liquids/dead-pirate.png';
 import simpsonsImage from '../../public/images/liquids/simpsons.png';
 import iceApowImage from '../../public/images/liquids/ice-apow.png';
+import iceApowSmallImage from '../../public/images/liquids/ice-apow-small.png';
 import vapeDrinksImage from '../../public/images/liquids/vape-drinks.png';
 import vapeDrinksSmallImage from '../../public/images/liquids/vape-drinks-small.png';
-import otherImage1 from '../../public/images/other/other1.png';
-import otherImage2 from '../../public/images/other/other2.png';
-import otherImage3 from '../../public/images/other/other3.png';
-import otherImage4 from '../../public/images/other/other4.png';
+import inRoyalCloudsImage from '../../public/images/liquids/in-royal-clouds.png';
 
 export default {
   types: [
     {
       id: 'liquid',
       name: 'Ароматические добавки',
-      checked: true,
-    },
-    {
-      id: 'other',
-      name: 'Аккумуляторы, расходники, обслужка',
       checked: true,
     },
   ],
@@ -174,12 +169,116 @@ export default {
       ],
     },
     {
+      id: 'dailySteamTobaccoSmall',
+      type: 'liquid',
+      name: 'DAILY STEAM (Табачка Salt)',
+      images: [dailySteamTobaccoSaltImage],
+      volume: 'Объем 30 мл.',
+      cost: 120,
+      types: [
+        {
+          id: 'name',
+          label: 'Название',
+          values: [
+            {
+              id: 'island',
+              value: 'Island',
+              description: 'Табачный лист в шоколадной глазури пропитанный кокосовым молоком',
+            },
+            {
+              id: 'ry4',
+              value: 'RY4',
+              description: 'Крепкий, с кислиной, табачный вкус для ценителей классики',
+            },
+            {
+              id: 'luckyStrike',
+              value: 'Lucky strike',
+              description: 'Настоящий американский вкус табака с мягким послевкусием',
+            },
+            {
+              id: 'kent',
+              value: 'Kent',
+              description: 'Классический табачный вкус популярных сигарет. Немного терпкий с кислинкой',
+            },
+            {
+              id: 'davidoff',
+              value: 'Davidoff',
+              description: 'Нежный табачный вкус с нотками меда и шоколада',
+            },
+          ],
+        },
+        {
+          id: 'strength',
+          label: 'Крепость',
+          values: [
+            { id: 'str1', value: '1.5 mg' },
+            { id: 'str2', value: '3 mg' },
+          ],
+        },
+      ],
+    },
+    {
       id: 'dailySteamFruits',
       type: 'liquid',
       name: 'DAILY STEAM (Фрукты)',
       images: [dailySteamFruitsImage],
       volume: 'Объем 120 мл.',
       cost: 130,
+      types: [
+        {
+          id: 'name',
+          label: 'Название',
+          values: [
+            {
+              id: 'mango',
+              value: 'Mango',
+              description: 'Спелое манго',
+            },
+            {
+              id: 'exotic',
+              value: 'Exotic',
+              description: 'Освежающий микс апельсина, манго и киви',
+            },
+            {
+              id: 'peach',
+              value: 'Peach',
+              description: 'Сладкий сочный персик',
+            },
+            {
+              id: 'gum',
+              value: 'Gum',
+              description: 'Фруктовая жевательная резинка',
+            },
+            {
+              id: 'currant',
+              value: 'Currant',
+              description: 'Кислая смородина',
+            },
+            {
+              id: 'juice',
+              value: 'Juice',
+              description: 'Микс граната, грейпфрута, манго и тонкой ноткой лайма',
+            },
+          ],
+        },
+        {
+          id: 'strength',
+          label: 'Крепость',
+          values: [
+            { id: 'str1', value: '0 mg' },
+            { id: 'str2', value: '1.5 mg' },
+            { id: 'str3', value: '3 mg' },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'dailySteamFruitsSmall',
+      type: 'liquid',
+      name: 'DAILY STEAM (Фрукты Salt)',
+      images: [dailySteamFruitsSmallImage],
+      volume: 'Объем 30 мл.',
+      cost: 120,
       types: [
         {
           id: 'name',
@@ -477,6 +576,90 @@ export default {
       ],
     },
     {
+      id: 'iceVapourSmall',
+      type: 'liquid',
+      name: 'Ice vapour (salt)',
+      images: [iceApowSmallImage],
+      volume: 'Объем 30 мл.',
+      cost: 120,
+      types: [
+        {
+          id: 'name',
+          label: 'Название',
+          values: [
+            {
+              id: 'iceLime',
+              value: 'Ice Lime',
+              description: 'Холодный лайм',
+            },
+            {
+              id: 'iceForestFruits',
+              value: 'Ice Forest Fruits',
+              description: 'Холодные лесные фрукты',
+            },
+            {
+              id: 'iceStrawberry',
+              value: 'Ice Strawberry',
+              description: 'Холодная клубника',
+            },
+            {
+              id: 'iceMango',
+              value: 'Ice Mango',
+              description: 'Ледяное манго',
+            },
+            {
+              id: 'iceCurrant',
+              value: 'Ice Currant',
+              description: 'Ледяная смородина',
+            },
+            {
+              id: 'icePineapple',
+              value: 'Ice Pineapple',
+              description: 'Освежающий ананас',
+            },
+            {
+              id: 'iceCranberry',
+              value: 'Ice Cranberry',
+              description: 'Освежающий клюква',
+            },
+            {
+              id: 'iceWatermelon',
+              value: 'Ice Watermelon',
+              description: 'Освежающий арбуз',
+            },
+            {
+              id: 'iceKiwi',
+              value: 'Ice Kiwi',
+              description: 'Освежающий киви',
+            },
+            {
+              id: 'iceOrange',
+              value: 'Ice Orange',
+              description: 'Освежающий апельсин',
+            },
+            {
+              id: 'icePear',
+              value: 'Ice Pear',
+              description: 'Освежающая груша',
+            },
+            {
+              id: 'iceCherry',
+              value: 'Ice Cherry',
+              description: 'Освежающая вишня',
+            },
+          ],
+        },
+        {
+          id: 'strength',
+          label: 'Крепость',
+          values: [
+            { id: 'str1', value: '25 mg' },
+            { id: 'str2', value: '50 mg' },
+          ],
+        },
+      ],
+    },
+    {
       id: 'vapeDrinks',
       type: 'liquid',
       name: 'Drinks',
@@ -578,119 +761,59 @@ export default {
       ],
     },
     {
-      id: 'other_accum',
-      type: 'other',
-      subtype: 'accum',
-      images: [otherImage1],
-      name: 'Аккумулятор',
+      id: 'inRoyalClouds',
+      type: 'liquid',
+      name: 'In Royal Clouds',
+      images: [inRoyalCloudsImage],
       description: '',
-      cost: 170,
+      volume: 'Объем 30 мл.',
+      cost: 120,
       types: [
         {
-          id: 'count',
-          label: 'Количество',
+          id: 'name',
+          label: 'Название',
           values: [
             {
-              id: 'count1',
-              value: '1 шт.',
-              cost: 0,
+              id: 'cranberryJuice',
+              value: 'Cranberry Juice',
+              description: 'Клюквенный сок',
             },
             {
-              id: 'count2',
-              value: '4 шт.',
-              cost: 470,
+              id: 'GreenApple',
+              value: 'Green Apple',
+              description: 'Зелёное яблоко',
             },
             {
-              id: 'count3',
-              value: '10 шт.',
-              cost: 1330,
+              id: 'honeyMelon',
+              value: 'Honey Melon',
+              description: 'Медовая дыня',
+            },
+            {
+              id: 'redGrapeJuice',
+              value: 'Red Grape Juice',
+              description: 'Сок из красного винограда',
+            },
+            {
+              id: 'watermelonRipe',
+              value: 'Watermelon Ripe',
+              description: 'Спелый арбуз',
+            },
+            {
+              id: 'cherriesJuice',
+              value: 'Cherries Juice',
+              description: 'Вишневый сок',
             },
           ],
         },
-      ],
-    },
-    {
-      id: 'other_spiral',
-      type: 'other',
-      subtype: 'spiral',
-      images: [otherImage2],
-      name: 'Спираль',
-      description: '',
-      cost: 10,
-      types: [
         {
-          id: 'type',
-          label: 'Тип',
+          id: 'strength',
+          label: 'Крепость',
           values: [
-            {
-              id: 'type1',
-              value: 'Fused clapton',
-            },
-            {
-              id: 'type2',
-              value: 'Alien clapton',
-            },
-            {
-              id: 'type3',
-              value: 'Clapton',
-            },
-            {
-              id: 'type4',
-              value: 'Tiger coil',
-            },
-            {
-              id: 'type5',
-              value: 'Quad coil',
-            },
-            {
-              id: 'type6',
-              value: 'Twised coil',
-            },
+            { id: 'str1', value: '25 mg' },
+            { id: 'str2', value: '50 mg' },
           ],
         },
       ],
-    },
-    {
-      id: 'other_spiral2',
-      type: 'other',
-      subtype: 'spiral',
-      images: [otherImage3],
-      name: 'Спираль',
-      description: '',
-      cost: 30,
-      types: [
-        {
-          id: 'type',
-          label: 'Тип',
-          values: [
-            {
-              id: 'type1',
-              value: 'Tsuka coil',
-            },
-            {
-              id: 'type2',
-              value: 'Clapseption coil',
-            },
-            {
-              id: 'type3',
-              value: 'Tri twised coil',
-            },
-            {
-              id: 'type4',
-              value: 'Framed coil',
-            },
-          ],
-        },
-      ],
-    },
-    {
-      id: 'other_other4',
-      type: 'other',
-      images: [otherImage4],
-      name: 'Вата',
-      description: '',
-      cost: 5,
-      types: [],
     },
   ],
 };

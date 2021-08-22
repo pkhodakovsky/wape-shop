@@ -55,15 +55,18 @@ export default {
     margin-bottom: 1em;
   }
   .filters h4 {
+    color: #fff;
     margin-bottom: .5em;
   }
   .filters .name {
     color: #fff;
   }
   .filters .label {
+    color: #fff;
     margin: 0;
   }
   .filters label {
+    color: #fff;
     margin-bottom: .5rem;
   }
   .filters label:before {
