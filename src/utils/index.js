@@ -7,9 +7,11 @@ export function amount(v, currency = 'грн.') {
 }
 
 export function prepareCartId({ id, types }) {
-  const cartType = types.map((type => `${type.id}:${type.value}`)).join(';');
-  if (cartType.length) {
-    return [id].concat(cartType).join('__');
+  if (types && types.length) {
+    const cartType = types.map((type => `${type.id}:${type.value}`)).join(';');
+    if (cartType.length) {
+      return [id].concat(cartType).join('__');
+    }
   }
   return id;
 }

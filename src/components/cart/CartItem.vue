@@ -66,6 +66,7 @@ export default {
   .cart-item .name {
     width: 50%;
     margin: 0;
+    color: #fff;
   }
   .amount {
     padding: 20px 0;

@@ -20,7 +20,7 @@
       <CartIcon :item="item" @click="$emit('addItem', {
                 count,
                 id: item.id,
-                types: item.types.map(({ id, values }) => ({
+                types: item.types && item.types.map(({ id, values }) => ({
                   id,
                   value: values[selectedTypesIndexes[id]].id,
                 })),

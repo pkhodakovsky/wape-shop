@@ -155,6 +155,8 @@ export default {
   .order {
     width: 100%;
     margin-top: 1em;
+    background-color: rgba(0, 0, 0, .4);
+    border-radius: 10px;
   }
   .order .order-row {
     display: flex;
@@ -162,10 +164,12 @@ export default {
   }
   .order-row h3 {
     width: 20%;
+    color: #fff;
   }
   .order-row input,
   .order-row textarea {
     width: 80%;
+    border: 1px solid #fff;
   }
   .checkout {
     margin-top: 2em;

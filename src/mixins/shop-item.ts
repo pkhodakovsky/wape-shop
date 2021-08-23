@@ -8,7 +8,7 @@ export default {
     cost() {
       const { cost } = this.item;
       const itemTypes = this.item.types;
-      if (itemTypes.length) {
+      if (itemTypes && itemTypes.length) {
         return itemTypes
           .reduce((amount, type) => cost + (type
             .values[this.selectedTypesIndexes[type.id]].cost || 0), cost);
@@ -36,8 +36,10 @@ export default {
     },
   },
   beforeMount() {
-    this.item.types.forEach((type) => {
-      this.selectedTypesIndexes[type.id] = 0;
-    });
+    if (this.item.types) {
+      this.item.types.forEach((type) => {
+        this.selectedTypesIndexes[type.id] = 0;
+      });
+    }
   },
 };

@@ -13,9 +13,23 @@ import iceApowSmallImage from '../../public/images/liquids/ice-apow-small.png';
 import vapeDrinksImage from '../../public/images/liquids/vape-drinks.png';
 import vapeDrinksSmallImage from '../../public/images/liquids/vape-drinks-small.png';
 import inRoyalCloudsImage from '../../public/images/liquids/in-royal-clouds.png';
+import disposableDeviceStrawberryBanana005 from '../../public/images/disposableDevices/disposableDeviceStrawberryBanana005.png';
+import disposableDeviceStrawberryGrape005 from '../../public/images/disposableDevices/disposableDeviceStrawberryGrape005.png';
+import disposableDeviceBananaIce005 from '../../public/images/disposableDevices/disposableDeviceBananaIce005.png';
+import disposableDeviceBlueRazzLemonade005 from '../../public/images/disposableDevices/disposableDeviceBlueRazzLemonade005.png';
+import disposableDevicePineapplePeachMango005 from '../../public/images/disposableDevices/disposableDevicePineapplePeachMango005.png';
+import disposableDeviceKiwiPassionfruitGuava005 from '../../public/images/disposableDevices/disposableDeviceKiwiPassionfruitGuava005.png';
+import disposableDeviceWatermelon005 from '../../public/images/disposableDevices/disposableDeviceWatermelon005.png';
+import disposableDevicePinkLemonade005 from '../../public/images/disposableDevices/disposableDevicePinkLemonade005.png';
+import disposubleDeviceBlueberry005 from '../../public/images/disposableDevices/disposableDeviceBlueberry005.png';
 
 export default {
   types: [
+    {
+      id: 'disposableDevice',
+      name: 'Одноразовые сигареты (под-системы)',
+      checked: true,
+    },
     {
       id: 'liquid',
       name: 'Ароматические добавки',
@@ -23,6 +37,78 @@ export default {
     },
   ],
   items: [
+    {
+      id: 'disposableDeviceStrawberryBanana005',
+      type: 'disposableDevice',
+      name: 'Одноразовый Pod Elf Bar Lux 1500 Disposable Device 850mAh Strawberry Banana 5%',
+      images: [disposableDeviceStrawberryBanana005],
+      description: 'Одноразовая под-система на 1500 затяжек, что является эквивалентом четырех пачек аналоговых сигарет. Картридж содержит 4.8 мл смеси на основе солевого никотина 5%-й крепости со вкусом клубники и банана.',
+      cost: 180,
+    },
+    {
+      id: 'disposableDeviceGrape005',
+      type: 'disposableDevice',
+      name: 'Одноразовый Pod Elf Bar Lux 1500 Disposable Device 850mAh Grape 5%',
+      images: [disposableDeviceStrawberryGrape005],
+      description: 'Одноразовая под-система на 1500 затяжек, что является эквивалентом четырех пачек аналоговых сигарет. Картридж содержит 4.8 мл смеси на основе солевого никотина 5%-й крепости со вкусом винограда.',
+      cost: 180,
+    },
+    {
+      id: 'disposableDeviceBananaIce005',
+      type: 'disposableDevice',
+      name: 'Одноразовый Pod Elf Bar Lux 1500 Disposable Device 850mAh Banana Ice 5%',
+      images: [disposableDeviceBananaIce005],
+      description: 'Одноразовая под-система на 1500 затяжек, что является эквивалентом четырех пачек аналоговых сигарет. Картридж содержит 4.8 мл смеси на основе солевого никотина 5%-й крепости со вкусом банана со льдом.',
+      cost: 180,
+    },
+    {
+      id: 'disposableDeviceBlueRazzLemonade005',
+      type: 'disposableDevice',
+      name: 'Одноразовый Pod Elf Bar Lux 1500 Disposable Device 850mAh Blue Razz Lemonade 5%',
+      images: [disposableDeviceBlueRazzLemonade005],
+      description: 'Одноразовая под-система на 1500 затяжек, что является эквивалентом четырех пачек аналоговых сигарет. Картридж содержит 4.8 мл смеси на основе солевого никотина 5%-й крепости со вкусом лимонада с синей малиной.',
+      cost: 180,
+    },
+    {
+      id: 'disposableDevicePineapplePeachMango005',
+      type: 'disposableDevice',
+      name: 'Одноразовый Pod Elf Bar Lux 1500 Disposable Device 850mAh Pineapple Peach Mango 5%',
+      images: [disposableDevicePineapplePeachMango005],
+      description: 'Одноразовая под-система на 1500 затяжек, что является эквивалентом четырех пачек аналоговых сигарет. Картридж содержит 4.8 мл смеси на основе солевого никотина 5%-й крепости со вкусом ананаса, персика и манго.',
+      cost: 180,
+    },
+    {
+      id: 'disposableDeviceKiwiPassionfruitGuava005',
+      type: 'disposableDevice',
+      name: 'Одноразовый Pod Elf Bar Lux 1500 Disposable Device 850mAh Kiwi Passionfruit Guava 5%',
+      images: [disposableDeviceKiwiPassionfruitGuava005],
+      description: 'Одноразовая под-система на 1500 затяжек, что является эквивалентом четырех пачек аналоговых сигарет. Картридж содержит 4.8 мл смеси на основе солевого никотина 5%-й крепости со вкусом киви, маракуйи и гуавы.',
+      cost: 180,
+    },
+    {
+      id: 'disposableDeviceWatermelon005',
+      type: 'disposableDevice',
+      name: 'Одноразовый Pod Elf Bar Lux 1500 Disposable Device 850mAh Watermelon 5%',
+      images: [disposableDeviceWatermelon005],
+      description: 'Одноразовая под-система на 1500 затяжек, что является эквивалентом четырех пачек аналоговых сигарет. Картридж содержит 4.8 мл смеси на основе солевого никотина 5%-й крепости со вкусом арбуза.',
+      cost: 180,
+    },
+    {
+      id: 'disposableDevicePinkLemonade005',
+      type: 'disposableDevice',
+      name: 'Одноразовый Pod Elf Bar Lux 1500 Disposable Device 850mAh Pink Lemonade 5%',
+      images: [disposableDevicePinkLemonade005],
+      description: 'Одноразовая под-система на 1500 затяжек, что является эквивалентом четырех пачек аналоговых сигарет. Картридж содержит 4.8 мл смеси на основе солевого никотина 5%-й крепости со вкусом розового лимонада.',
+      cost: 180,
+    },
+    {
+      id: 'disposableDeviceBlueberry005',
+      type: 'disposableDevice',
+      name: 'Одноразовый Pod Elf Bar Lux 1500 Disposable Device 850mAh Blueberry 5%',
+      images: [disposubleDeviceBlueberry005],
+      description: 'Одноразовая под-система на 1500 затяжек, что является эквивалентом четырех пачек аналоговых сигарет. Картридж содержит 4.8 мл смеси на основе солевого никотина 5%-й крепости со вкусом черники.',
+      cost: 180,
+    },
     {
       id: 'wildWest',
       type: 'liquid',
@@ -223,7 +309,7 @@ export default {
       name: 'DAILY STEAM (Фрукты)',
       images: [dailySteamFruitsImage],
       volume: 'Объем 120 мл.',
-      cost: 130,
+      cost: 180,
       types: [
         {
           id: 'name',

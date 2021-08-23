@@ -6,6 +6,7 @@
 import LiquidTypes from './LiquidTypes.vue';
 import SelfMixingTypes from './SelfMixingTypes.vue';
 import OtherTypes from './OtherTypes.vue';
+import DisposableDeviceTypes from './DisposableDeviceTypes.vue';
 
 export default {
   name: 'CartItemType',
@@ -13,6 +14,7 @@ export default {
     liquid: LiquidTypes,
     selfMixing: SelfMixingTypes,
     other: OtherTypes,
+    disposableDevice: DisposableDeviceTypes,
   },
   props: {
     item: {

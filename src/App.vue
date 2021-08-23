@@ -64,7 +64,7 @@ export default {
   methods: {
     ...mapMutations('cart', ['setCart']),
     validateCart(storageCart) {
-      const cart = JSON.parse(storageCart);
+      const cart = JSON.parse(storageCart) || {};
       if (cart.orderSuccess
         || !(cart instanceof Object)
         || !(cart.items instanceof Array)) {
