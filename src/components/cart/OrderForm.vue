@@ -79,6 +79,13 @@ export default {
         .concat(this.addCell(amountFilter(liquid.cost)))
         .concat(this.addCell(amountFilter(liquid.count * liquid.cost)));
     },
+    prepareDisposableDeviceText(disposableDeviceText) {
+      return ''.concat(this.addCell(`${disposableDeviceText.name}`))
+        .concat(this.addCell(''))
+        .concat(this.addCell(`${disposableDeviceText.count} шт.`))
+        .concat(this.addCell(amountFilter(disposableDeviceText.cost)))
+        .concat(this.addCell(amountFilter(disposableDeviceText.count * disposableDeviceText.cost)));
+    },
     prepareSelfMixingText(selfMixing) {
       let typeString;
       switch (selfMixing.subtype) {
@@ -132,6 +139,8 @@ export default {
         switch (item.type) {
           case 'liquid':
             return this.addRow(this.prepareLiquidText(item));
+          case 'disposableDevice':
+            return this.addRow(this.prepareDisposableDeviceText(item));
           case 'selfMixing':
             return this.addRow(this.prepareSelfMixingText(item));
           case 'other':
