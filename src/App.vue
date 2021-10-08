@@ -15,27 +15,20 @@
     <nav id="menu">
       <ul class="links">
         <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/gallery">Gallery</router-link></li>
         <li><router-link to="/shop">Shop</router-link></li>
       </ul>
 
       <div id="social">
-        <div id="instagram" class="social-button">
-          <a href="https://www.instagram.com/royalvape_rv/" target="_blank">
-            <img src="../public/images/instagram_icon.png"
-                 alt="Instagram" width="30px" height="30px">
-          </a>
-        </div>
         <div id="facebook" class="social-button">
           <a href="https://www.facebook.com/groups/royalvape.rv" target="_blank">
             <img src="../public/images/facebook_icon.png"
                  alt="Facebook" width="30px" height="30px">
           </a>
         </div>
-        <div id="olx" class="social-button">
-          <a href="http://olx.ua/list/user/89KOa/" target="_blank">
-            <img src="../public/images/olx_icon.png"
-                 alt="OLX" width="30px" height="30px">
+        <div id="viber" class="social-button">
+          <a href="https://invite.viber.com/?g2=AQAG72udaE7shUy6Crbh9CN0q9muW%2BMEzPRgGxS8YSuHXGiP9D5%2BplJirSfUh91d" target="_blank">
+            <img src="../public/images/viber-icon-300x300.png"
+                 alt="Facebook" width="30px" height="30px">
           </a>
         </div>
       </div>

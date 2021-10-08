@@ -2,8 +2,10 @@ import wildWestImage from '../../public/images/liquids/wild-west.png';
 import cardsImage from '../../public/images/liquids/cards.png';
 import dailySteamFruitsImage from '../../public/images/liquids/daily-steam-fruits.png';
 import dailySteamFruitsSmallImage from '../../public/images/liquids/daily-steam-fruilts-salt.png';
+import dailySteamFruitsExtraSmallImage from '../../public/images/liquids/daily-steam-fruilts-salt-10.png';
 import dailySteamTobaccoImage from '../../public/images/liquids/daily-steam-tobacco.png';
-import dailySteamTobaccoSaltImage from '../../public/images/liquids/daily-steam-tobacco-salt.png';
+import dailySteamTobaccoSmallImage from '../../public/images/liquids/daily-steam-tobacco-salt.png';
+import dailySteamTobaccoExtraSmallImage from '../../public/images/liquids/daily-steam-tobacco-salt-10.png';
 import tobaccoImage from '../../public/images/liquids/tobacco.png';
 import tobaccoSmallImage from '../../public/images/liquids/tobacco-small.png';
 import deadPirateImage from '../../public/images/liquids/dead-pirate.png';
@@ -211,7 +213,7 @@ export default {
       name: 'DAILY STEAM (Табачка)',
       images: [dailySteamTobaccoImage],
       volume: 'Объем 120 мл.',
-      cost: 130,
+      cost: 180,
       types: [
         {
           id: 'name',
@@ -258,9 +260,58 @@ export default {
       id: 'dailySteamTobaccoSmall',
       type: 'liquid',
       name: 'DAILY STEAM (Табачка Salt)',
-      images: [dailySteamTobaccoSaltImage],
+      images: [dailySteamTobaccoSmallImage],
       volume: 'Объем 30 мл.',
       cost: 120,
+      types: [
+        {
+          id: 'name',
+          label: 'Название',
+          values: [
+            {
+              id: 'island',
+              value: 'Island',
+              description: 'Табачный лист в шоколадной глазури пропитанный кокосовым молоком',
+            },
+            {
+              id: 'ry4',
+              value: 'RY4',
+              description: 'Крепкий, с кислиной, табачный вкус для ценителей классики',
+            },
+            {
+              id: 'luckyStrike',
+              value: 'Lucky strike',
+              description: 'Настоящий американский вкус табака с мягким послевкусием',
+            },
+            {
+              id: 'kent',
+              value: 'Kent',
+              description: 'Классический табачный вкус популярных сигарет. Немного терпкий с кислинкой',
+            },
+            {
+              id: 'davidoff',
+              value: 'Davidoff',
+              description: 'Нежный табачный вкус с нотками меда и шоколада',
+            },
+          ],
+        },
+        {
+          id: 'strength',
+          label: 'Крепость',
+          values: [
+            { id: 'str1', value: '1.5 mg' },
+            { id: 'str2', value: '3 mg' },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'dailySteamTobaccoSmall',
+      type: 'liquid',
+      name: 'DAILY STEAM (Табачка Salt)',
+      images: [dailySteamTobaccoExtraSmallImage],
+      volume: 'Объем 10 мл.',
+      cost: 50,
       types: [
         {
           id: 'name',
@@ -414,12 +465,67 @@ export default {
       ],
     },
     {
+      id: 'dailySteamFruitsSmall',
+      type: 'liquid',
+      name: 'DAILY STEAM (Фрукты Salt)',
+      images: [dailySteamFruitsExtraSmallImage],
+      volume: 'Объем 10 мл.',
+      cost: 50,
+      types: [
+        {
+          id: 'name',
+          label: 'Название',
+          values: [
+            {
+              id: 'mango',
+              value: 'Mango',
+              description: 'Спелое манго',
+            },
+            {
+              id: 'exotic',
+              value: 'Exotic',
+              description: 'Освежающий микс апельсина, манго и киви',
+            },
+            {
+              id: 'peach',
+              value: 'Peach',
+              description: 'Сладкий сочный персик',
+            },
+            {
+              id: 'gum',
+              value: 'Gum',
+              description: 'Фруктовая жевательная резинка',
+            },
+            {
+              id: 'currant',
+              value: 'Currant',
+              description: 'Кислая смородина',
+            },
+            {
+              id: 'juice',
+              value: 'Juice',
+              description: 'Микс граната, грейпфрута, манго и тонкой ноткой лайма',
+            },
+          ],
+        },
+        {
+          id: 'strength',
+          label: 'Крепость',
+          values: [
+            { id: 'str1', value: '0 mg' },
+            { id: 'str2', value: '1.5 mg' },
+            { id: 'str3', value: '3 mg' },
+          ],
+        },
+      ],
+    },
+    {
       id: 'sigaretteSeries',
       type: 'liquid',
       name: 'Sigarette series',
       images: [tobaccoImage],
       volume: 'Объем 60 мл.',
-      cost: 100,
+      cost: 120,
       types: [
         {
           id: 'name',
@@ -617,7 +723,7 @@ export default {
       name: 'Ice vapour',
       images: [iceApowImage],
       volume: 'Объем 60 мл.',
-      cost: 100,
+      cost: 120,
       types: [
         {
           id: 'name',
@@ -646,6 +752,11 @@ export default {
             {
               id: 'iceLime',
               value: 'Ice Lime',
+              description: '',
+            },
+            {
+              id: 'iceCherry',
+              value: 'Ice Cherry',
               description: '',
             },
           ],
@@ -783,6 +894,11 @@ export default {
               value: 'Dr Peppe',
               description: 'Это вкус для настоящих ценителей - легендарная газировка с вишневым привкусом, которая отдает пряностью и отзывается легкой прохладой при выдохе.',
             },
+            {
+              id: 'schweppesMojito',
+              value: 'Schweppes Mojito',
+              description: '',
+            },
           ],
         },
         {
@@ -833,6 +949,11 @@ export default {
               id: 'drPepper',
               value: 'Dr Peppe',
               description: 'Это вкус для настоящих ценителей - легендарная газировка с вишневым привкусом, которая отдает пряностью и отзывается легкой прохладой при выдохе.',
+            },
+            {
+              id: 'schweppesMojito',
+              value: 'Schweppes Mojito',
+              description: '',
             },
           ],
         },
@@ -888,6 +1009,11 @@ export default {
               id: 'cherriesJuice',
               value: 'Cherries Juice',
               description: 'Вишневый сок',
+            },
+            {
+              id: 'freshMintJuice',
+              value: 'Fresh Mint Juice',
+              description: '',
             },
           ],
         },

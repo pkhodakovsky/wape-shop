@@ -41,7 +41,9 @@
     width: 150px;
     height: 50px;
     display: flex;
-    justify-content: space-between;
+}
+#social .social-button {
+    margin-right: 10px;
 }
 #tels {
     display: flex;

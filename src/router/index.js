@@ -1,15 +1,10 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
+import Shop from '../views/Shop.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
-  {
-    path: '/gallery',
-    name: 'gallery',
-    component: () => import('../views/Gallery.vue'),
-  },
   {
     path: '/shop',
     name: 'shop',
@@ -23,7 +18,7 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home,
+    component: Shop,
     children: [
       {
         path: '*',
